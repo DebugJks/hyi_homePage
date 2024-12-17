@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>대양산업</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <!-- 나중에 로고 주석 풀기 -->
+                            <img src="assets/images/yLogo.png" style="margin: auto; bottom: 2px; height: 80px;">
+
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="submenu">
+                                <a href="javascript:;">About Us</a>
+                                <ul>
+                                    <li><a href="about.html">공장소개</a></li>
+                                    <li><a href="about_locate.html">위치안내</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:;">Project</a>
+                                <ul>
+                                    <li><a href="Projects_changho.html">창호</a></li>
+                                    <li><a href="Projects_curtainWall.html">커튼월</a></li>
+                                    <li><a href="Projects_steel.html">철구조물</a></li>
+                                    <li><a href="Projects_panel.html">판넬</a></li>
+                                    <li><a href="products.html">더보기</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faq_page.html">FAQ</a></li>
+                            <li class="scroll-to-section"><a href="index.html#explore">Contact Us</a></li>
+                        </ul>    
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+
+
+<!-- tab -->
+
+<style>
+    /* 라디오 버튼 숨기기 */
+    input[type="radio"] {
+        display: none;
+    }
+
+    /* 라벨을 버튼처럼 스타일링 */
+    label {
+        width: 210px; /* 모든 탭의 너비를 일정하게 설정 */
+        height: 60px; /* 모든 탭의 높이를 일정하게 설정 */
+        padding-top: 18px;
+        border: 1px solid rgb(180, 180, 180);
+        background-color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0px;
+        border-radius: 0px;
+
+            
+    /* 가로 및 세로 중앙 정렬 */
+        /* display: flex; */
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: center; /* 세로 중앙 정렬 */
+        text-align: center; /* 텍스트의 가로 중앙 정렬을 추가로 보장 */
+    }
+
+    /* 선택된 탭에 적용할 스타일 */
+    input[type="radio"]:checked + label {
+        background-color: #f3be43;
+        color: white;
+        border-color: rgb(180, 180, 180);
+    }
+
+    .tab-area
+    {
+        /* display: flex;
+        justify-content: center; */
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* 탭 내용 숨기기 */
+    .tab-content {
+        display: none;
+        padding: 20px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    /* 활성화된 탭 내용 표시 */
+    .tab-content.active {
+        display: block;
+    }
+
+    /* 각 탭 내용의 배경색 */
+    /* .red { background-color: #f8d7da; }
+    .blue { background-color: #d1ecf1; }
+    .yellow { background-color: #fff3cd; }
+    .green { background-color: #d4edda; } */
+
+    /* 모바일 환경에서 탭 버튼들을 세로로 표시 */
+@media (max-width: 768px) {
+    .tab-area {
+        flex-direction: row; /* 모바일에서는버튼 가로세로 배치방향 */
+    }
+
+    label {
+        width: 100%; /* 모바일에서는 탭 버튼들이 화면에 꽉 차도록 설정 */
+        margin-bottom: 5px; /* 탭 간의 세로 간격 */
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="tab-area">
+<input type="radio" name="tabs" id="tab1" checked>
+<label for="tab1">공장소개</label>
+<input type="radio" name="tabs" id="tab2">
+<label for="tab2">특징 & 강점</label>
+<input type="radio" name="tabs" id="tab3">
+<label for="tab3">제품소개</label>
+<input type="radio" name="tabs" id="tab4">
+<label for="tab4">인증현황</label>
+
+<div id="content1" class="tab-content red active">
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image">
+                        <img src="assets/images/about/main_factory.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <h4>Our Factory</h4>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+                        <p style="margin-top: 80px; color: black; font-size: 15px;">저희 공장은 최신식 설비들과 숙련된 기능공을 보유하고 있어 높은 품질의 
+                            제품을 생산합니다.<br> 또한 경험이 풍부한 현장 기술자들이 직접 시공하여 
+                            안전하고 빠른 시공을 진행하고 있습니다. </p>
+                            <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** About Area Ends ***** -->
+
+
+    <!-- ***** Services Area Starts ***** -->
+    <section class="our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>확실한 시공</h4>
+                        <p>빈틈없는 마감 공사를 통해 <br>누수 및 우풍 차단 효과</p>
+                        <img src="assets/images/about/about_1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>품질 보장</h4>
+                        <p>넓은 프로파일 구조로 <br>단열성 및 내구성 우수 제품 사용</p>
+                        <img src="assets/images/about/about_2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>세련된 디자인</h4>
+                        <p>네추럴하며 세련된 디자인으로 편안하고<br> 세련된 분위기 확보</p>
+                        <img src="assets/images/about/about_3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section></div>
+<div id="content2" class="tab-content blue">
+    <img src="assets/images/img/about_why_merit.png" style="align-content: center; width: 100%;">
+</div>
+<div id="content3" class="tab-content yellow">
+    <img src="assets/images/img/about_products.png" style="align-content: center; width: 100%; max-width: 1000px;">
+</div>
+<div id="content4" class="tab-content green">
+    <img src="assets/images/img/about_certification.png" style="align-content: center; width: 100%; max-width: 1000px;">
+</div>
+</div>
+
+<script>
+// URL에서 'tab' 파라미터를 추출하는 함수
+function getTabFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('tab'); // 'tab' 파라미터 값 반환
+}
+
+// 모든 라디오 버튼과 탭 콘텐츠를 가져옴
+const tabs = document.querySelectorAll('input[name="tabs"]');
+const contents = document.querySelectorAll('.tab-content');
+
+// 페이지 로드 시 URL의 'tab' 파라미터에 따라 탭 활성화
+window.onload = function() {
+    const tab = getTabFromUrl(); // URL에서 탭 번호 가져오기
+    if (tab) {
+        const targetTab = document.getElementById('tab' + tab); // 해당 탭 버튼 찾기
+        if (targetTab) {
+            targetTab.checked = true; // 해당 탭 버튼을 체크
+            // 탭 콘텐츠 활성화
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById('content' + tab).classList.add('active');
+        }
+    }
+};
+
+
+// 라디오 버튼이 변경될 때마다 실행되는 함수
+tabs.forEach(tab => {
+    tab.addEventListener('change', function() {
+        // 모든 콘텐츠를 숨기고
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+        // 선택된 탭에 해당하는 콘텐츠만 표시
+        const contentId = 'content' + this.id.slice(-1);
+        document.getElementById(contentId).classList.add('active');
+    });
+});
+</script>
+
+
+
+
+
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <!-- <img src="assets/images/bottom_logo.png" alt="한양산업" style="position: absolute; bottom: 80px; left: -43px;"> -->
+                            <!-- <img src="assets/images/bottom_logo.png" alt="한양산업" style="position: absolute; bottom: 80px; left: -43px;"> -->
+                            
+                            <!-- <div style="position: absolute; top: -15px; left: -5px; color: white; font-size: 40px; font-weight: bold;">
+                                대양산업
+                            </div> -->
+                        </div>
+                        <ul style="margin-top: -50px; margin-left:-17px;">
+                            <div style="color: white; font-size: 40px; font-weight: bold;">
+                                대양산업
+                            </div>
+                            <li><a href="#">경기도 화성시 팔탄면 푸른들판로 496</a></li>
+                            <li><a href="#">ejrwls0321@naver.com</a></li>
+                            <li><a href="#">010-4010-2363</a></li>
+                            <li><a href="#">031 - 353 - 0457</a></li>
+                            <li><a href="#">사업자등록번호 : 419 - 10 - 02841</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3">
+                    <h4>Shopping &amp; Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/slick.js"></script> 
+    <script src="assets/js/lightbox.js"></script> 
+    <script src="assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>
