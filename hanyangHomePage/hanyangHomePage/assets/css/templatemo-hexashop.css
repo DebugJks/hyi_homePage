@@ -2719,8 +2719,10 @@ responsive
 /* 모바일 화면 크기 조정 (최대 너비 768px 이하) */
 @media (max-width: 768px) {
   .responsive-btn {
-      margin-top: 25px;
-      width: 60%;       /* 모바일에서는 화면의 50% 크기 */
-      max-width: 150px; /* 최대 150px로 제한 */
+      margin-top: 20px;
+      width: 80%;       /* 모바일에서는 화면의 50% 크기 */
+      max-width: 160px; /* 최대 150px로 제한 */
   }
+
+
 }

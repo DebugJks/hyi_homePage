@@ -3,7 +3,16 @@
 
 
   <head>
+    <!-- 방문자 수 추적 => 구글 애널리틱스 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53K9G4Z70Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-53K9G4Z70Z');
+</script>
     <!-- 1 men 2 sunroom 3 women 4 kids 5 door -->
 
 
@@ -14,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- 웹사이트 제목 나중에 변경 -->
-    <title>대양산업</title>
+    <title>한양창호</title>
 
 
     <!-- Additional CSS Files -->
@@ -27,14 +36,98 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
-<!--
-https://templatemo.com/tm-571-hexashop
 
--->
-    </head>
+    <link rel="stylesheet" href="assets/css/submitStyle.css">
+
+    <link rel="stylesheet" href="assets/css/Calendar/calendarStyle.css">
+    <link rel="stylesheet" href="assets/css/Calendar/evo-calendar.css">
+    <link rel="stylesheet" href="assets/css/Calendar/evo-calendar.midnight-blue.min.css">
     
+
+
+    <!-- 파비콘 로고 -->
+    <link rel="icon" href="assets/images/파비콘.png" type="image/x-icon"> 
+
+    <!-- 달력 CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.orange-coral.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.royal-navy.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/calendar/demo.css">
+
+
+
+
+</head>
     <body>
+
+        
+
+            <!-- 배너 띄우기 -->
+
+            <div id="banner" style="position: fixed; top: 90px; left: 100px; width: 350px; max-width: 90%; z-index: 9999;">
+                <img src="assets/images/banner_event.png" alt="이벤트 배너" style="width: 100%; border-radius: 10px; display: block; border: 2px solid white;">
+                <button id="closeBanner" style="position: relative; left: 40%; font-size: 16px; cursor: pointer; color: rgb(0, 0, 0); border: none; border-radius: 5px; font-weight: bold; background-color: transparent;">
+                    닫기 [x]
+                </button>
+            </div>
+            
+            <script>
+                document.getElementById("closeBanner").addEventListener("click", function () {
+                    document.getElementById("banner").style.display = "none";
+                });
+            </script>
+            
+            <style>
+                @media (max-width: 768px) {
+                    #banner {
+                        width: auto;
+                        max-width: 50%; /* 배너가 화면 너비의 90% 차지 */
+                        transform: translateX(-50%);  /*중앙 정렬*/
+                        width: 90%;
+                        bottom: 70%;   /*닫기 버튼 위치*/
+                        align-content: center;
+                        left: 10%;
+                        z-index: 9999;
+                    }
+            
+                    #banner img {
+                        transform:translateX(50%);
+                        width: 100%; /* 이미지를 배너에 맞게 확대 */
+                        max-width: 250px; /* 이미지 최대 크기 */
+                        height: auto; /* 이미지 비율 유지 */
+                        border: 2px solid white; /* 이미지 부분에만 경계선 적용 */
+                        border-radius: 10px;
+                    }
+            
+                    #closeBanner {
+                        position: absolute;
+                        bottom: -5px; /* 배너 이미지 바로 밑으로 이동 */
+                        left: 65% !important; /* 가로 중앙 정렬 */
+                        color: rgb(0, 0, 0) !important;
+                        font-size: 13px;
+                        background-color: transparent;
+                    }
+                }
+            </style>
+            
     
+
+
+
+
+        <!-- 이벤트 팝업창 띄우기 -->
+        <!-- <body onLoad="javascript:popup()"> -->
+
+        <!-- <div>
+            <script>
+                function popup(){
+                    window.open("event_Popup.html", "popup", "width=400, height=500, history=no, resizable=no, status=no, scrollbars=yes, menubar=no")
+                }
+            </script>        
+        </div>
+     -->
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -44,8 +137,9 @@ https://templatemo.com/tm-571-hexashop
         </div>
     </div>  
     <!-- ***** Preloader End ***** -->
-    
-    
+     <!-- 팝업창 띄우기 -->
+
+
     <!-- ***** Header Area Start ***** -->
 
 
@@ -127,8 +221,8 @@ https://templatemo.com/tm-571-hexashop
                         <div class="thumb">
                             <div class="inner-content">
                                 <div class="text-overlay" style="position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 32px; font-weight: bold;">
-                                    믿음과 신뢰를 향한 대양산업
-                                    <div style="margin-bottom: -15px; font-size: 15px; text-align: center;">대양산업은 40년간 창호업계를 이어 나가고 있습니다.</div>
+                                    믿음과 신뢰를 향한 한양창호
+                                    <div style="margin-bottom: -15px; font-size: 15px; text-align: center;">고객과 함께 공간의 미래를 열다.</div>
 
                                 </div>
                             </div>
@@ -136,33 +230,20 @@ https://templatemo.com/tm-571-hexashop
                                 /* 모바일 화면에서 글씨 숨기기 */
                                 @media (max-width: 768px) {
                                     .text-overlay {
-                                        display: none; /* 모바일 화면에서 해당 글씨 숨기기 */
+                                        margin-top: -15%;
+                                        font-size: 20px !important;
+                                        white-space: nowrap; /* 줄바꿈 방지 */
+
+                                        text-align: center;
+                                    }
+                                    .text-overlay div
+                                    {
+                                        font-size: 13px !important;
                                     }
                                 }
                             </style>
 
 
-
-
-<!-- 모바일에서 안 보이게 수정하기
- 
-
-
-ㅇㅁㅇ
-ㅁㄴ
-ㅇㅁ
-ㅇㅁㄴ
-ㅇㅁㄴ
-
-견적및 실측 밑에 인증서 나열
-유통마진
-보증기간 20년
-
-
-
-
-궁금한 게 >>> 가운데로 이동시키기
--->
                             <!-- 메인 이미지 하단 버튼들 -->
                             <div style="position: absolute; top: 145%; left: 50%; transform: translate(-50%, 0%); display: flex; gap: 10px;" class="main-buttons">
                                 <div class="main-border-button" style="display: flex; gap: 4px;">
@@ -194,20 +275,81 @@ https://templatemo.com/tm-571-hexashop
     <!-- ***** Main Banner Area End ***** -->
 
 
-    <!-- 섹션 -->
-    <!-- ***** Men Area Starts ***** -->
-
-
+    
 
 <!-- 상단 버튼들 -->
+
+</style>
+
+
+<!-- 유튜브 영상 -->
+    <div>
+        <iframe class="yVid" width="580" height="335" src="https://www.youtube.com/embed/yNFRDFmUhXU?si=2YVkmomE68C9YPzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        style="align-items: left; margin-left: 12%; margin-top: 10px;"></iframe>
+    
+            <iframe class="yVid_second" width="580" height="335" src="https://www.youtube.com/embed/9B4Q1dmT6MY?si=Ny488MhtYIwdNQPi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+            style="gap: 30px;"></iframe>
+    </div>
+
+
+    <style>
+    /* 반응형 처리 */
+    @media (max-width: 768px) {
+        .yVid {
+            margin-top: 15px !important;
+            max-width: 400px; /* 모바일 화면에서 이미지가 화면을 벗어나지 않도록 설정 */
+            margin: 0 auto !important; /* 중앙 정렬 */
+        }
+        .yVid_second
+        {
+            display: none;
+        }
+
+    }
+    </style>
+
+
+
+<!-- 영림이여야 하는 이유 -->
+<section class="section">
+
+    <img class="pc_reason" src="assets/images/Reason_img.png" style="align-content: center; width: 100%;
+    margin-top: 5%;">
+        <img class="mobile_reason" src="assets/images/Reason_img_Mobile.png" style="align-content: center; width: 100%;
+    margin-top: 5%;">
+        <img class="pc_reason" src="assets/images/reason_2.png" style="align-content: center; width: 100%;
+    margin-top: 5%;">
+            <img class="mobile_reason" src="assets/images/reason_2.png" style="align-content: center; width: 100%;
+    margin-top: 5%;">
+</section>
+
+<style>
+    .mobile_reason{
+        display: none;
+    }
+@media (max-width: 768px) {
+    .pc_reason {
+        display: none;
+    }
+    .mobile_reason{
+        display: flex;   
+    }
+    }
+</style>
+
+
+
+
+<!--
+hover img 없는 코드드 
 <section class="section" id="products" style="background-color: rgb(245, 238, 227);">
     <div class="container">
         <div class="row">
-            <!-- PC에서는 한 줄에 3개, 모바일에서는 한 줄에 2개 -->
+             PC에서는 한 줄에 3개, 모바일에서는 한 줄에 2개 
             <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
                 <div class="item">
                     <div class="thumb text-center">
-                        <!-- 버튼 생성 -->
+                         버튼 생성 
                         <a href="about.html?tab=1">
                             <img src="assets/images/img/about_btn.png" class="responsive-btn" alt="Button Image">
                         </a>
@@ -244,7 +386,7 @@ https://templatemo.com/tm-571-hexashop
             <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
                 <div class="item">
                     <div class="thumb text-center">
-                        <!-- 이동하는 곳 수정하기 -->
+                         이동하는 곳 수정하기 
                         <a class="scroll-to-section" href="#explore">
                             <img src="assets/images/img/why_btn.png" class="responsive-btn" alt="Button Image">
                         </a>                     
@@ -263,17 +405,122 @@ https://templatemo.com/tm-571-hexashop
         </div>
     </div>
 </section>
+-->
+
+<!-- 상담 요청 보내기 -->
+<section class="box" style="width: 100%; display: flex; justify-content: center; margin-top: 10px; background-color: #fd8856;">
+    <div class="left-content" style="margin-right: 25%; margin-top: 1%;">
+        <div class="form_Text" style="font-size: 40px; font-weight: bold; align-content: center; color: white;">간편 견적 받기</div>
+        <div class="left-form-img">
+            <img src="assets/images/img/index_form_left.png" alt="견적 이미지" style="width: 100%; max-width: 400px; height: auto;">
+        </div>
+    </div>
+
+<style>
+/* 기본 이미지 스타일 */
+.left-form-img img {
+    width: 100%; /* 부모 컨테이너의 크기에 맞게 조정 */
+    max-width: 400px; /* 이미지의 최대 너비 */
+    height: auto; /* 비율 유지 */
+}
+
+.form_Text
+{
+    display: none;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+    .left-form-img img {
+        display: none;
+        max-width: 90%; /* 모바일 화면에서 이미지가 화면을 벗어나지 않도록 설정 */
+        margin: 0 auto; /* 중앙 정렬 */
+    }
+
+    .form_Text
+    {
+        display:flex;
+    }
+
+    .box .left-content
+    {
+        display: none;
+    }
+}
+</style>
 
 
+    <div class="right-content" style="margin-top: -1%;" id="top_submit">
+        <div class="form" style="max-width: 600px; width: 100%;">
+            <form>
+                <h2 style="font-size: 30px; font-weight: bold; text-align: center; color: rgb(255, 255, 255);margin-bottom: 5px;">간편 견적 받기</h2>
+                <div class="horizontal-box" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+                    <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
+                        <textarea type="text" placeholder="전화번호" id="userName" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
+                    </div>
+                    <!-- <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
+                        <textarea type="text" placeholder="전화번호" id="phoneNumber" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
+                    </div> -->
+                    <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
+                        <textarea type="text" placeholder="지역" id="지역" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
+                    </div>
+                </div>
 
 
+                <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
+                    <textarea type="text" placeholder="단창/이중창 교체 수량" id="교체수량" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
+                </div>
+                <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
+                    <textarea type="text" placeholder="주거형태(아파트/상가 등)" id="주거형태" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
+                </div>
+                <div class="inputBox" style="position: relative; margin-bottom: 20px;">
+                    <textarea placeholder="중문 등 기타 문의를 작성해 주시면 1차 견적을 보내드립니다." id="contents" required style="padding-left: 10px; width: 100%; height: 100px; resize: none;"></textarea>
+                </div>
+                <input style="margin-top: -7px;" type="submit" value="상담 신청" class="sub" id="submit">
+            </form>
+        </div>
+    </div>
+    
+    <style>
+    /* 기본 스타일 */
+    .horizontal-box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap; /* 화면 크기에 따라 자동 줄바꿈 */
+    }
+    
+    .inputBox textarea {
+        width: 100%;
+        box-sizing: border-box; /* 패딩 포함 크기 계산 */
+        height: 40px;
+        resize: none;
+    }
+    
+    /* 모바일 반응형 스타일 */
+    @media (max-width: 768px) {
+        .horizontal-box {
+            flex-direction: column; /* 모바일에서는 세로로 정렬 */
+        }
+    
+        .inputBox textarea {
+            height: 45px; /* 모바일에서 높이 조정 */
+        }
+    }
+    </style>
+    
+</div>
 
-
+</section>
 
 
     <section class="section" id="men">
+
+        <!-- <img src="assets/images/img/top_sen.png" style="align-content: center; width: 100%;">
+        <img src="assets/images/img/index_freeCounsel.png" style="align-content: center; width: 100%;"> -->
+        <div style=" font-size: 30px; text-align: center; font-weight: bold;"><h1 style="color: rgb(75, 75, 249); font-weight: bold;">HANYANG</h1> WINDOW PROJECT</div><br>
+
         <div class="container">
-            <div style="margin-top: -80px; font-size: 30px; text-align: center; font-weight: bold;">DAEYANG WINDOW PROJECT</div><br>
+
             
     <section class="section" id="products">
         <!-- <div class="container">
@@ -517,10 +764,7 @@ https://templatemo.com/tm-571-hexashop
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <ul>
-                                            <!-- 눈 모양 버튼 -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            
-                        
+
                                         </ul>
                                     </div>
                                     <img src="assets/images/커튼월/커튼월_3.jpg" alt="">
@@ -670,6 +914,7 @@ https://templatemo.com/tm-571-hexashop
             <div class="col-lg-12">
                 <div class="kid-item-carousel">
                     <div class="owl-kid-item owl-carousel">
+                    </section>
                         <!-- <div class="item">
                             <div class="thumb">
                                 <div class="hover-content">
@@ -677,7 +922,8 @@ https://templatemo.com/tm-571-hexashop
                                 </div>
                                 <img src="assets/images/판넬/판넬_1.png" alt="">
                             </div>
-                             <div class="down-content">
+                             <div
+                              class="down-content">
                                 <h4>School Collection</h4>
                                 <span>$80.00</span>
                             </div>
@@ -705,17 +951,6 @@ https://templatemo.com/tm-571-hexashop
                                 <span>$30.00</span>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                </div>
-                                <img src="assets/images/kid-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
-                            </div>   
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -724,7 +959,7 @@ https://templatemo.com/tm-571-hexashop
 </section>
 
 
-<!-- 견적 문의 설명 -->
+ 견적 문의 설명 -->
     <!-- ***** Explore Area Starts ***** -->
     <section class="section" id="explore">
         <div class="container">
@@ -735,23 +970,6 @@ https://templatemo.com/tm-571-hexashop
                     
                     <div class="left-content">
 
-
-
-                        <!-- <h2>견적 & 실측</h2>
-
-                        <div class="quote">
-                            <i class="fa fa-quote-left"></i>
-                        </div>
-                        <div style="font-size: 20px; margin-top: 35px; font-weight: bold;" >투명한 견적 제공</div>
-                        <div style="font-size: 20px; margin-top: 40px;" >원가와 기업마진을 투명하게 공개합니다</div>
-
-                        <div class="quote">
-                            <i class="fa fa-quote-left"></i>
-                        </div>
-                        
-                        <div style="font-size: 20px; margin-top: 40px; font-weight: bold;" >철저한 사후관리 보장</div>
-                        <div style="font-size: 20px; margin-top: 40px;" >하자에 대한 책임보증을 계약서에 명확히 기재합니다</div><br>
-                         -->
                         <br><br><br>
                         <a href="tel:01040102363" style="font-size: 18px; font-weight: bold;">전화 걸기 : 010-4010-2363</a> <br>
                         <a href="mailto:ejrwls0321@naver.com" style="font-size: 18px; font-weight: bold;">이메일 보내기 : ejrwls0321@naver.com</a>
@@ -773,20 +991,7 @@ https://templatemo.com/tm-571-hexashop
                                     <span>Latest Collection</span>
                                 </div>
                             </div> -->
-                            <!-- <div class="col-lg-6">
-                                <div class="first-image">
-                                    <img src="assets/images/인증서_1.png" alt="">
-                                    <div style="font-size: 20px; margin-top: 40px; text-align: center;" >KS제품 인증서</div>
 
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="second-image">
-                                    <img src="assets/images/인증서_2.png" alt="">
-                                    <div style="font-size: 20px; margin-top: 40px;text-align: center;" >제품시험성적서</div>
-
-                                </div>
-                            </div> -->
                             <!-- <div class="col-lg-6">
                                 <div class="types">
                                     <h4>Different Types</h4>
@@ -799,7 +1004,72 @@ https://templatemo.com/tm-571-hexashop
             </div>
         </div>
     </section>
-    <!-- ***** Explore Area Ends ***** -->
+
+<!-- 상담 요청 보내기 -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 하단 고정 이미지 -->
+
+    <div class="bottom_sticky_img" style="z-index: 10;">
+        <div class="container">
+            <a class="scroll-to-section" href="#top_submit">
+            <img src="assets/images/img/bottom_fixed.png">
+        </a>
+        </div>
+    </div>
+
+    <style>
+        /* 고정 이미지 스타일 */
+        .bottom_sticky_img {
+            position: fixed;
+            bottom: 0; /* 화면 하단에 고정 */
+            left: 0;
+            width: 100%; /* 화면 너비 전체를 차지 */
+            text-align: center;
+            padding: 10px 0;
+            transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+
+        }
+
+        .bottom_sticky_img img
+        {
+            max-width: 150px; /* 이미지 최대 너비 제한 */
+            height: auto; /* 비율 유지 */
+        }
+
+                /* 숨겨진 상태 */
+        .bottom_sticky_img.hidden {
+            opacity: 0; /* 투명하게 설정 */
+            pointer-events: none; /* 클릭 불가능 */
+        }
+
+    </style>
+
+    <script>
+        // 스크롤 이벤트 처리
+        const footer = document.querySelector('.bottom_sticky_img');
+        const hidePosition = 2000; // 특정 스크롤 위치(px)
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < hidePosition) {
+                // 특정 위치 이상 스크롤하면 숨김
+                footer.classList.add('hidden');
+            } else {
+                // 특정 위치 미만에서는 표시
+                footer.classList.remove('hidden');
+            }
+        });
+    </script>
 
 
 
@@ -817,12 +1087,12 @@ https://templatemo.com/tm-571-hexashop
                             <!-- <img src="assets/images/bottom_logo.png" alt="한양산업" style="position: absolute; bottom: 80px; left: -43px;"> -->
                             
                             <!-- <div style="position: absolute; top: -15px; left: -5px; color: white; font-size: 40px; font-weight: bold;">
-                                대양산업
+                                한양창호
                             </div> -->
                         </div>
                         <ul style="margin-top: -50px; margin-left:-17px;">
                             <div style="color: white; font-size: 40px; font-weight: bold;">
-                                대양산업
+                                한양창호
                             </div>
                             <li><a href="#">경기도 화성시 팔탄면 푸른들판로 496</a></li>
                             <li><a href="#">ejrwls0321@naver.com</a></li>
@@ -833,46 +1103,6 @@ https://templatemo.com/tm-571-hexashop
                     </div>
                 </div>
 
-
-                <!-- 하단 사이트 링크 -->
-                <!-- <div class="col-lg-3">
-                    <h4>Shopping &amp; Categories</h4>
-                    <ul>
-                        <li><a href="#">Men’s Shopping</a></li>
-                        <li><a href="#">Women’s Shopping</a></li>
-                        <li><a href="#">Kid's Shopping</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Help &amp; Information</h4>
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Tracking ID</a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="col-lg-12">
-                    <div class="under-footer">
-                        <p>초고압 샤시 전문업체
-                        
-                        <br>Made by 김대리
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul> -->
-                    </div>
                 </div>
             </div>
         </div>
@@ -918,6 +1148,70 @@ https://templatemo.com/tm-571-hexashop
         });
 
     </script>
+
+
+<!-- firebase Database 연결 -->
+
+<script type="module">  // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
+    authDomain: "hyihomepage.firebaseapp.com",
+    databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
+    projectId: "hyihomepage",
+    storageBucket: "hyihomepage.firebasestorage.app",
+    messagingSenderId: "175712717780",
+    appId: "1:175712717780:web:8b775bded241f7043ba441",
+    measurementId: "G-JJ3ZDL0X2F"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // get ref to database services
+
+    const db = getDatabase(app);
+
+    // 추가 변수 여기에서 추가하기기
+    document.getElementById("submit").addEventListener('click', function (e) {
+    e.preventDefault();
+    const currentTime = new Date().toISOString(); // 현재 시간을 ISO 포맷으로 가져옴
+            // firebase서 맨처음 보이는 사용자 명 변수
+    set(ref(db, 'user/' + document.getElementById("userName").value), {
+        userName: document.getElementById("userName").value,
+        // phoneNumber: document.getElementById("phoneNumber").value,
+        contents: document.getElementById("contents").value,
+        교체수량: document.getElementById("교체수량").value,
+        주거형태: document.getElementById("주거형태").value,
+        지역: document.getElementById('지역').value,
+        timestamp: currentTime // 시간을 timestamp 필드에 추가
+    });
+    alert("상담 접수가 완료되었습니다");
+});
+
+
+    // document.getElementById("submit").addEventListener('click',function(e)
+    // {
+    //     e.preventDefault();
+    //     set(ref(db, 'user/' + document.getElementById("userName").value),
+    //     {
+    //         userName: document.getElementById("userName").value,
+    //         phoneNumber: document.getElementById("phoneNumber").value,
+    //         contents: document.getElementById("contents").value
+    //     });
+    //     alert("상담 접수가 완료되었습니다");
+    // })
+</script>
+
 
   </body>
 </html>

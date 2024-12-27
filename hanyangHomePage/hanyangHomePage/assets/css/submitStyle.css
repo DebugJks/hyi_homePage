@@ -1,0 +1,67 @@
+/* 서버 데이터 전송 스타일 */
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: ; 배경이미지*/
+  /* background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.box
+{
+  justify-content: center;
+  padding: 20px 30px;
+  width: 600px;
+  height: 400px;
+  /* backdrop-filter: blur(10px); */
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.box .form
+{
+  padding: 10px 20px;
+}
+
+.box .form form
+{
+  /* form 윗 공간 */
+  margin-top: 0px;
+  align-items: center;
+}
+
+.box .form form .inputBox input
+{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: none;
+  /* 하단 선 */
+  /* border-bottom: 1px solid #000000; */
+}
+
+.box .form form .sub
+{
+  /*사각형 크기 */
+  padding: 10px 160px;
+  color : #0b0000;
+  border: none;
+  outline: 1px solid #6d6c6c;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: -15px;
+  border-radius: 3px;
+}
