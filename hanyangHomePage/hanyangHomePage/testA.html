@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- 웹사이트 제목 나중에 변경 -->
+    <title>한양창호</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            display: none; /* 기본적으로 화면에 보이지 않게 설정 */
+        }
+        .active {
+            display: block; /* 활성화된 컨테이너만 표시 */
+        }
+        #result {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: blue;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn.selected {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- class가 caontainer active 있는 곳부터 화면 시작함 -->
+        <img src="assets/images/견적/title.png" style="display: block;margin: 0 auto ;width: 40%;">
+
+<!-- <h1>제품 선택 시스템</h1> -->
+
+<!-- 제품 선택 화면 -->
+<!-- <div id="step1" class="container active">
+    <h2>제품을 선택하세요:</h2>
+    <select id="product" onchange="goToNextStep(2)">
+        <option value="0">제품을 선택하세요</option>
+        <option value="100">제품 A - 100,000원</option>
+        <option value="200">제품 B - 200,000원</option>
+        <option value="300">제품 C - 300,000원</option>
+    </select>
+</div> -->
+
+<!-- 색상 선택 화면 -->
+<div id="step2" class="container active">
+    <h2>색상을 선택하세요:</h2>
+    <select id="color" onchange="goToNextStep(3)">
+        <option value="0">색상을 선택하세요</option>
+        <option value="10">빨강 - 추가 10,000원</option>
+        <option value="20">파랑 - 추가 20,000원</option>
+        <option value="30">검정 - 추가 30,000원</option>
+    </select>
+</div>
+
+<!-- 가로/세로 입력 화면 -->
+<div id="step3" class="container">
+    <h2>사이즈를 입력하세요 (cm):</h2>
+    <label for="width">가로:</label>
+    <input type="number" id="width" placeholder="가로 입력">
+    <br>
+    <label for="height">세로:</label>
+    <input type="number" id="height" placeholder="세로 입력">
+    <br>
+    <button onclick="goToNextStep(4)">다음</button>
+</div>
+
+<!-- 창 유형 선택 화면 -->
+<div id="step4" class="container">
+    <h2>창 유형을 선택하세요:</h2>
+    <button class="btn" id="singleWindow" onclick="selectWindow('single')">단창</button>
+    <button class="btn" id="doubleWindow" onclick="selectWindow('double')">이중창</button>
+    <!-- <button onclick="goToNextStep(5)">다음</button> -->
+</div>
+
+
+
+<!-- 최종 가격 표시 화면 -->
+<div id="step5" class="container">
+    <h2>최종 가격:</h2>
+    
+    <!-- 선택 항목과 가격을 표시할 표 -->
+    <table>
+        <thead>
+            <tr>
+                <th>항목</th>
+                <th>선택 내용</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>제품</td>
+                <td id="selectedProduct">-</td>
+                <td id="productPrice">0원</td>
+            </tr>
+            <tr>
+                <td>색상</td>
+                <td id="selectedColor">-</td>
+                <td id="colorPrice">0원</td>
+            </tr>
+            <tr>
+                <td>사이즈 (가로 x 세로)</td>
+                <td id="selectedSize">-</td>
+                <td id="sizePrice">0원</td>
+            </tr>
+            <tr>
+                <td>창 유형</td>
+                <td id="selectedWindow">-</td>
+                <td id="windowPrice">-</td>
+            </tr>
+            <tr>
+                <td>총합</td>
+                <td colspan="2" id="result">0원</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="calculateFinalPrice()">가격 계산하기</button>
+</div>
+
+
+
+
+
+<script>
+    // 전역 변수로 창 유형 저장
+    let selectedWindowType = "none";
+
+    // 단계별로 화면을 전환하는 함수
+    function goToNextStep(step) {
+        // 모든 container를 비활성화
+        const containers = document.querySelectorAll('.container');
+        containers.forEach(container => {
+            container.classList.remove('active');
+        });
+        
+        // 다음 단계의 container를 활성화
+        document.getElementById('step' + step).classList.add('active');
+
+        // 마지막 단계(견적 계산 페이지)일 때 자동으로 계산 실행
+        if (step === 5) {
+            calculateFinalPrice();
+        }
+    }
+
+    // 창 유형 선택 함수
+    function selectWindow(type) {
+        // 선택한 창 유형 저장
+        selectedWindowType = type;
+
+        // 버튼 스타일 업데이트 (선택된 버튼 강조)
+        document.getElementById('singleWindow').classList.remove('selected');
+        document.getElementById('doubleWindow').classList.remove('selected');
+        if (type === 'single') {
+            document.getElementById('singleWindow').classList.add('selected');
+        } else if (type === 'double') {
+            document.getElementById('doubleWindow').classList.add('selected');
+        }
+
+        // 창 유형을 선택하면 자동으로 다음 단계로 이동
+    goToNextStep(5);
+}
+
+    // 최종 가격 계산 함수
+    function calculateFinalPrice() {
+        // 제품 선택
+        const productDropdown = document.getElementById("product");
+        const productText = productDropdown.options[productDropdown.selectedIndex].text;
+        const productPrice = parseInt(productDropdown.value);
+        document.getElementById("selectedProduct").textContent = productText;
+        document.getElementById("productPrice").textContent = productPrice.toLocaleString() + "원";
+        
+        // 색상 선택
+        const colorDropdown = document.getElementById("color");
+        const colorText = colorDropdown.options[colorDropdown.selectedIndex].text;
+        const colorPrice = parseInt(colorDropdown.value);
+        document.getElementById("selectedColor").textContent = colorText;
+        document.getElementById("colorPrice").textContent = colorPrice.toLocaleString() + "원";
+
+        // 사이즈 입력값 가져오기
+        const width = parseInt(document.getElementById("width").value) || 0;
+        const height = parseInt(document.getElementById("height").value) || 0;
+        document.getElementById("selectedSize").textContent = width + " x " + height;
+
+        // 사이즈 계산 (가로 x 세로 x 11)
+        let sizePrice = width * height * 11;
+        
+        // 계산된 값의 앞 두 자리 가져오기
+        let sizeFactor = Math.floor(sizePrice / 1000000); // 앞 두 자리만 추출
+
+        // 사이즈 계산 가격 = 앞 두 자리 * 5000
+        let finalSizePrice = sizeFactor * 5000;
+        document.getElementById("sizePrice").textContent = finalSizePrice.toLocaleString() + "원";
+
+        // 창 유형에 따른 가격 계산
+        document.getElementById("selectedWindow").textContent = selectedWindowType === 'single' ? "단창" : "이중창";
+        
+        if (selectedWindowType === "double") {
+            // 이중창인 경우 finalSizePrice * 2
+            finalSizePrice *= 2;
+        }
+
+        // 최종 가격 계산
+        const totalPrice = productPrice + colorPrice + finalSizePrice;
+
+        // 결과 출력
+        document.getElementById("result").textContent = totalPrice.toLocaleString() + "원";
+
+        // 결과 화면으로 이동
+        goToNextStep(5);
+    }
+</script>
+
+  </body>
+</html>
