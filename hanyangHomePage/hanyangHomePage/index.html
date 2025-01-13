@@ -65,7 +65,7 @@
         
 
             <!-- 배너 띄우기 -->
-
+<!-- 
             <div id="banner" style="position: fixed; top: 90px; left: 100px; width: 350px; max-width: 90%; z-index: 9999;">
                 <img src="assets/images/banner_event.png" alt="이벤트 배너" style="width: 100%; border-radius: 10px; display: block; border: 2px solid white;">
                 <button id="closeBanner" style="position: relative; left: 40%; font-size: 16px; cursor: pointer; color: rgb(0, 0, 0); border: none; border-radius: 5px; font-weight: bold; background-color: transparent;">
@@ -111,13 +111,12 @@
                     }
                 }
             </style>
-            
-    
+             -->
+    <!-- //배너끝 -->
 
 
 
-
-        <!-- 이벤트 팝업창 띄우기 -->
+    <!-- 이벤트 팝업창 띄우기 -->
         <!-- <body onLoad="javascript:popup()"> -->
 
         <!-- <div>
@@ -221,7 +220,7 @@
                         <div class="thumb">
                             <div class="inner-content">
                                 <div class="text-overlay" style="position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 32px; font-weight: bold;">
-                                    믿음과 신뢰를 향한 한양창호
+                                    행복을 디자인하는 한양창호
                                     <div style="margin-bottom: -15px; font-size: 15px; text-align: center;">고객과 함께 공간의 미래를 열다.</div>
 
                                 </div>
@@ -273,17 +272,15 @@
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-
-
-    
-
 <!-- 상단 버튼들 -->
-
 </style>
 
 
+
+
+
 <!-- 유튜브 영상 -->
-    <div>
+    <!-- <div>
         <iframe class="yVid" width="580" height="335" src="https://www.youtube.com/embed/yNFRDFmUhXU?si=2YVkmomE68C9YPzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
         style="align-items: left; margin-left: 12%; margin-top: 10px;"></iframe>
     
@@ -306,23 +303,23 @@
         }
 
     }
-    </style>
+    </style> -->
 
 
 
 <!-- 영림이여야 하는 이유 -->
 <section class="section">
 
-    <img class="pc_reason" src="assets/images/Reason_img.png" style="width: 70%;
+    <img class="pc_reason" src="assets/images/Reason_imgTest.png" style="width: 50%; height: 100%;
     margin-left: auto; margin-right: auto; display: block;
     margin-top: 5%;">
-        <img class="mobile_reason" src="assets/images/Reason_img_Mobile.png" style="align-content: center; width: 100%;
+        <img class="mobile_reason" src="assets/images/Reason_imgTest.png" style="align-content: center;
     margin-top: 5%;">
-        <img class="pc_reason" src="assets/images/reason_2.png" style="width: 70%;
+        <!-- <img class="pc_reason" src="assets/images/reason_2.png" style="width: 70%;
         margin-left: auto; margin-right: auto; display: block;
     margin-top: 5%;">
             <img class="mobile_reason" src="assets/images/reason_2.png" style="align-content: center; width: 100%;
-    margin-top: 5%;">
+    margin-top: 5%;"> -->
 </section>
 
 <style>
@@ -966,7 +963,7 @@ hover img 없는 코드드
     <!-- ***** Explore Area Starts ***** -->
     <section class="section" id="explore">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <img src="assets/images/img/index_bottom_form.png" style="align-content: center; width: 100%;">
 
                 <div class="col-lg-6">
@@ -981,7 +978,7 @@ hover img 없는 코드드
                             <a href="products.html">시공사례 더보기</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- 우측 -->
@@ -1155,66 +1152,48 @@ hover img 없는 코드드
 
 <!-- firebase Database 연결 -->
 
-<script type="module">  // Import the functions you need from the SDKs you need
+<script type="module">  
+    // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-
+    import { getDatabase, ref, set, get, child, push } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
+    
     // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-    apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
-    authDomain: "hyihomepage.firebaseapp.com",
-    databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
-    projectId: "hyihomepage",
-    storageBucket: "hyihomepage.firebasestorage.app",
-    messagingSenderId: "175712717780",
-    appId: "1:175712717780:web:8b775bded241f7043ba441",
-    measurementId: "G-JJ3ZDL0X2F"
+        apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
+        authDomain: "hyihomepage.firebaseapp.com",
+        databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
+        projectId: "hyihomepage",
+        storageBucket: "hyihomepage.firebasestorage.app",
+        messagingSenderId: "175712717780",
+        appId: "1:175712717780:web:8b775bded241f7043ba441",
+        measurementId: "G-JJ3ZDL0X2F"
     };
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 
-    // get ref to database services
-
+    // Get ref to database services
     const db = getDatabase(app);
 
-    // 추가 변수 여기에서 추가하기기
+    // Add event listener to submit button
     document.getElementById("submit").addEventListener('click', function (e) {
-    e.preventDefault();
-    const currentTime = new Date().toISOString(); // 현재 시간을 ISO 포맷으로 가져옴
-            // firebase서 맨처음 보이는 사용자 명 변수
-    set(ref(db, 'user/' + document.getElementById("userName").value), {
-        userName: document.getElementById("userName").value,
-        // phoneNumber: document.getElementById("phoneNumber").value,
-        contents: document.getElementById("contents").value,
-        교체수량: document.getElementById("교체수량").value,
-        주거형태: document.getElementById("주거형태").value,
-        지역: document.getElementById('지역').value,
-        timestamp: currentTime // 시간을 timestamp 필드에 추가
+        e.preventDefault();
+        const currentTime = new Date().toISOString(); // Get current time in ISO format
+
+        // Push data under the 'user' path with a unique key
+        push(ref(db, 'user/' + document.getElementById("userName").value), {
+            userName: document.getElementById("userName").value,
+            contents: document.getElementById("contents").value,
+            교체수량: document.getElementById("교체수량").value,
+            주거형태: document.getElementById("주거형태").value,
+            지역: document.getElementById('지역').value,
+            timestamp: currentTime // Add timestamp
+        });
+
+        alert("상담 접수가 완료되었습니다");
     });
-    alert("상담 접수가 완료되었습니다");
-});
-
-
-    // document.getElementById("submit").addEventListener('click',function(e)
-    // {
-    //     e.preventDefault();
-    //     set(ref(db, 'user/' + document.getElementById("userName").value),
-    //     {
-    //         userName: document.getElementById("userName").value,
-    //         phoneNumber: document.getElementById("phoneNumber").value,
-    //         contents: document.getElementById("contents").value
-    //     });
-    //     alert("상담 접수가 완료되었습니다");
-    // })
 </script>
-
-
   </body>
 </html>
