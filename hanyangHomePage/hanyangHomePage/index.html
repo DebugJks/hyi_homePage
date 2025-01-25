@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--알루미늄 6.5m당 13만 원 -->
+
 
   <head>
     <!-- 방문자 수 추적 => 구글 애널리틱스 -->
@@ -13,8 +15,6 @@
 
   gtag('config', 'G-53K9G4Z70Z');
 </script>
-    <!-- 1 men 2 sunroom 3 women 4 kids 5 door -->
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,9 +22,10 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <!-- 웹사이트 제목 나중에 변경 -->
+
     <title>한양창호</title>
 
+    <link rel="stylesheet" href="HYI_Unity/TemplateData/style.css">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -56,13 +57,15 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/calendar/demo.css">
 
+            <!-- 창호 중문 이미지 슬라이딩 관련 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
-
+<!-- 견적프로그램 -->
+    <link rel="stylesheet" href="TemplateData/style.css">
 
 </head>
     <body>
-
-        
 
             <!-- 배너 띄우기 -->
 <!-- 
@@ -117,9 +120,8 @@
 
 
     <!-- 이벤트 팝업창 띄우기 -->
-        <!-- <body onLoad="javascript:popup()"> -->
-
-        <!-- <div>
+        <!-- <body onLoad="javascript:popup()">s
+        <div>
             <script>
                 function popup(){
                     window.open("event_Popup.html", "popup", "width=400, height=500, history=no, resizable=no, status=no, scrollbars=yes, menubar=no")
@@ -136,11 +138,10 @@
         </div>
     </div>  
     <!-- ***** Preloader End ***** -->
-     <!-- 팝업창 띄우기 -->
 
+    
 
     <!-- ***** Header Area Start ***** -->
-
 
     <header class="header-area header-sticky">
         <div class="container">
@@ -160,20 +161,18 @@
 
                         <ul class="nav">
                             <li class="submenu">
-                                <a href="javascript:;">About Us</a>
+                                <a href="#">About Us</a>
                                 <ul>
                                     <li><a href="about.html">공장소개</a></li>
                                     <li><a href="about_locate.html">위치안내</a></li>
                                 </ul>
                             </li>
-
+                            
                             <li class="submenu">
-                                <a href="javascript:;">Project</a>
+                                <a href="#">Project</a>
                                 <ul>
                                     <li><a href="Projects_changho.html">창호</a></li>
                                     <li><a href="Projects_curtainWall.html">커튼월</a></li>
-                                    <li><a href="Projects_steel.html">철구조물</a></li>
-                                    <li><a href="Projects_panel.html">판넬</a></li>
                                     <li><a href="products.html">더보기</a></li>
                                 </ul>
                             </li>
@@ -247,15 +246,11 @@
                             <div style="position: absolute; top: 145%; left: 50%; transform: translate(-50%, 0%); display: flex; gap: 10px;" class="main-buttons">
                                 <div class="main-border-button" style="display: flex; gap: 4px;">
                                     <li class="scroll-to-section"></li><a href="#men" style="display: flex; 
-                                        justify-content: center; align-items: center; width: 130px; align-items: center;">창호 & 중문</a>
-                                                                            <li class="scroll-to-section"></li><a href="#sunroom" style="display: flex; 
-                                        justify-content: center; align-items: center; width: 130px; align-items: center;">썬룸</a>
+                                        justify-content: center; align-items: center; width: 140px; align-items: center;">아파트 & 빌라</a>
                                     <li class="scroll-to-section"></li><a href="#women" style="display: flex; justify-content: center;
-                                         align-items: center; width: 130px; align-items: center;">커튼월</a>
-                                        <li class="scroll-to-section"></li><a href="#kids" style="display: flex; justify-content: center; 
-                                         align-items: center; width: 130px; align-items: center;">철구조물</a>
-                                        
-                                        <li class="scroll-to-section"></li><a href="#door" style="display: flex; justify-content: center; align-items: center; width: 130px; align-items: center;">판넬</a>
+                                         align-items: center; width: 140px; align-items: center;">단독주택</a>
+                                    <li class="scroll-to-section"></li><a href="#kids" style="display: flex; justify-content: center;
+                                         align-items: center; width: 140px; align-items: center;">커튼월</a>
                                     <li class="scroll-to-section"></li><a href="products.html" style="display: flex; justify-content: center; align-items: center; width: 130px; align-items: center;">사례 더보기</a>
                                 </div>
                             </div>
@@ -272,11 +267,17 @@
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-<!-- 상단 버튼들 -->
 </style>
 
 
-
+<!-- 유니티 견적 프로그램 구역 -->
+ <!-- 견적 팝업창으로 띄우기 -->
+<script>
+    document.getElementById("openPopup").addEventListener("click", function (event) {
+        event.preventDefault(); // 기본 링크 동작 방지
+        window.open("HYI_Unity/index.html", "popupWindow", "width=800,height=600,scrollbars=yes,resizable=yes");
+    });
+</script>
 
 
 <!-- 유튜브 영상 -->
@@ -307,114 +308,24 @@
 
 
 
-<!-- 영림이여야 하는 이유 -->
-<section class="section">
+    <!-- 이거 리뷰 들어오면 margin top -75로 바꾸기 -->
 
-    <img class="pc_reason" src="assets/images/Reason_imgTest.png" style="width: 50%; height: 100%;
-    margin-left: auto; margin-right: auto; display: block;
-    margin-top: 5%;">
-        <img class="mobile_reason" src="assets/images/Reason_imgTest.png" style="align-content: center;
-    margin-top: 5%;">
-        <!-- <img class="pc_reason" src="assets/images/reason_2.png" style="width: 70%;
-        margin-left: auto; margin-right: auto; display: block;
-    margin-top: 5%;">
-            <img class="mobile_reason" src="assets/images/reason_2.png" style="align-content: center; width: 100%;
-    margin-top: 5%;"> -->
+<!-- 문의 견적 상담 요청 보내기 -->
+<section class="section" id="explore" style="margin-top: -75%;">
+<center>
+    <img class="mobileFormTitle" src="assets/images/formTitle_2.png" 
+    style="display: flex; justify-content: center; width: 40%;">
+</center>
+    <style>
+        @media (max-width: 768px) {
+        .mobileFormTitle {
+            width: 80% !important;
+        }
+    }
+    </style>
 </section>
-
-<style>
-    .mobile_reason{
-        display: none;
-    }
-@media (max-width: 768px) {
-    .pc_reason {
-        display: none !important;
-    }
-    .mobile_reason{
-        display: flex;  
-        width: 100% !important; 
-    }
-    }
-</style>
-
-
-
-
-<!--
-hover img 없는 코드드 
-<section class="section" id="products" style="background-color: rgb(245, 238, 227);">
-    <div class="container">
-        <div class="row">
-             PC에서는 한 줄에 3개, 모바일에서는 한 줄에 2개 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                         버튼 생성 
-                        <a href="about.html?tab=1">
-                            <img src="assets/images/img/about_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                        <a href="about.html?tab=3">
-                            <img src="assets/images/img/product_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                        <a href="products.html">
-                            <img src="assets/images/img/ex_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>                    
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                        <a class="scroll-to-section" href="#explore">
-                            <img src="assets/images/img/form_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>    
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                         이동하는 곳 수정하기 
-                        <a class="scroll-to-section" href="#explore">
-                            <img src="assets/images/img/why_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>                     
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
-                <div class="item">
-                    <div class="thumb text-center">
-                        <a href="faq_page.html">
-                            <img src="assets/images/img/faq_btn.png" class="responsive-btn" alt="Button Image">
-                        </a>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-
-<!-- 상담 요청 보내기 -->
-<section class="box" style="width: 100%; display: flex; justify-content: center; margin-top: 10px; background-color: #fd8856;">
-    <div class="left-content" style="margin-right: 25%; margin-top: 1%;">
-        <div class="form_Text" style="font-size: 40px; font-weight: bold; align-content: center; color: white;">간편 견적 받기</div>
-        <div class="left-form-img">
-            <img src="assets/images/img/index_form_left.png" alt="견적 이미지" style="width: 100%; max-width: 400px; height: auto;">
-        </div>
-    </div>
+<!-- 여기도 마진 탑 -70프로 바꾸기 -->
+<section class="box" style="width: 100%; display: flex; justify-content: center; background-color: #ffffff;">
 
 <style>
 /* 기본 이미지 스타일 */
@@ -449,34 +360,20 @@ hover img 없는 코드드
 }
 </style>
 
-
     <div class="right-content" style="margin-top: -1%;" id="top_submit">
         <div class="form" style="max-width: 600px; width: 100%;">
             <form>
-                <h2 style="font-size: 30px; font-weight: bold; text-align: center; color: rgb(255, 255, 255);margin-bottom: 5px;">간편 견적 받기</h2>
+
                 <div class="horizontal-box" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
                     <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
                         <textarea type="text" placeholder="전화번호" id="userName" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
                     </div>
-                    <!-- <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
-                        <textarea type="text" placeholder="전화번호" id="phoneNumber" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
-                    </div> -->
-                    <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
-                        <textarea type="text" placeholder="지역" id="지역" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
-                    </div>
                 </div>
 
-
-                <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
-                    <textarea type="text" placeholder="단창/이중창 교체 수량" id="교체수량" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
-                </div>
-                <div class="inputBox" style="flex: 1; min-width: 120px; position: relative;">
-                    <textarea type="text" placeholder="주거형태(아파트/상가 등)" id="주거형태" required style="padding-left: 10px; width: 100%; height: 40px; resize: none;"></textarea>
-                </div>
                 <div class="inputBox" style="position: relative; margin-bottom: 20px;">
-                    <textarea placeholder="중문 등 기타 문의를 작성해 주시면 1차 견적을 보내드립니다." id="contents" required style="padding-left: 10px; width: 100%; height: 100px; resize: none;"></textarea>
+                    <textarea placeholder="문의사항" id="contents" required style="padding-left: 10px; width: 100%; height: 100px; resize: none;"></textarea>
                 </div>
-                <input style="margin-top: -7px;" type="submit" value="상담 신청" class="sub" id="submit">
+                <input class="submitBtn" style="margin-top: -7px; background-color: #3C2415; color: white;" type="submit" value="문의" class="sub" id="submit">
             </form>
         </div>
     </div>
@@ -484,17 +381,29 @@ hover img 없는 코드드
     <style>
     /* 기본 스타일 */
     .horizontal-box {
+        margin-top: 10%;
         display: flex;
         gap: 10px;
         flex-wrap: wrap; /* 화면 크기에 따라 자동 줄바꿈 */
     }
     
     .inputBox textarea {
+        width: 350px !important;
         width: 100%;
         box-sizing: border-box; /* 패딩 포함 크기 계산 */
         height: 40px;
         resize: none;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 1); /* 그림자 추가 */
+        border-radius: 4px;
     }
+    
+    .submitBtn{
+        width: 100%;
+        height: 35px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 1); /* 그림자 추가 */
+        border-radius: 4px;
+    }
+    
     
     /* 모바일 반응형 스타일 */
     @media (max-width: 768px) {
@@ -507,522 +416,737 @@ hover img 없는 코드드
         }
     }
     </style>
-    
 </div>
+</section>
+
+
+
+
+
+<!-- 리뷰 -->
+
+<section class="section" id="products">
+    <div style="  text-align: center; font-weight: bold;">
+        <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 50px;">시공 후기</h1></div>
+        <div style=" font-size: 30px; color: #ffb535;text-align: center; font-weight: bold; margin-top: 2%;"><h1>|</h1></div>
+
+    <div style=" font-size: 20px; text-align: center; font-weight: bold; margin-top: 2%; margin-bottom: 2%;">
+    <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 25px;"><a style="color: #ffb535;">만족하신 고객님들의</a> <br>
+            생생한 리뷰입니다.</h1></div>
+
+
+
+    <div class="container">
+        <div class="row" id="reviewContainer">
+            <!-- 리뷰 아이템은 JavaScript로 동적으로 로드 -->
+        </div>
+        <div class="col-lg-12">
+            <div class="pagination">
+                <ul id="pagination">
+                    <!-- 페이지네이션 버튼 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 팝업창 -->
+<div id="reviewPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <button id="closePopup" class="close-btn">X</button>
+        <h2 id="popupTitle"></h2>
+        <div id="popupTitle"></div>
+        <img style="margin-top: 10%;" id="popupImage" src="" alt="Review Image" />
+        <p id="popupText" style="font-size: 16px;"></p>
+    </div>
+</div>
+
+<script>
+    const reviews = [
+        { image: "assets/images/리뷰/1.jpg", title: "두번째 공사까지 너무 만족합니다.", text: "작년에 타 업체 대비 견적이 가장 괜찮아서 공사 진행 했어요 <br>저렴한 만큼 시공 품질이 떨어지지 않을까 많이 고민 했는데 하자 없이 너무 잘 해주셔서 이번에 또 맡기게 되었습니다.<br> 두번째 공사도 너무 만족해요.",who:"황O훈 경기도 부천시" ,address: "경기도 부천시", date: "2025-01-20" },
+        { image: "assets/images/리뷰/23.jpg", title: "너무 훌륭한 공사비, 시공입니다.", text: "저희 집 베란다가 겨울마다 너무 춥고 밖에서 봤을 때 집이 너무 낡았는데<br>샷시 교체 하나로 집이 깔끔해졌습니다. 공사도 빨리 진행해주시고 견적도 괜찮고 하자 없이 깔끔하게 진행 해주셨네요",who:"김O석 경기도 화성시",address:"경기도 화성시" , date: "2025-1-15" },
+    { image: "assets/images/리뷰/3.jpg", title: "가격, 시공 너무 만족 합니다!", text: "세입자 집 샷시가 오래돼서 견적 의뢰 하게 되었습니다.<br> 주방창문도 갈아야 했는데 사장님께서 덧방으로 마무리 하면 비용도 절감하고 효율도 더 좋다고 하셨는데 하고 나니까 <br>세입자도 좋아하고 저도 너무 맘에 드네요.",who:"송O진 서울 특별시",address:"서울 특별시" , date: "2025-01-02" },
+        { image: "assets/images/리뷰/6.jpg", title: "처음부터 끝까지 맘에 쏙 들어요.", text: "실측 오신 후 친절하게 설명해주셔서 믿고 진행했습니다~<br>하자 나오진 않을까 많이 걱정 했는데 마무리까지 깔끔하게 진행 되어서 좋아요.",who:"박O민 경기도 부천시", address:"경기도 화성시" , date: "2024-12-15" },
+        { image: "assets/images/리뷰/5.jpg", title: "베란다 샷시 교체 매우 만족 합니다.", text: "확실히 오래된 샷시 교체하고 나니까 집안이 달라지는 것 같아요.<br> 사장님께서 친절하게 상담도 해주시고 하자 없이 잘 진행해주셔서<br>큰 맘 먹고 하길 잘했다는 생각이 들어요.", who:"박O훈 서울 특별시",address:"서울 특별시" ,date: "2024-12-02" },
+        { image: "assets/images/리뷰/2.jpg", title: "좋은 가격으로 교체 했어요.", 
+    text: "샷시가 오래 되어 집이 많이 추워서 교체 했습니다. <br>여러 군데 견적 비교 하고 한양창호에서 샷시 교체 진행 했는데 견적 가격도 너무 좋고 하자 없이 잘 마무리 되었습니다. 감사합니다.",who:"김O훈 경기도 의왕시", address:"경기도 의왕시" ,date: "2024-11-30" },    
+        { image: "assets/images/리뷰/7.jpg", title: "시공 너무 잘해주셨어요.", text: "걱정 없도록 상담도 잘 해주시고 매우 만족 합니다.",who:"김O진 서울 특별시",address:"서울 특별시" , date: "2024-11-30" },
+        { image: "assets/images/리뷰/9.jpg", title: "상담도 친절하게 해주시고 공사도 잘하시고", text: "어떤 창호로 해야 되는지 잘 몰랐는데 친절하게 상담 해 주시고<br> 공사도 너무 잘해주셔서 다음에 또 할 일 있으면 의뢰 하려고 합니다 !",who:"윤O석 서울 특별시",address:"서울 특별시" , date: "2024-11-25" },
+        { image: "assets/images/리뷰/10.jpg", title: "친절하고 책임감도 있으시고 대만족합니다.", text: "정말 시공 잘 못 돼서 골치아프게 될까봐 걱정 많이 했는데 <br>너무 잘해주셔서 감사합니다.",who:"이O준 서울 특별시",address:"서울 특별시" , date: "2024-11-02" },
+        { image: "assets/images/리뷰/11.jpg", title: "믿고 맡겨도 좋습니다 !", text: "샷시도 깨끗하고 가격도 좋고 대만족 입니다.",who:"임O석 경기도 의왕시 ",address:"경기도 의왕시" , date: "2024-10-14" },
+        { image: "assets/images/리뷰/12.jpg", title: "만족하는 공사 입니다.", text: "다음에도 기회가 생기면 또 맡길 것 같아요<br>공사 설명도 너무 잘해주시고 친절하시고<br>모든 방면에서 만족 합니다.",who:"김O진 경기도 안산시",address:"경기도 안산시" , date: "2024-10-01" },
+        { image: "assets/images/리뷰/13.jpg", title: "처음부터 끝까지 정말 잘해주셨습니다.", text: "저희가 좀 까다롭게 요구 드렸는데도 친절하고<br>끝까지 책임지시고 공사하시는 모습이 너무 좋았습니다.<br>번창하세요!",who:"김O석 경기도 의왕시",address:"경기도 의왕시" , date: "2024-09-23" },
+        { image: "assets/images/리뷰/14.jpg", title: "가격, 시공, 친절 너무 좋아요.", text: "매우 만족합니다 ~!",who:"김O자 경기도 화성시",address:"경기도 화성시 " , date: "2024-09-10" },
+        { image: "assets/images/리뷰/15.jpg", title: "타 업체 대비 가격도 저렴하고 솜씨도 좋아요.", text: "어쩜 이렇게 잘해주셨는지 사장님도 친절하시고<br>공사일정도 빨라서 하길 잘했다는 생각입니다.",who:"송O자 경기도 안양시",address:"경기도 안양시" , date: "2024-08-30" },
+        { image: "assets/images/리뷰/16.jpg", title: "샷시 볼때마다 하길 잘한 것 같습니다.", text: "대만족이에요!",who:"박O호 경기도 시흥시",address:"경기도 시흥시" , date: "2024-08-23" },
+        { image: "assets/images/리뷰/17.jpg", title: "가격 너무 괜찮아요.", text: "뒷 마무리까지 잘 ~ 마무리해주셔서 매우 만족 합니다.",who:"조O성 서울 특별시",address:"서울 특별시" , date: "2024-08-20" },
+        { image: "assets/images/리뷰/18.jpg", title: "친절하고 가성비도 좋아요.", text: "오래된집 샷시 교체가 필요해서 이 업체 저 업체 알아보던 중<br>인터넷으로 알게 됐는데 공사 잘 마무리 돼서 다행이에요.",who:"김O진 서울 특별시",address:"서울 특별시" , date: "2024-08-03" },
+        { image: "assets/images/리뷰/19.jpg", title: "상담도 친절하고 공사도 빨라요.", text: "상담 공사 다 좋습니다!",who:"김O석 서울 특별시",address:"서울 특별시" , date: "2024-07-23" },
+        { image: "assets/images/리뷰/20.jpg", title: "걱정했던 하자가 없어서 다행입니다.", text: "전에 공사 하면서 하자가 많이 나와서 걱정 많이 했는데 하자 없어서 좋습니다.",who:"강O주 서울 특별시",address:"서울 특별시" , date: "2024-07-10" },
+        { image: "assets/images/리뷰/21.jpg", title: "마무리 잘 해주셔서 감사합니다~", text: "다음에 공사 하게 될 일 있으면 또 부탁드려요.",who:"송O준 경기도 화성시",address:"경기도 화성시" , date: "2024-07-25" },
+        { image: "assets/images/리뷰/22.jpg", title: "합리적인 견적이에요.", text: "이 가격에 하자도 없고 마무리도 잘되고 너무 만족 합니다.",who:"유O석 경기도 의왕시",address:"경기도 의왕시" , date: "2024-06-05" },
+        { image: "assets/images/리뷰/4.jpg", title: "뒷 탈 없는 공사 매우 만족 !", text: "만족 만족 대만족.",who:"김O준 경기도 성남시",address:"경기도 성남시" , date: "2024-05-28" },
+        { image: "assets/images/리뷰/24.jpg", title: "꼼꼼한 작업", text: "친절하신만큼 매우 꼼꼼해요.",who:"김O준 경기도 안산시",address:"경기도 안산시" , date: "2024-05-23" },
+
+    ];
+
+    let reviewsPerPage = 6;
+    let totalPages = Math.ceil(reviews.length / reviewsPerPage);
+
+    // PC와 모바일에서 다른 reviewsPerPage 값 설정
+    function updateReviewsPerPage() {
+        reviewsPerPage = window.innerWidth <= 768 ? 4 : 6;
+        totalPages = Math.ceil(reviews.length / reviewsPerPage); // totalPages 재계산
+    }
+
+    let currentPage = 1; // 현재 페이지를 추적할 변수
+
+
+    function loadReviews(page) {
+        currentPage = page;
+        const reviewContainer = document.getElementById("reviewContainer");
+        reviewContainer.innerHTML = "";
+
+        const startIndex = (page - 1) * reviewsPerPage;
+        const endIndex = Math.min(startIndex + reviewsPerPage, reviews.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const review = reviews[i];
+            const reviewHTML = `
+                <div class="col-lg-4">
+                    <div class="item" onclick="openPopup(${i})">
+                        <div class="thumb">
+                            <img src="${review.image}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>${review.title}</h4>
+                            <span style="font-size:15px;">${review.who}</span>
+                            <span>${review.date}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            reviewContainer.innerHTML += reviewHTML;
+        }
+    }
+
+// 기존 방식
+    // function openPopup(index) {
+    //     const review = reviews[index];
+    //     document.getElementById("popupTitle").textContent = review.title;
+    //     document.getElementById("popupImage").src = review.image;
+    //     document.getElementById("popupText").textContent = review.text;
+
+    //     const popup = document.getElementById("reviewPopup");
+    //     popup.style.display = "block";
+    // }
+
+    function openPopup(index) {
+    const review = reviews[index];
+    
+    // 팝업에 표시할 HTML 내용 생성
+    const popupContent = `
+        <html>
+        <head>
+            <title>${review.title}</title>
+            <style>
+                body { font-family: 'Arial', sans-serif; text-align: center; padding: 20px;
+                margin-top: 5%; }
+                h2 { font-size: 24px; color: #333; margin-bottom: 10px; position: relative; }
+                h2::after {
+                    content: "";
+                    display: block;
+                    width: 80%; /* 가로선 길이 */
+                    height: 1px; /* 가로선 두께 */
+                    background: #000; /* 가로선 색상 */
+                    margin: 10px auto 0; /* 간격 및 중앙 정렬 */
+                }
+                    /* 팝업창 내 이미지 크기 조절 */
+                img { width: 80%; height: auto; margin-bottom: 10px; border-radius: 5px; }
+                p { font-size: 16px; }
+            </style>
+        </head>
+        <body>
+            <h2>${review.title}</h2>
+            <p><strong>시공일: </strong>${review.date}</p>
+            <p><strong>주소: </strong>${review.address}</p>
+            <img src="${review.image}" alt="Review Image" />
+            <p>${review.text}</p>
+
+        </body>
+        </html>
+    `;
+
+    // 팝업창 사이즈
+    const popupWindow = window.open("", "_blank", "width=450,height=500");
+    popupWindow.document.write(popupContent);
+    popupWindow.document.close(); // 문서를 닫아야 브라우저가 렌더링을 시작함
+}
+
+
+    
+    
+    function closePopup() {
+        document.getElementById("reviewPopup").style.display = "none";
+    }
+
+    document.getElementById("closePopup").addEventListener("click", closePopup);
+
+    function loadPagination() {
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement("li");
+            pageButton.innerHTML = `<a href="#">${i}</a>`;
+            if (i === 1) pageButton.classList.add("active");
+
+            pageButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                const currentActive = document.querySelector("#pagination .active");
+                if (currentActive) currentActive.classList.remove("active");
+                pageButton.classList.add("active");
+                loadReviews(i);
+            });
+
+            pagination.appendChild(pageButton);
+        }
+    }
+
+// 기존의 JavaScript 코드 맨 아래 또는 이벤트 리스너와 관련된 섹션에 추가
+function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+    if (isMobile()) {
+        return; // 모바일 환경에서는 리사이즈 처리 생략
+    }
+    
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        const currentPage = document.querySelector("#pagination .active a").textContent; // 현재 활성화된 페이지를 저장
+        updateReviewsPerPage();
+        loadReviews(parseInt(currentPage)); // 저장된 페이지로 다시 로드
+        loadPagination(); // 페이지네이션 다시 로드
+        document.querySelectorAll("#pagination li")[currentPage - 1].classList.add("active"); // 현재 페이지 다시 활성화
+    }, 150);
+});
+
+window.addEventListener("orientationchange", () => {
+    const currentPage = document.querySelector("#pagination .active a").textContent;
+    updateReviewsPerPage();
+    loadReviews(parseInt(currentPage)); // 저장된 페이지로 다시 로드
+    loadPagination(); // 페이지네이션 다시 로드
+    document.querySelectorAll("#pagination li")[currentPage - 1].classList.add("active"); // 현재 페이지 다시 활성화
+});
+
+
+    // 초기 설정
+    updateReviewsPerPage();
+    loadPagination();
+    loadReviews(currentPage);
+</script>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .section {
+        padding: 20px 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-lg-4 {
+        width: 50%;
+        padding: 10px;
+    }
+    .item {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        background: #fff;
+        cursor: pointer;
+    }
+    .thumb {
+        width: 100%;
+        aspect-ratio: 4 / 3; /* 4:3 비율 유지 */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 이미지 크기 조정 */
+    }
+    .down-content {
+        padding: 10px;
+    }
+    .down-content h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;   /* 최대 줄 수 제한 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;        /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 말줄임표(...) 표시 */
+}
+    .pagination ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .pagination ul li {
+        margin: 0 5px;
+    }
+    .pagination ul li a {
+        display: block;
+        padding: 0px 10px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 3px;
+        text-decoration: none;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .pagination ul li a:hover, .pagination ul li.active a {
+        background: #0056b3;
+    }
+        .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: center;    /* 세로 중앙 정렬 */
+        z-index: 1000;
+    }
+    .popup-content {
+    position: relative; /* 부모 요소(.popup-overlay) 안에서 위치를 기준 */
+    margin: 0; /* 여백 제거 */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 500px;
+    max-width: 90%;
+    text-align: center;
+    transform: translate(-50%, -50%); /* 정 중앙으로 이동 */
+    top: 50%; /* 수직 중앙 기준 */
+    left: 50%; /* 가로 중앙 기준 */
+}
+.popup-content h2 {
+    margin-bottom: 10px; /* 제목과 가로선 사이 간격 */
+    font-size: 24px;
+    color: #333;
+}
+.popup-content h2::after {
+    content: "";
+    display: block;
+    width: 80%; /* 가로선 길이 */
+    height: 1px; /* 가로선 두께 */
+    background: #000000; /* 가로선 색상 */
+    margin: 10px auto 0; /* 간격 및 중앙 정렬 */
+}
+    .popup-content img {
+        width: 80%;
+        max-height: 300px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+    .col-lg-4 {
+        width: 50%; /* 모바일에서 4개 */
+        }
+    .down-content h4 {
+    -webkit-line-clamp: 2;   /* 최대 줄 수 제한 */
+    }
+}
+</style>
+
+
+
+<!-- 숨고 리뷰 -->
+<section>
+    <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 35px; text-align: center;">네이버플레이스</h1>
+
+    <img class="reviews" src="assets/images/네이버.png" style="width: 70%; height: 100%;
+    margin-left: auto; margin-right: auto; display: block;
+    margin-top: 5%;">
+    
+<h1 style=" margin-top: 3% ;color: rgb(0, 0, 0); font-weight: bold; font-size: 35px; text-align: center;">숨고</h1>
+<img  class="reviews" src="assets/images/숨고.png" style="width: 70%; height: 100%;
+margin-left: auto; margin-right: auto; display: block;
+margin-top: 5%;">
+
+<style>
+        @media (max-width: 768px) {
+    .reviews {
+        width: 100% !important;
+        }
+    }
+</style>
 
 </section>
 
 
-    <section class="section" id="men">
 
-        <!-- <img src="assets/images/img/top_sen.png" style="align-content: center; width: 100%;">
-        <img src="assets/images/img/index_freeCounsel.png" style="align-content: center; width: 100%;"> -->
-        <div style=" font-size: 30px; text-align: center; font-weight: bold;"><h1 style="color: rgb(75, 75, 249); font-weight: bold;">HANYANG</h1> WINDOW PROJECT</div><br>
 
-        <div class="container">
+<!-- 영림이여야 하는 이유 -->
+<section class="section">
 
-            
-    <section class="section" id="products">
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-    
-                </div>
-            </div>
-        </div> -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="item">
-                        <div class="thumb">
-                            <img src="assets/images/창호/창호_4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item">
-                        <div class="thumb">
-                            <img src="assets/images/창호/창호_9.jpg" alt="">
-                        </div>
+    <img class="pc_reason" src="assets/images/이유_1.jpg" style="width: 50%; height: 100%;
+    margin-left: auto; margin-right: auto; display: block;
+    margin-top: 5%;">
+        <img class="mobile_reason" src="assets/images/이유_1.jpg" style="align-content: center;
+    margin-top: 5%;">
+</section>
 
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="item">
-                        <div class="thumb">
-                            <img src="assets/images/창호/창호_3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>        
-            </section>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-heading">
-                        <h2 style="margin-top: 25px;">창호 & 중문</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="men-item-carousel">
-                        <div class="owl-men-item owl-carousel">
+<style>
+    .mobile_reason{
+        display: none;
+    }
+@media (max-width: 768px) {
+    .pc_reason {
+        display: none !important;
+    }
+    .mobile_reason{
+        display: flex;  
+        width: 100% !important; 
+    }
+    }
+</style>
 
-                            <div class="item">
-                                <div class="thumb">
-                                    <img src="assets/images/창호/창호_1.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                </div>
-                            </div>
 
-                            <div class="item">
-                                <div class="thumb">
-                                    <img src="assets/images/창호/창호_4.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                    </div>
-                                    <img src="assets/images/창호/창호_2.jpg" alt="">
-                                </div>
-                                <div class="down-content">
-                                    <!-- <h4>Air Force 1 X</h4>
-                                    <span>$90.00</span> -->
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/창호/창호_3.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Love Nana ‘20</h4>
-                                    <span>$150.00</span>
-                                </div> -->
-                            </div>
-                            <!-- 추가 아이템 -->
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                    </div>
-                                    <img src="assets/images/창호/중문_2.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Men Area Ends ***** -->
 
-<!-- 썬룸 -->
 
-<section class="section" id="sunroom">
+
+<!-- 아파트 빌라-->
+    <div style=" font-size: 30px; text-align: center; font-weight: bold; margin-top: 5%;"><h1 style="color: rgb(75, 75, 249); font-weight: bold;">HANYANG</h1> WINDOW PROJECT</div><br>
+<section class="section" id="men">
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .carousel-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .carousel .slide {
+            margin: 5px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 350px !important;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* 화살표 버튼 */
+        .slick-prev, .slick-next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .slick-prev:hover, .slick-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .slick-prev {
+            left: -50px;
+        }
+
+        .slick-next {
+            right: -50px;
+        }
+        .slick-slide {
+            margin: 0 10px; /* 슬라이드 간격 */
+        }
+
+        .slick-list {
+            margin: 0 -10px; /* 전체 슬라이드 정렬 보정 */
+        }
+
+                /* PC 전용 스타일 */
+        @media (min-width: 1024px) {
+            .carousel img {
+                width: 100%; /* 슬라이드에 꽉 차도록 */
+                height: 400px !important;
+                height: auto; /* 이미지 높이를 고정 */
+                object-fit: cover; /* 비율을 유지하며 잘림 방지 */
+            }
+
+            .slick-prev {
+                left: -30px; /* 화살표 간격 조정 */
+            }
+
+            .slick-next {
+                right: -30px; /* 화살표 간격 조정 */
+            }
+        }
+    </style>
+</head>
+<body>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-heading">
-                    <h2>썬룸</h2>
+                    <h2>아파트 & 빌라</h2>
                 </div>
             </div>
         </div>
     </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide"><img src="assets/images/아파트빌라/1.jpg" alt="창호 1"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/2.jpg" alt="창호 2"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/3.jpg" alt="창호 3"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/4.jpg" alt="중문 2"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/5.jpg" alt="중문 2"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/6.jpg" alt="중문 2"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/7.jpg" alt="중문 2"></div>
+            <div class="slide"><img src="assets/images/아파트빌라/8.jpg" alt="중문 2"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                infinite: true, // 무한 루프
+                slidesToShow: 3, // 한 번에 보여줄 슬라이드 개수
+                slidesToScroll: 1, // 한 번에 스크롤할 슬라이드 개수
+                arrows: true, // 화살표 활성화
+                responsive: [
+                    {
+                        breakpoint: 768, // 화면 너비 768px 이하
+                        settings: {
+                            slidesToShow: 1 // 모바일에서 2개 표시
+                        }
+                    },
+                ]
+            });
+        });
+    </script>
+</section>
+
+<!-- 단독주택 -->
+<section class="section" id="women">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="kid-item-carousel">
-                    <div class="owl-kid-item owl-carousel">
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-
-                                </div>
-                                <img src="assets/images/썬룸/썬룸_1.png" alt="">
-                            </div>
-                            <!-- <div class="down-content">
-                                <h4>School Collection</h4>
-                                <span>$80.00</span>
-                            </div> -->
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-
-                                </div>
-                                <img src="assets/images/썬룸/썬룸_2.png" alt="">
-                            </div>
-                            <!-- <div class="down-content">
-                                <h4>Summer Cap</h4>
-                                <span>$12.00</span>
-                            </div> -->
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                </div>
-                                <img src="assets/images/썬룸/썬룸_3.png" alt="">
-                            </div>
-                            <!-- <div class="down-content">
-                                <h4>Classic Kid</h4>
-                                <span>$30.00</span>
-                            </div> -->
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                </div>
-                                <img src="assets/images/썬룸/썬룸_4.png" alt="">
-                            </div>
-                            <!-- <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
-                            </div> -->
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                </div>
-                                <img src="assets/images/썬룸/썬룸_5.png" alt="">
-                            </div>
-                            <!-- <div class="down-content">
-                                <h4>Classic Spring</h4>
-                                <span>$120.00</span>
-                            </div> -->
-                        </div>
-                    </div>
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2>단독주택</h2>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide"><img src="assets/images/단독주택/1.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/2.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/3.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/4.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/5.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/6.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/7.jpg" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/8.png" alt=""></div>
+            <div class="slide"><img src="assets/images/단독주택/10.jpg" alt=""></div>
         </div>
     </div>
 </section>
 
-
-
-
-    <!-- ***** Women Area Starts ***** -->
-    <section class="section" id="women">
+    <!-- ***** 상가 ***** -->
+    <section class="section" id="sunroom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>커튼월</h2>
-                        <!-- <span>Details to details is what makes Hexashop different from the other themes.</span> -->
+                        <h2>상가</h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="women-item-carousel">
-                        <div class="owl-women-item owl-carousel">
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/커튼월/커튼월_1.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>New Green Jacket</h4>
-                                    <span>$75.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/커튼월/커튼월_2.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Classic Dress</h4>
-                                    <span>$45.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/커튼월/커튼월_3.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Spring Collection</h4>
-                                    <span>$130.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/커튼월/커튼월_4.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide"><img src="assets/images/상가/1.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/상가/2.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/상가/3.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/상가/4.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/상가/5.jpg" alt=""></div>
             </div>
         </div>
     </section>
-    <!-- ***** Women Area Ends ***** -->
 
-    <!-- ***** Kids Area Starts ***** -->
+
+
+    <!-- ***** 커튼월 ***** -->
     <section class="section" id="kids">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>철구조물</h2>
-                        <!-- <span>Details to details is what makes Hexashop different from the other themes.</span> -->
+                        <h2>커튼월</h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="kid-item-carousel">
-                        <div class="owl-kid-item owl-carousel">
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-
-                                    </div>
-                                    <img src="assets/images/철구조물/철구조물_7.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>School Collection</h4>
-                                    <span>$80.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/철구조물/철구조물_2.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Summer Cap</h4>
-                                    <span>$12.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/철구조물/철구조물_1.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Classic Kid</h4>
-                                    <span>$30.00</span>
-                                </div> -->
-                            </div>
-                            <div class="item">
-                                <div class="thumb">
-                                    <div class="hover-content">
-                                        <ul>
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
-                                            <!-- <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li> -->
-                                        </ul>
-                                    </div>
-                                    <img src="assets/images/철구조물/철구조물_4.jpg" alt="">
-                                </div>
-                                <!-- <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Kids Area Ends ***** -->
-
-<!-- 섹션 추가시 css도 추가하기 -->
-
-<section class="section" id="door">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-heading">
-                    <h2>판넬</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-        
-
-
-            <div class="item">
-                <div class="thumb">
-                    <div class="hover-content">
-
-                    </div>
-                    <img src="assets/images/판넬/판넬_1.png" alt="" style="width: 400px; height: 300px;">
-                </div>
-            </div>
-
-
-
-            <div class="col-lg-12">
-                <div class="kid-item-carousel">
-                    <div class="owl-kid-item owl-carousel">
-                    </section>
-                        <!-- <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-
-                                </div>
-                                <img src="assets/images/판넬/판넬_1.png" alt="">
-                            </div>
-                             <div
-                              class="down-content">
-                                <h4>School Collection</h4>
-                                <span>$80.00</span>
-                            </div>
-                        </div> -->
-                        <!-- <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-
-                                </div>
-                                <img src="assets/images/kid-02.jpg" alt="">
-                            </div>
-                             <div class="down-content">
-                                <h4>Summer Cap</h4>
-                                <span>$12.00</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="hover-content">
-                                </div>
-                                <img src="assets/images/kid-03.jpg" alt="">
-                            </div>
-                             <div class="down-content">
-                                <h4>Classic Kid</h4>
-                                <span>$30.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
- 견적 문의 설명 -->
-    <!-- ***** Explore Area Starts ***** -->
-    <section class="section" id="explore">
-        <div class="container">
-            <!-- <div class="row">
-                <img src="assets/images/img/index_bottom_form.png" style="align-content: center; width: 100%;">
-
-                <div class="col-lg-6">
-                    
-                    <div class="left-content">
-
-                        <br><br><br>
-                        <a href="tel:01040102363" style="font-size: 18px; font-weight: bold;">전화 걸기 : 010-4010-2363</a> <br>
-                        <a href="mailto:ejrwls0321@naver.com" style="font-size: 18px; font-weight: bold;">이메일 보내기 : ejrwls0321@naver.com</a>
-                        <div class="main-border-button">
-
-                            <a href="products.html">시공사례 더보기</a>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <!-- 우측 -->
-                <!-- <div class="col-lg-6">
-                    <div class="right-content">
-                        <div class="row"> -->
-                            <!-- <div class="col-lg-6">
-                                <div class="leather">
-                                    <h4>Leather Bags</h4>
-                                    <span>Latest Collection</span>
-                                </div>
-                            </div> -->
-
-                            <!-- <div class="col-lg-6">
-                                <div class="types">
-                                    <h4>Different Types</h4>
-                                    <span>Over 304 Products</span>
-                                </div>
-                            </div> -->
-                        <!-- </div>
-                    </div>
-                </div> -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide"><img src="assets/images/커튼월/1.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/커튼월/커튼월_3.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/커튼월/커튼월_2.jpg" alt=""></div>
+                <div class="slide"><img src="assets/images/커튼월/커튼월_4.jpg" alt=""></div>
             </div>
         </div>
     </section>
 
-<!-- 상담 요청 보내기 -->
+<!-- 이유_2 -->
+    <section class="section">
+
+        <img class="pc_reason" src="assets/images/이유_2.jpg" style="width: 50%; height: 100%;
+        margin-left: auto; margin-right: auto; display: block;
+        margin-top: 5%;">
+            <img class="mobile_reason" src="assets/images/이유_2.jpg" style="align-content: center;
+        margin-top: 5%;">
+    </section>
 
 
 
 
+<!-- 카톡 이미지 -->
+<style>
+    .kakaoChat {
+        position: fixed;
+        right: 15px;
+        bottom: 50%;
+        width: 70px;
+        height: 70px;
+        z-index: 99;
+    }
+    @media (max-width: 768px){
+        .kakaoChat {
+            width: 45px;
+            height: 45px;
+            bottom: 1%;
+        }
+    }
 
+    .kakaoChat_ {
+        display: none;
+        position: fixed;
+        right: 15px;
+        bottom: 50%;
+        width: 70px;
+        height: 70px;
+        z-index: 99;
+    }
+    @media (max-width: 768px){
+        .kakaoChat_ {
+            display: flex;
+            width: 45px;
+            height: 45px;
+            bottom: 1%;
+        }
+    }
+</style>
 
+<!-- 카톡 연결 -->
+<a href="http://pf.kakao.com/_LIqxbn/chat" target="_blank">
+    <img class="kakaoChat" style="bottom: 45%;" src="assets/images/kakaoImg.png" alt=""/></a>
 
+    <!-- 전화연결 -->
+    <a href="tel:01040102363">
+        <img class="kakaoChat_" style="bottom: 40%;" src="assets/images/phone.png">
+    </a>
+    <!-- 이미지 버튼 -->
+    <a href="#" id="cal" style="cursor: pointer;" target="_blank">
+        <img class="calPro" style="bottom: 35%;" src="assets/images/견적내기_버튼.png" class="calPro" alt="">
+    </a>
+    <style>
+        .calPro {
+            position: fixed;
+            right: 15px;
+            bottom: 26%;
+            width: 70px;
+            height: 70px;
+            z-index: 99;
+        }
+        @media (max-width: 768px){
+            .calPro {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        document.getElementById("cal").addEventListener("click", function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
 
+            // 팝업 창 열기
+            const popupWindow = window.open(
+                "HYI_Unity/index.html", // 팝업으로 열릴 HTML 파일 경로
+                "popupWindow",         // 팝업 창 이름
+                "width=800,height=600,scrollbars=yes,resizable=yes" // 팝업 창 속성
+            );
 
-
-
+            // 팝업 차단 확인
+            if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
+                alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업 차단을 해제해주세요.");
+            }
+        });
+    </script>
 
 <!-- 하단 고정 이미지 -->
-
     <div class="bottom_sticky_img" style="z-index: 10;">
         <div class="container">
-            <a class="scroll-to-section" href="#top_submit">
+            <a class="scroll-to-section" href="#explore">
             <img src="assets/images/img/bottom_fixed.png">
         </a>
         </div>
@@ -1043,7 +1167,7 @@ hover img 없는 코드드
 
         .bottom_sticky_img img
         {
-            max-width: 150px; /* 이미지 최대 너비 제한 */
+            max-width: 230px; /* 이미지 최대 너비 제한 */
             height: auto; /* 비율 유지 */
         }
 
@@ -1086,9 +1210,6 @@ hover img 없는 코드드
                         <div class="logo">
                             <!-- <img src="assets/images/bottom_logo.png" alt="한양산업" style="position: absolute; bottom: 80px; left: -43px;"> -->
                             
-                            <!-- <div style="position: absolute; top: -15px; left: -5px; color: white; font-size: 40px; font-weight: bold;">
-                                한양창호
-                            </div> -->
                         </div>
                         <ul style="margin-top: -50px; margin-left:-17px;">
                             <div style="color: white; font-size: 40px; font-weight: bold;">
@@ -1173,22 +1294,15 @@ hover img 없는 코드드
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-
-    // Get ref to database services
     const db = getDatabase(app);
 
-    // Add event listener to submit button
     document.getElementById("submit").addEventListener('click', function (e) {
         e.preventDefault();
         const currentTime = new Date().toISOString(); // Get current time in ISO format
 
-        // Push data under the 'user' path with a unique key
         push(ref(db, 'user/' + document.getElementById("userName").value), {
             userName: document.getElementById("userName").value,
             contents: document.getElementById("contents").value,
-            교체수량: document.getElementById("교체수량").value,
-            주거형태: document.getElementById("주거형태").value,
-            지역: document.getElementById('지역').value,
             timestamp: currentTime // Add timestamp
         });
 

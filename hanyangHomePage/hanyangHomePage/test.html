@@ -1,155 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
 
+        .carousel-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
 
-  <head>
+        .carousel .slide {
+            margin: 5px;
+        }
 
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-    <!-- 웹사이트 제목 나중에 변경 -->
-    <title>한양창호</title>
+        /* 화살표 버튼 */
+        .slick-prev, .slick-next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
+        .slick-prev:hover, .slick-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
+        .slick-prev {
+            left: -50px;
+        }
 
-
-
-
-
-
-
-
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.min.css">
-        <!-- 여기서 색상 변경 -->
-        <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.orange-coral.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.midnight-blue.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/calendar/evo-calendar.royal-navy.min.css">
-    
-        <link rel="stylesheet" type="text/css" href="assets/css/calendar/demo.css">
-
+        .slick-next {
+            right: -50px;
+        }
+    </style>
+</head>
 <body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide"><img src="assets/images/창호/창호_1.jpg" alt="창호 1"></div>
+            <div class="slide"><img src="assets/images/창호/창호_2.jpg" alt="창호 2"></div>
+            <div class="slide"><img src="assets/images/창호/창호_3.jpg" alt="창호 3"></div>
+            <div class="slide"><img src="assets/images/창호/중문_2.jpg" alt="중문 2"></div>
+        </div>
+    </div>
 
-    <!-- 일정 추가 및 삭제 관리는 demo.js 에서 관리 -->
-                <section id="demos">
-                    <div class="section-content">
-                        <p class="section-title --shrt">한양창호 달력 테스트</p>
-                        <div class="action-buttons">
-                            <p class="section-desc">달력 테스트 </p>
-                            <button class="btn-action active" data-set-theme="Default">DEFAULT</button>
-                            <button class="btn-action" data-set-theme="Orange Coral">ORANGE CORAL</button>
-                        </div>
-                        <div class="console-log">
-                            <div class="log-content">
-                                <div class="--noshadow" id="demoEvoCalendar"></div>
-                            </div>
-                        </div>
-                        <div class="action-buttons">
-                        </div>
-                    </div>
-                </section>
-    
-
-        <!-- jQuery -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-        <script src="assets/js/Calendar/evo-calendar.min.js"></script>
-        <script src="assets/js/Calendar/demo.js"></script>
-
-
-<!-- 셀프 견적 테스트 -->
-
-
-
-
-<div class="container">
-    <label for="product">제품 선택:</label>
-    <select id="product" onchange="calculatePrice()">
-        <option value="0">제품을 선택하세요</option>
-        <option value="100000">빠른 퇴사- 100,000원</option>
-        <option value="200000">이직 - 200,000원</option>
-        <option value="300000">빠른 이직 - 300,000원</option>
-    </select>
-</div>
-
-<div class="container">
-    <label for="color">색상 선택:</label>
-    <select id="color" onchange="calculatePrice()">
-        <option value="0">색상을 선택하세요</option>
-        <option value="10000">빨강 - 추가 10,000원</option>
-        <option value="20000">파랑 - 추가 20,000원</option>
-        <option value="30000">검정 - 추가 30,000원</option>
-    </select>
-</div>
-
-<div class="container">
-    <label for="width">가로 (mm):</label>
-    <input type="number" id="width" placeholder="가로 입력" onchange="calculatePrice()">
-</div>
-
-<div class="container">
-    <label for="height">세로 (mm):</label>
-    <input type="number" id="height" placeholder="세로 입력" onchange="calculatePrice()">
-</div>
-
-
-<div class="container">
-    <label for="windowType">창 유형 선택:</label>
-    <select id="windowType" onchange="calculatePrice()">
-        <option value="none">없음</option>
-        <option value="single">단창</option>
-        <option value="double">이중창</option>
-    </select>
-</div>
-
-<p>최종 가격: <span id="result">0원</span></p>
-
-<script>
-    function calculatePrice() {
-        // 제품 가격
-        const productPrice = parseInt(document.getElementById("product").value);
-        // 색상 추가 가격
-        const colorPrice = parseInt(document.getElementById("color").value);
-        
-        // 사이즈 입력값 가져오기
-        const width = parseInt(document.getElementById("width").value) || 0;
-        const height = parseInt(document.getElementById("height").value) || 0;
-
-        // 사이즈 계산 (가로 x 세로 x 11)
-        let sizePrice = width * height * 11;
-        
-        // 계산된 값의 앞 두 자리 가져오기
-        let sizeFactor = Math.floor(sizePrice / 1000000); // 앞 두 자리만 추출
-
-        // 사이즈 계산 가격 = 앞 두 자리 * 5000
-        let finalSizePrice = sizeFactor * 5000;
-
-    // 창 유형에 따른 가격 계산
-    const windowType = document.getElementById("windowType").value;
-
-    if (windowType === "double") {
-        // 이중창인 경우 finalSizePrice * 2
-        finalSizePrice *= 2;
-    }
-
-    // 최종 가격 계산
-    const totalPrice = productPrice + colorPrice + finalSizePrice;
-
-    // 결과 출력
-    document.getElementById("result").textContent = totalPrice.toLocaleString() + "원";
-    }
-</script>
-
-
-
-
-
-
-
-
-
-
-  </body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                infinite: true, // 무한 루프
+                slidesToShow: 2, // 한 번에 보여줄 슬라이드 개수
+                slidesToScroll: 1, // 한 번에 스크롤할 슬라이드 개수
+                arrows: true, // 화살표 활성화
+                responsive: [
+                    {
+                        breakpoint: 768, // 화면 너비 768px 이하
+                        settings: {
+                            slidesToShow: 2 // 모바일에서 2개 표시
+                        }
+                    },
+                    {
+                        breakpoint: 480, // 화면 너비 480px 이하
+                        settings: {
+                            slidesToShow: 2 // 화면에 1개 표시
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
 </html>

@@ -826,8 +826,10 @@ Men
   visibility: visible;
 }
 
+/* 이미지 크기 */
 #men .item .thumb {
   position: relative;
+  /* width: 50%; */
 }
 
 #men .item .thumb .hover-content ul li {
@@ -849,7 +851,8 @@ Men
 #men .owl-nav {
   text-align: center;
   position: absolute;
-  width: 100%;
+  /*  화살표 사이 간격 */
+  width: 100%;  
   top: 40%;
   transform: translateY(-25px);
 }
@@ -860,7 +863,7 @@ Men
     
 #men .owl-nav .owl-prev{
   position: absolute;
-  left: -80px;
+  left: -60px;
   outline: none;
 }
 
@@ -876,8 +879,9 @@ Men
   font-size: 25px;
   font-weight: 700;
   content: '\f104';
-  width: 50px;
-  height: 50px;
+  /* 화살표 */
+  width: 20px;
+  height: 20px;
   background-color: transparent;
   line-height: 48px;
   border :1px solid #2a2a2a;
@@ -904,7 +908,8 @@ Men
 #men .owl-nav .owl-next{
   outline: none;
   position: absolute;
-  right: -85px;
+  /* 오른쪽 화살표 위치 */
+  right: -60px;
 }
 
 #men .owl-nav .owl-next:before {
@@ -922,6 +927,7 @@ Men
 }
 
 
+
 /*
 ---------------------------------------------
 Women
@@ -930,7 +936,6 @@ Women
 
 #women {
   background-color: rgb(245, 238, 227);;
-
   padding-top: 90px;
   padding-bottom: 90px;
   border-bottom: 3px dotted #eee;
@@ -1091,6 +1096,7 @@ Kids
 */
 
 #kids {
+  background-color: rgb(245, 238, 227);;
   padding-top: 90px;
   padding-bottom: 90px;
   border-bottom: 3px dotted #eee;
@@ -1310,7 +1316,7 @@ Sunroom 추가
   opacity: 1;
   visibility: visible;
 }
-
+/* 이미지 크기 설정정 */
 #sunroom .item .thumb {
   position: relative;
 }
@@ -1405,10 +1411,6 @@ Sunroom 추가
   line-height: 48px;
   border :1px solid #2a2a2a;
 }
-
-
-
-
 
 
 /*
@@ -1947,14 +1949,15 @@ Products Page
 }
 
 #products .item .down-content {
-  padding-top: 20px;
+    /* 사진 텍스트 간격 */
+  padding-top: 7px; 
   position: relative;
   z-index: 3;
   background-color: #fff;
 }
 
 #products .item .down-content h4 {
-  font-size: 22px;
+  font-size: 21px;
   color: #2a2a2a;
   font-weight: 700;
   margin-bottom: 8px;
@@ -1962,8 +1965,9 @@ Products Page
 
 #products .item .down-content span {
   font-size: 18px;
-  color: #a1a1a1;
+  color: #7b7b7b;
   font-weight: 500;
+  font-weight: bold;
   display: block;
 }
 
