@@ -1059,56 +1059,56 @@
 
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZpxFxSbgN4ylGicJUsUb-UyNXzTcdJnMSfb2Nf4p9ioY8JRyMeNSwOPPt5mwHypFXCw/exec';
+        // const scriptURL = 'https://script.google.com/macros/s/AKfycbzZpxFxSbgN4ylGicJUsUb-UyNXzTcdJnMSfb2Nf4p9ioY8JRyMeNSwOPPt5mwHypFXCw/exec';
 
-        const form = document.forms['contact-form'];
-        const submitBtn = form.querySelector('.submit-btn');
+        // const form = document.forms['contact-form'];
+        // const submitBtn = form.querySelector('.submit-btn');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
+        // form.addEventListener('submit', e => {
+        //     e.preventDefault();
 
-            // 연락처 유효성 검사
-            const phoneNumber = document.getElementById("userName").value;
-            if (!phoneNumber.match(/^[0-9]{11}$/)) {
-                alert("연락처를 11자리 숫자로 입력해주세요 ('-' 제외)");
-                return;
-            }
+        //     // 연락처 유효성 검사
+        //     const phoneNumber = document.getElementById("userName").value;
+        //     if (!phoneNumber.match(/^[0-9]{11}$/)) {
+        //         alert("연락처를 11자리 숫자로 입력해주세요 ('-' 제외)");
+        //         return;
+        //     }
 
-            // 버튼 상태 변경
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = "처리 중...";
-            submitBtn.classList.add('loading');
-            submitBtn.disabled = true;
+        //     // 버튼 상태 변경
+        //     const originalText = submitBtn.textContent;
+        //     submitBtn.textContent = "처리 중...";
+        //     submitBtn.classList.add('loading');
+        //     submitBtn.disabled = true;
 
-            // 타임스탬프 추가
-            const currentTime = new Date().toLocaleString();
-            const formData = new FormData(form);
-            formData.append("문의시간", currentTime);
+        //     // 타임스탬프 추가
+        //     const currentTime = new Date().toLocaleString();
+        //     const formData = new FormData(form);
+        //     formData.append("문의시간", currentTime);
 
-            // 데이터 전송 (handleContactSubmit 함수로 전송)
-            fetch(scriptURL + '?action=contact', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (response.ok) {
-                        alert("문의가 성공적으로 접수되었습니다.");
-                        form.reset();
-                    } else {
-                        throw new Error("서버 응답 오류");
-                    }
-                })
-                .catch(error => {
-                    alert("문의 접수에 실패했습니다. 다시 시도해주세요.");
-                    console.error('Error!', error.message);
-                })
-                .finally(() => {
-                    // 버튼 상태 복원
-                    submitBtn.textContent = originalText;
-                    submitBtn.classList.remove('loading');
-                    submitBtn.disabled = false;
-                });
-        });
+        //     // 데이터 전송 (handleContactSubmit 함수로 전송)
+        //     fetch(scriptURL + '?action=contact', {
+        //         method: 'POST',
+        //         body: formData
+        //     })
+        //         .then(response => {
+        //             if (response.ok) {
+        //                 alert("문의가 성공적으로 접수되었습니다.");
+        //                 form.reset();
+        //             } else {
+        //                 throw new Error("서버 응답 오류");
+        //             }
+        //         })
+        //         .catch(error => {
+        //             alert("문의 접수에 실패했습니다. 다시 시도해주세요.");
+        //             console.error('Error!', error.message);
+        //         })
+        //         .finally(() => {
+        //             // 버튼 상태 복원
+        //             submitBtn.textContent = originalText;
+        //             submitBtn.classList.remove('loading');
+        //             submitBtn.disabled = false;
+        //         });
+        // });
 
     </script>
 
