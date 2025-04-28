@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 시공사례 페이지 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/images/파비콘.png" type="image/x-icon">
+    <!-- 
+    상단 배너 이미지는 css 템플릿 파일에서 변경
+    ! Product
+  -->
+    <title>한양창호 문의하기</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+
+    <link rel="stylesheet" href="css/indexEtcStyles.css">
+    <script src="js/index_js.js"></script>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <!-- 나중에 로고 주석 풀기 -->
+                            <img src="assets/images/yLogo.png" style="margin: auto; bottom: 2px; height: 80px;">
+                        </a>
+                        <a href="index.html" class="mlogo">
+                            <img src="assets/images/mLogo.png" style="margin-top: 5%; height: 50px;">
+                        </a>
+
+                        <!-- ***** Logo End ***** -->
+
+
+
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="submenu">
+                                <a href="javascript:;">About Us</a>
+                                <ul>
+                                    <li><a href="about.html">공장소개</a></li>
+                                    <li><a href="about_locate.html">위치안내</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="faq_page.html">FAQ</a></li>
+                            <li class="scroll-to-section"><a href="submit.html#submitForm">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+
+    <!-- 스프레드시트용 용 -->
+    <!-- <section class="contact-section" style="margin-top: 10%; background: #f8fafc; padding: 3rem 0;">
+        <h2 id="submitForm"
+            style="text-align: center; margin-bottom: 2.5rem; font-size: 1.8rem; color: #1e293b; font-weight: 500; letter-spacing: -0.5px;">
+            문의하기
+        </h2>
+        <div class="form-container" id="explore" style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+            <h2>
+                <br></br>
+            </h2>
+
+            <form  method="post" name="contact-form" class="contact-form"
+                style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); border: 1px solid #e2e8f0;">
+
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <div class="input-field" style="position: relative;">
+                        <input type="text" name="연락처" id="userName" placeholder=" " required pattern="[0-9]{11}"
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #cbd5e1; font-size: 1rem; transition: all 0.3s; background: transparent;"
+                            onfocus="this.style.borderBottomColor='#1e40af'; this.parentElement.querySelector('label').style.transform='translateY(-24px) scale(0.85)';"
+                            onblur="if(!this.value) { this.parentElement.querySelector('label').style.transform='translateY(-12px) scale(1)'; this.style.borderBottomColor='#cbd5e1'; }">
+                        <label for="userName"
+                            style="position: absolute; left: 0; top: 12px; color: #64748b; transition: all 0.3s; pointer-events: none; font-size: 0.95rem;">전화번호</label>
+                        <span class="input-hint"
+                            style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※ '-'없이 숫자만
+                            입력</span>
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="margin-bottom: 2.5rem;">
+                    <div class="input-field" style="position: relative; padding-top: 12px;">
+                        <textarea name="문의사항" id="contents" placeholder=" " required
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #cbd5e1; font-size: 1rem; min-height: 120px; resize: none; transition: all 0.3s; background: transparent;"
+                            onfocus="this.style.borderBottomColor='#1e40af'; this.parentElement.querySelector('label').style.transform='translateY(-24px) scale(0.85)';"
+                            onblur="if(!this.value) { this.parentElement.querySelector('label').style.transform='translateY(-12px) scale(1)'; this.style.borderBottomColor='#cbd5e1'; }"></textarea>
+                        <label for="contents"
+                            style="position: absolute; left: 0; top: 24px; color: #64748b; transition: all 0.3s; pointer-events: none; font-size: 0.95rem;">문의사항</label>
+                        <span class="input-hint"
+                            style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※
+                            견적 문의 등 문의 사항을 작성해 주세요.
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="form-actions" style="text-align: center;">
+                    <button type="submit" class="submit-btn"
+                        style="background: #1e40af; color: white; border: none; padding: 12px 28px; border-radius: 6px; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; width: 100%; font-weight: 400;">
+                        <span class="btn-text">문의 보내기</span>
+                        <span class="loading-spinner" style="display: none;">⌛</span>
+                    </button>
+                </div>
+            </form>
+
+
+            <button id="cal" class="learn-more"
+                style="width: 100%; margin-top: 1.5rem; background: transparent; color: #1e40af; border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="opacity: 0.7;">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+                <span>셀프견적 계산기</span>
+            </button>
+            <br></br>
+        </div>
+    </section> -->
+
+
+
+<!-- Firebase용 -->
+    <section class="contact-section" style="margin-top: 10%; background: #f8fafc; padding: 3rem 0;">
+        <h2 id="submitForm"
+            style="text-align: center; margin-bottom: 2.5rem; font-size: 1.8rem; color: #1e293b; font-weight: 500; letter-spacing: -0.5px;">
+            문의하기
+        </h2>
+        <div class="form-container" id="explore" style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+            <h2>
+                <br></br>
+            </h2>
+
+            <form  method="post" name="contact-form" class="contact-form"
+                style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); border: 1px solid #e2e8f0;">
+                <!-- 전화번호 입력 필드 -->
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <div class="input-field" style="position: relative;">
+                        <input type="text" name="연락처" id="userName" placeholder=" " required pattern="[0-9]{11}"
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #cbd5e1; font-size: 1rem; transition: all 0.3s; background: transparent;"
+                            onfocus="this.style.borderBottomColor='#1e40af'; this.parentElement.querySelector('label').style.transform='translateY(-24px) scale(0.85)';"
+                            onblur="if(!this.value) { this.parentElement.querySelector('label').style.transform='translateY(-12px) scale(1)'; this.style.borderBottomColor='#cbd5e1'; }">
+                        <label for="userName"
+                            style="position: absolute; left: 0; top: 12px; color: #64748b; transition: all 0.3s; pointer-events: none; font-size: 0.95rem;">전화번호</label>
+                        <span class="input-hint"
+                            style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※ '-'없이 숫자만
+                            입력</span>
+                    </div>
+                </div>
+
+                <!-- 문의사항 입력 필드 -->
+                <div class="form-group" style="margin-bottom: 2.5rem;">
+                    <div class="input-field" style="position: relative; padding-top: 12px;">
+                        <textarea name="문의사항" id="contents" placeholder=" " required
+                            style="width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #cbd5e1; font-size: 1rem; min-height: 120px; resize: none; transition: all 0.3s; background: transparent;"
+                            onfocus="this.style.borderBottomColor='#1e40af'; this.parentElement.querySelector('label').style.transform='translateY(-24px) scale(0.85)';"
+                            onblur="if(!this.value) { this.parentElement.querySelector('label').style.transform='translateY(-12px) scale(1)'; this.style.borderBottomColor='#cbd5e1'; }"></textarea>
+                        <label for="contents"
+                            style="position: absolute; left: 0; top: 24px; color: #64748b; transition: all 0.3s; pointer-events: none; font-size: 0.95rem;">문의사항</label>
+                        <span class="input-hint"
+                            style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※
+                            견적 문의 등 문의 사항을 작성해 주세요.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 제출 버튼 -->
+                <div class="form-actions" style="text-align: center;">
+                    <button type="submit" id="submit" class="submit-btn"
+                    style="background: #1e40af; color: white; border: none; padding: 12px 28px; border-radius: 6px; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; width: 100%; font-weight: 400;">
+                    <span class="btn-text">문의 보내기</span>
+                    <span class="loading-spinner" style="display: none;">⌛</span>
+                </button>
+                </div>
+            </form>
+
+            <!-- 셀프견적 버튼 -->
+            <button id="cal" class="learn-more"
+                style="width: 100%; margin-top: 1.5rem; background: transparent; color: #1e40af; border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px; font-size: 0.95rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="opacity: 0.7;">
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+                <span>셀프견적 계산기</span>
+            </button>
+            <br></br>
+        </div>
+    </section>
+
+    <style>
+        /* 애니메이션 효과 */
+        .submit-btn:hover {
+            background: #1e3a8a !important;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2);
+        }
+
+        .learn-more:hover {
+            background: #f1f5f9 !important;
+            border-color: #94a3b8 !important;
+        }
+
+        /* 입력 필드 포커스 효과 */
+        textarea:focus,
+        input:focus {
+            outline: none;
+        }
+
+        /* 로딩 상태 */
+        .submit-btn.loading .btn-text {
+            visibility: hidden;
+        }
+
+        .submit-btn.loading .loading-spinner {
+            display: inline-block;
+        }
+
+        .contact-section {
+            margin-top: 5% !important;
+            padding: 2rem 0 !important;
+        }
+
+        .form-container {
+            padding: 0 15px !important;
+        }
+
+        .contact-form {
+            padding: 1.8rem !important;
+        }
+
+        h2 {
+            font-size: 1.5rem !important;
+        }
+    </style>
+<!-- 
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZpxFxSbgN4ylGicJUsUb-UyNXzTcdJnMSfb2Nf4p9ioY8JRyMeNSwOPPt5mwHypFXCw/exec';
+
+        const form = document.forms['contact-form'];
+        const submitBtn = form.querySelector('.submit-btn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // 연락처 유효성 검사
+            const phoneNumber = document.getElementById("userName").value;
+            if (!phoneNumber.match(/^[0-9]{11}$/)) {
+                alert("연락처를 11자리 숫자로 입력해주세요 ('-' 제외)");
+                return;
+            }
+
+            // 버튼 상태 변경
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "처리 중...";
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // 타임스탬프 추가
+            const currentTime = new Date().toLocaleString();
+            const formData = new FormData(form);
+            formData.append("문의시간", currentTime);
+
+            // 데이터 전송 (handleContactSubmit 함수로 전송)
+            fetch(scriptURL + '?action=contact', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("문의가 성공적으로 접수되었습니다.");
+                        form.reset();
+                    } else {
+                        throw new Error("서버 응답 오류");
+                    }
+                })
+                .catch(error => {
+                    alert("문의 접수에 실패했습니다. 다시 시도해주세요.");
+                    console.error('Error!', error.message);
+                })
+                .finally(() => {
+                    // 버튼 상태 복원
+                    submitBtn.textContent = originalText;
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+ -->
+
+
+
+
+
+
+
+    <!-- firebase Database 연결 -->
+    <script type="module">  
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase, ref, set, get, child, push } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
+            authDomain: "hyihomepage.firebaseapp.com",
+            databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
+            projectId: "hyihomepage",
+            storageBucket: "hyihomepage.firebasestorage.app",
+            messagingSenderId: "175712717780",
+            appId: "1:175712717780:web:8b775bded241f7043ba441",
+            measurementId: "G-JJ3ZDL0X2F"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase(app);
+    
+        document.querySelector(".contact-form").addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            // 로딩 상태 활성화
+            const submitBtn = e.target.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const loadingSpinner = submitBtn.querySelector('.loading-spinner');
+            
+            btnText.textContent = "처리중...";
+            loadingSpinner.style.display = "inline-block";
+            submitBtn.disabled = true;
+            
+            const currentTime = new Date().toISOString();
+            const phoneNumber = document.getElementById("userName").value;
+    
+            // 전화번호 길이 체크
+            if (phoneNumber.length !== 11 || isNaN(phoneNumber)) {
+                alert("연락처를 확인해주세요. '-' 없이 11자리 숫자만 입력해주세요.");
+                
+                // 로딩 상태 비활성화
+                btnText.textContent = "문의 보내기";
+                loadingSpinner.style.display = "none";
+                submitBtn.disabled = false;
+                
+                return;
+            }
+    
+            push(ref(db, 'user/' + phoneNumber), {
+                userName: phoneNumber,
+                contents: document.getElementById("contents").value,
+                timestamp: currentTime
+            }).then(() => {
+                alert("상담 접수가 완료되었습니다");
+                e.target.reset();
+            }).catch((error) => {
+                console.error("Error writing to Firebase: ", error);
+                alert("상담 접수에 실패했습니다. 다시 시도해주세요.");
+            }).finally(() => {
+                // 로딩 상태 비활성화 (성공/실패 모두)
+                btnText.textContent = "문의 보내기";
+                loadingSpinner.style.display = "none";
+                submitBtn.disabled = false;
+            });
+        });
+        </script>
+</script>
+
+
+
+
+
+
+
+
+
+
+    <style>
+        /* 기존 스타일 유지 */
+        .submit-btn {
+            position: relative;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .submit-btn .btn-text {
+            transition: visibility 0.2s;
+        }
+    </style>
+
+
+
+
+    <!-- 구석 카톡 문의 Toggle 버튼 -->
+    <div class="contact-container">
+        <button class="contact-option submit-btn" onclick="openSubmit()"></button>
+        <button class="contact-option kakao-btn" onclick="openKakao()"></button>
+        <button class="contact-option call-btn" onclick="makeCall()"></button>
+        <button class="contact-toggle" onclick="toggleContact()"></button>
+    </div>
+
+
+
+
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+
+                        </div>
+                        <ul style="margin-top: -50px; margin-left:-17px;">
+                            <div style="color: white; font-size: 40px; font-weight: bold;">
+                                (주) 한양창호
+                            </div>
+                            <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
+                            <li><a href="#">ejrwls0321@naver.com</a></li>
+                            <li><a href="#">010-4010-2363</a></li>
+                            <li><a href="#">031 - 353 - 0457</a></li>
+                            <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

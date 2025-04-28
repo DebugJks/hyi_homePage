@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 특정 클래스(.learn-more)를 가진 버튼에만 스타일 적용 */
+button.learn-more {
+  font-family: "Rubik", sans-serif !important;
+  font-size: 15px !important;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 1em 1em !important;
+  background: #ffffff;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+button.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.learn-more:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+button.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}/*# sourceMappingURL=indexCalBtnStyle.css.map */

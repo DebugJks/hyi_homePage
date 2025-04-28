@@ -1,0 +1,784 @@
+/* 문의 보내기 */
+
+.contact-section {
+  font-family: 'Noto Sans KR', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-title-image {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  border-color: #3C2415;
+  box-shadow: 0 0 0 2px rgba(60, 36, 21, 0.2);
+  outline: none;
+  background-color: #fff;
+}
+
+.input-field label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: #f9f9f9;
+  padding: 0 5px;
+}
+
+.input-field input:focus+label,
+.input-field input:not(:placeholder-shown)+label,
+.input-field textarea:focus+label,
+.input-field textarea:not(:placeholder-shown)+label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #3C2415;
+  background: #fff;
+}
+
+.input-hint {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background: #3C2415;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:hover {
+  background: #2a1a10;
+  transform: translateY(-2px);
+}
+
+.loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.estimate-btn {
+  display: block;
+  text-align: center;
+  background: #f5f5f5;
+  color: #3C2415;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid #ddd;
+}
+
+.estimate-btn:hover {
+  background: #e0e0e0;
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .form-title-image {
+    width: 80%;
+  }
+
+  .form-container {
+    padding: 25px;
+  }
+
+  .input-field input,
+  .input-field textarea {
+    padding: 14px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+/* 중간 tab2 */
+/* 탭 메뉴 스타일 */
+.tab2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab2-menu {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin-bottom: 40px;
+  /* border-bottom: 1px solid #eee; */
+  justify-content: flex-end;
+  /* 탭을 오른쪽으로 정렬 */
+}
+
+.tab2-item {
+  list-style: none;
+  padding: 10px 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab2-item:hover,
+.tab2-item.active {
+  transform: scale(1.05);
+}
+
+.tab2-item:hover::after,
+.tab2-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+
+/* 탭 내용 스타일 */
+.tab2-content {
+  display: none;
+}
+
+.tab2-content.active {
+  display: block;
+}
+
+/* 이미지 레이아웃 */
+.image-layout {
+  position: relative;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.left-image {
+  width: 60%;
+  margin-left: 10%;
+}
+
+.right-image {
+  width: 35%;
+  align-self: flex-end;
+  margin-bottom: 10%;
+}
+
+.center-image {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.image-description {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* 중간 큰 텍스트 */
+.large-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 72px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.555);
+  z-index: 10;
+  /* top: 50%; */
+  margin-top: 40%;
+  white-space: nowrap;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  .tab2-menu {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 40px;
+    /* border-bottom: 1px solid #eee; */
+    justify-content: flex-end;
+    /* 탭을 오른쪽으로 정렬 */
+  }
+
+  .tab2-item {
+    font-size: 16px;
+    padding: 8px 3px;
+  }
+
+  .image-layout {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .left-image {
+    width: 85%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+
+  .right-image {
+    width: 85%;
+    margin-top: 0;
+    margin-left: auto;
+    align-self: flex-end;
+  }
+
+  .center-image {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .large-text {
+    font-size: 48px;
+    position: relative;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin: 30px 0;
+    color: rgba(0, 0, 0, 0.5);
+    top: auto;
+    white-space: normal;
+  }
+
+  .image-description {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+
+/* 카톡 Toggle 버튼 */
+
+/* 문의하기 버튼 컨테이너 */
+.contact-container {
+  position: fixed;
+  right: 20px;
+  bottom: 15%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* 토글 버튼 (이미지 버튼) */
+.contact-toggle {
+  width: 60px;
+  height: 60px;
+  background: url('../images/24_2.png') no-repeat center;
+  background-size: 70%;
+  background-color: #ffffff;
+  /* 카카오톡 노란색 */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contact-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* 문의 옵션 버튼들 */
+.contact-option {
+  display: none;
+  /* 기본적으로 숨김 */
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-option:hover {
+  transform: translateY(-5px);
+}
+
+/* 카카오톡 문의 버튼 */
+.kakao-btn {
+  background-color: #FFEB33;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3669/3669973.png');
+}
+
+/* 전화 문의 버튼 */
+.call-btn {
+  background-color: #32BEA6;
+  background-image: url('../images/toggle_Call.png');
+}
+
+/*  문의 게시판 버튼 */
+.submit-btn {
+  background-color: #33c30b;
+  background-image: url('../images/submit.png');
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .contact-toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-option {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+
+
+/* 추천제품 스타일 */
+
+:root {
+  --rec-tab-primary: #2c3e50;
+  --rec-tab-accent: #e74c3c;
+  --rec-tab-border: #e0e0e0;
+  --rec-tab-transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* 추천 섹션 스타일 */
+.recommend-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* 헤더 영역 */
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rec-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rec-tab-primary);
+  margin: 0;
+}
+
+/* 탭 버튼 스타일 */
+.rec-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.rec-tab {
+  padding: 8px 20px;
+  background: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--rec-tab-transition);
+}
+
+.rec-tab.active {
+  font-weight: 700;
+  color: var(--rec-tab-accent);
+}
+
+/* 컨텐츠 영역 */
+.rec-content {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.rec-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--rec-tab-transition);
+  transform: translateX(30px);
+}
+
+.rec-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 데스크탑용 이미지 그리드 레이아웃 */
+.rec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.rec-main-img {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.rec-sub-img {
+  height: 100%;
+}
+
+.rec-img-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rec-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.rec-img-container:hover img {
+  transform: scale(1.03);
+}
+
+/* 모바일용 슬라이드 스타일 */
+.mobile-slider {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.mobile-slide-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.mobile-slide {
+  flex: 0 0 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.mobile-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 8px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: var(--rec-tab-accent);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .rec-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rec-tabs {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+
+  .rec-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rec-tab {
+    flex-shrink: 0;
+  }
+
+  /* 모바일에서 그리드 대신 슬라이더 표시 */
+  .rec-grid {
+    display: none;
+  }
+
+  .mobile-slider {
+    display: block;
+  }
+
+  .rec-content {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-slider {
+    display: none;
+  }
+}
+
+
+/* 문의 등 버튼그룹 섹션 */
+/* 섹션 기본 스타일 */
+.image-button-section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+/*  얘가 지금 footer에 문제 */
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+/* 이미지 컨테이너 */
+.image-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 이미지 버튼 그룹 */
+.image-button-section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+/* 이미지 컨테이너 */
+.image-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 이미지 버튼 그룹 */
+.button-group {
+  flex: 1;
+  min-width: 300px;
+  /* 4x4면 grid */
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-btn {
+  width: 100%; /* ✅ 버튼 전체 넓이 확장 */
+  
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  box-sizing: border-box; /* ✅ 패딩 포함한 전체 영역 계산 */
+}
+
+
+.image-btn:hover {
+  background-color: #f0f4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #4361ee;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.image-btn span {
+  color: #333;
+  font-size: 14px;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0; /* 모바일에서 좌우 여백 완전히 제거 */
+  }
+
+  .image-container {
+    width: 100%;
+    min-width: auto;
+    padding: 0; /* 이미지 컨테이너의 패딩 제거 */
+  }
+
+  .section-image {
+    border-radius: 0; /* 모바일에서 이미지 코너 둥글기 제거 */
+  }
+
+  .button-group {
+    width: 100%;
+    min-width: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 10px; /* 버튼 그룹에만 약간의 패딩 추가 */
+    margin-top: 15px; /* 이미지와 버튼 사이 간격 */
+  }
+
+  .image-btn {
+    padding: 10px 5px;
+    min-height: 80px;
+  }
+
+  .btn-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+
+  .image-btn span {
+    font-size: 12px;
+  }
+}
+
+/* 매우 작은 모바일 기기 */
+@media (max-width: 480px) {
+  .button-group {
+    gap: 5px;
+    padding: 0 5px; /* 더 작은 기기에서는 패딩 더 줄임 */
+  }
+
+  .image-btn {
+    min-height: 70px;
+  }
+}

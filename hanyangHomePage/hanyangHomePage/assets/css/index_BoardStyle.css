@@ -1,0 +1,118 @@
+/* 게시판 스타일 */
+
+
+.board {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.post-item {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-item h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #333;
+}
+
+.post-item small {
+  color: #777;
+  font-size: 12px;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-container button:hover {
+  background-color: #45a049;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.write-form {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+
+.write-form.active {
+  max-height: 600px;
+  opacity: 1;
+  padding: 15px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.post-content.active {
+  display: block;
+  max-height: 1000px;
+  opacity: 1;
+}

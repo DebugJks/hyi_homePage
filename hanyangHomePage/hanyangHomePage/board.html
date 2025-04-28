@@ -1,261 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한양창호 게시판</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
 
 
-  <head>
+    <link rel="stylesheet" href="css/board/board.css">
+    <link rel="stylesheet" href="css/indexEtcStyles.css">
+    <script src="js/index_js.js"></script>
 
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+</head>
+
+<body>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/yLogo.png" style="margin: auto; bottom: 2px; height: 80px;">
+                        </a>
+                        <a href="index.html" class="mlogo">
+                            <img src="assets/images/mLogo.png" style="margin-top: 5%; height: 50px;">
+                        </a>
 
 
-    <title>게시판</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
- 
-    <style>
-      table {
-        border-collapse: collapse; /* 셀 구분선을 합칩니다 */
-        width: 100%; /* 테이블의 너비를 화면 전체로 설정합니다 */
-        margin: 0 5px; /* 테이블의 양쪽 마진을 10px로 설정합니다 */
-      }
-      table, th, td {
-        border: 1px solid black; /* 테이블과 셀에 모두 외곽선을 추가합니다 */
-      }
-      .left-aligned-cell { /* 새로운 클래스 추가 */
-      text-align: left; /* 텍스트를 좌측에 맞춥니다 */
-      } 
-  
-      input, textarea {
-      border: 1px solid black !important;  /* 외곽선의 너비를 2px로 설정합니다 */
-      }
-      </style>
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="submenu">
+                                <a href="javascript:;">About Us</a>
+                                <ul>
+                                    <li><a href="about.html">공장소개</a></li>
+                                    <li><a href="about_locate.html">위치안내</a></li>
+                                </ul>
+                            </li>
 
-  </head>
-  <body>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>   
-    <script>
-      const firebaseConfig = 
-      {
-        apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
-        authDomain: "hyihomepage.firebaseapp.com",
-        databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
-        projectId: "hyihomepage",
-        storageBucket: "hyihomepage.firebasestorage.app",
-        messagingSenderId: "175712717780",
-        appId: "1:175712717780:web:8b775bded241f7043ba441",
-        measurementId: "G-JJ3ZDL0X2F"
-        };
-      firebase.initializeApp(firebaseConfig); 
-    </script>
-    
-  <div class="container mt-5 mb-3">
-    <h4> 게시판</h4>
-    <table id="posts" style="text-align: center; border: 2px solid black;">
-      <tr>
-        <th style="font-weight: bold; width: 100px;">No.</th>
-        <th style="font-weight: bold; width: 400px;">제목</th>
-        <th style="font-weight: bold; width: 1500px;">내용</th>
-        <th style="font-weight: bold; width: 100px;">작성자</th>
-        <th style="font-weight: bold; width: 150px;">Date</th>
-      </tr>
-       <!-- 이곳에 게시물이 동적 추가 -->
-    </table>
-    <button class="btn btn-primary mt-5" id="towrite">글 쓰기</button>
-  </div>
+                            <li><a href="faq_page.html">FAQ</a></li>
+                            <li><a href="submit.html#submitForm">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!-- paginate -->
-  <div class="container">
-    <div id="productList" class="m-3"></div>
-    <div class="m-3">
-      <button id="prevPage">뒤로가기</button>
 
-      <span id="currentPage" style="margin: 10px 10px;"></span>
-      <button id="nextPage" class="btn btn-sm btn-outline-danger">다음 페이지</button>
-      <span id="space" style="margin: 10px 10px;"></span>
-      <button id="writeNew" class="btn btn-sm btn-primary">글 쓰기</button>
+    <!-- ***** Main Banner Area Start ***** -->
+<div class="page-heading" id="top" style="background-image: url('images/paraBack.png') !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-content"></div>
+            </div>
+        </div>
     </div>
-  </div>
-
-
-
-  <script>
-  var db = firebase.firestore();
-
-    // 한페이지에 표시할 게시글 수
-  var pageSize = 2;
-  var firstVisible;
-  var lastVisible;  // 마지막 표시된 항목
-  var currentPage = 1; 
-
-
-  var navigationStack = [];
-
-  function readPosts() {
-    var query = db.collection("posts").orderBy("postNumber", "desc").limit(pageSize);
-
-
-    if (currentPage > 1 && lastVisible) {
-      // 다음 페이지로 갈 때: 마지막 게시글 이후부터 가져옴
-      query = query.startAfter(lastVisible);
-  } else if (currentPage < navigationStack.length && lastVisible) {
-      // 이전 페이지로 갈 때: 이전 스택의 마지막 게시글 이전을 기준으로 가져옴
-      query = query.endBefore(firstVisible);
-  }
-    // if (lastVisible) {
-    //     query = query.startAfter(lastVisible);
-    // } else if (firstVisible && currentPage < 1) {
-    //    query = query.endBefore(firstVisible);
-    // }
-
-    query.get().then((querySnapshot) => {
-      if (!querySnapshot.empty) {
-          // 현재 페이지의 첫번째와 마지막 게시글을 저장
-          firstVisible = querySnapshot.docs[0];
-          lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
-
-          if (currentPage > navigationStack.length) {
-              // 스택에 저장 (nextPage로 이동할 때만 저장)
-              navigationStack.push({ firstVisible, lastVisible });
-          }
-      }
-    // 게시글 테이블 업데이트
-    var postsTable = document.getElementById('posts');
-      while (postsTable.rows.length > 1) {
-          postsTable.deleteRow(postsTable.rows.length - 1);
-      }
-
-
-      querySnapshot.forEach((doc) => {
-        var row = postsTable.insertRow();
-        var postNumberCell = row.insertCell();
-        var titleCell = row.insertCell();
-        var contentCell = row.insertCell();
-          contentCell.className = 'left-aligned-cell';  // CSS 클래스 추가
-          contentCell.textContent = doc.data().content;
-        var authorCell = row.insertCell();  
-        var createdAtCell = row.insertCell();
-        postNumberCell.textContent = doc.data().postNumber;
-        titleCell.textContent = doc.data().title;
-        contentCell.textContent = doc.data().content;
-        authorCell.textContent = doc.data().author;  
-        createdAtCell.textContent = doc.data().createdAt.toDate().toLocaleString();  
-      });
-  }).catch((error) => {
-     console.error("Error reading posts: ", error);
-  });
-}
     
-  function updatePageNumber() {
-    document.getElementById('currentPage').textContent = "현재 페이지: " + currentPage;
-  }
+    <!-- 탭 메뉴를 배너 바로 아래에 추가 -->
+    <div class="tab-menu-container">
+        <div class="board-tabs">
+            <!-- <button class="tab-btn active" data-tab="review">후기 게시판</button> -->
+            <button class="tab-btn" data-tab="inquiry">간편문의</button>
+        </div>
+    </div>
+</div>
 
-// 이전 페이지로 이동
-$('#prevPage').click(function () {
-    if (currentPage > 1) {
-        currentPage--;
-        var previousVisible = navigationStack[currentPage - 1]; // 스택에서 이전 페이지 정보 가져옴
-        firstVisible = previousVisible.firstVisible;
-        lastVisible = previousVisible.lastVisible;
-        readPosts();
-        updatePageNumber();
+<style>
+    .page-heading {
+        background-image: url(../hanyangHomePage/assets/images/examples_banner.jpg);
+        position: relative;
+        padding-bottom: 60px; /* 탭 메뉴를 위한 공간 추가 */
     }
-});
-
-  window.onload = function() {
-      readPosts();
-      updatePageNumber();
-    }
-
-  $('#nextPage').click(function() {
-    currentPage++;
-    readPosts( );
-    updatePageNumber();
-  });
-
-
-  $('#writeNew').click(function () {      
-          setTimeout(() => window.location.href = "/boardwrite.html", 100)
-  });
     
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    .tab-menu-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+        /* 상단 탭 */
+    .board-tabs {
+        background: white;
+        border-radius: 5px 5px 0 0;
+        padding: 0 20px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+</style>
 
+
+
+
+
+
+
+
+<section class="section">
+    <!-- 게시판 전환시 로딩 효과 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>게시글을 불러오는 중입니다...</p>
+        </div>
+    </div>
+
+    <div class="board-container">
+        <div class="board-header">
+            <h1><i class="fas fa-clipboard-list"></i> 게시판</h1>
+            <button id="writeButton" class="btn btn-primary"><i class="fas fa-pen"></i> 글쓰기</button>
+        </div>
+
+        <div class="board-body">
+            <!-- 글 작성 폼 -->
+            <div class="write-form" id="postFormContainer">
+                <form id="postForm">
+                    <!-- 
+                    
+                -->
+                    <!-- 이거 나중에 리뷰게시판 추가하면 value= 리뷰로 바꿔야함 !!!! -->
+                    <input type="hidden" id="boardType" name="boardType" value="inquiry">
+                    <div class="form-group">
+                        <label for="title">제목</label>
+                        <input type="text" id="title" name="title" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">내용</label>
+                        <textarea id="content" name="content" class="form-control"
+                        placeholder="연락처는 노출되지 않습니다." required></textarea>
+                    </div>
+
+                    <div class="form-row" style="display: flex; gap: 15px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="author">작성자</label>
+                            <input type="text" id="author" name="author" class="form-control" required>
+                        </div>
+
+                        <div class="form-group" style="flex: 1;">
+                            <label for="phoneNumber">연락처</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div style="text-align: right; margin-top: 20px;">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> 등록</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 게시글 목록 -->
+            <div class="post-table-container">
+                <table class="post-table">
+                    <thead>
+                        <tr>
+                            <th class="num">번호</th>
+                            <th class="title">제목</th>
+                            <th class="author">작성자</th>
+                            <th class="date">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody id="postList">
+                        <!-- 게시글 목록이 여기에 출력됩니다 -->
+                    </tbody>
+                </table>
+            </div>
+                <!-- 페이지네이션 -->
+            <ul class="pagination" id="pagination"></ul>
+
+        </div>
+    </div>
+</section>
+
+    
+
+<!-- 구석 카톡 문의 Toggle 버튼 -->
+    <div class="contact-container">
+        <button class="contact-option submit-btn" onclick="openSubmit()"></button>
+        <button class="contact-option kakao-btn" onclick="openKakao()"></button>
+        <button class="contact-option call-btn" onclick="makeCall()"></button>
+        <button class="contact-toggle" onclick="toggleContact()"></button>
+    </div>
+
+
+        <!-- ***** Footer Start ***** -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="first-item">
+                            <div class="logo">
+    
+                            </div>
+                            <ul style="margin-top: -50px; margin-left:-17px;">
+                                <div style="color: white; font-size: 40px; font-weight: bold;">
+                                    (주) 한양창호
+                                </div>
+                                <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
+                                <li><a href="#">ejrwls0321@naver.com</a></li>
+                                <li><a href="#">010-4010-2363</a></li>
+                                <li><a href="#">031 - 353 - 0457</a></li>
+                                <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/board.js"></script>
 </body>
+
 </html>
-
-
-
-
-<!-- 복구용 -->
-
-<!-- var query = db.collection("posts").orderBy("postNumber", "desc").limit(pageSize);
-    
-
-if (lastVisible) {
-    query = query.startAfter(lastVisible);
-} else if (firstVisible && currentPage < 1) {
-   query = query.endBefore(firstVisible);
-}
-
-query.get().then((querySnapshot) => {
-      if (!querySnapshot.empty) {
-        firstVisible = querySnapshot.docs[0];
-          lastVisible = querySnapshot.docs[querySnapshot.docs.length-1];
-      }
-
-var postsTable = document.getElementById('posts');
-
-while (postsTable.rows.length > 1) {  // 기존에 추가된 게시물을 제거합니다
-  postsTable.deleteRow(postsTable.rows.length - 1);
-}
-
-querySnapshot.forEach((doc) => {
-  var row = postsTable.insertRow();
-  var postNumberCell = row.insertCell();
-  var titleCell = row.insertCell();
-  var contentCell = row.insertCell();
-    contentCell.className = 'left-aligned-cell';  // CSS 클래스 추가
-    contentCell.textContent = doc.data().content;
-  var authorCell = row.insertCell();  
-  var createdAtCell = row.insertCell();
-  postNumberCell.textContent = doc.data().postNumber;
-  titleCell.textContent = doc.data().title;
-  contentCell.textContent = doc.data().content;
-  authorCell.textContent = doc.data().author;  
-  createdAtCell.textContent = doc.data().createdAt.toDate().toLocaleString();  
-});
-}).catch((error) => {
- console.error("Error reading posts: ", error);
-});
-}
-
-function updatePageNumber() {
-document.getElementById('currentPage').textContent = "현재 페이지: " + currentPage;
-}
-
-window.onload = function() {
-  readPosts();
-  updatePageNumber();
-}
-
-$('#nextPage').click(function() {
-currentPage++;
-readPosts( );
-updatePageNumber();
-});
-
-$('#writeNew').click(function () {      
-      setTimeout(() => window.location.href = "/boardwrite.html", 100)
-});
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</body>
-</html> -->

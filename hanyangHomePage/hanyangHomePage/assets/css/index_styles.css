@@ -1,0 +1,309 @@
+/* 기본 스타일 */
+.horizontal-box {
+    margin-top: 10%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* 화면 크기에 따라 자동 줄바꿈 */
+}
+
+.inputBox textarea {
+    width: 350px !important;
+    width: 100%;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+    height: 40px;
+    resize: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 1); /* 그림자 추가 */
+    border-radius: 4px;
+}
+
+.inputBox input{
+    width: 350px !important;
+    width: 100%;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+    height: 40px;
+    resize: none;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 1); /* 그림자 추가 */
+    border-radius: 4px;   
+}
+
+.submitBtn{
+    width: 100%;
+    height: 35px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 1); /* 그림자 추가 */
+    border-radius: 4px;
+}
+
+.indexImg
+{
+  width: 80% !important;
+}
+
+@media (max-width: 768px) {
+  .indexImg{
+    width: 100%;
+  }
+
+}
+
+
+        /* 화면 하단고정 이미지 스타일 */
+        .bottom_sticky_img {
+          position: fixed;
+          bottom: 0; /* 화면 하단에 고정 */
+          left: 0;
+          width: 100%; /* 화면 너비 전체를 차지 */
+          text-align: center;
+          padding: 10px 0;
+          transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+
+      }
+
+      .bottom_sticky_img img
+      {
+          max-width: 230px; /* 이미지 최대 너비 제한 */
+          height: auto; /* 비율 유지 */
+      }
+
+              /* 숨겨진 상태 */
+      .bottom_sticky_img.hidden {
+          opacity: 0; /* 투명하게 설정 */
+          pointer-events: none; /* 클릭 불가능 */
+      }
+
+
+  /* 모바일 반응형 스타일 */
+  @media (max-width: 768px) {
+      .horizontal-box {
+          flex-direction: column; /* 모바일에서는 세로로 정렬 */
+      }
+
+      .inputBox textarea {
+          height: 45px; /* 모바일에서 높이 조정 */
+      }
+  }
+
+/* 리뷰관련 스타일 */
+
+body {
+  font-family: Arial, sans-serif;
+}
+.section {
+  padding: 20px 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-lg-4 {
+  width: 50%;
+  padding: 10px;
+}
+.item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+}
+.thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* 4:3 비율 유지 */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 크기 조정 */
+}
+.down-content {
+  padding: 10px;
+}
+.down-content h4 {
+font-size: 18px;
+font-weight: bold;
+margin: 10px 0;
+display: -webkit-box;
+-webkit-line-clamp: 1;   /* 최대 줄 수 제한 */
+-webkit-box-orient: vertical;
+overflow: hidden;        /* 넘치는 텍스트 숨기기 */
+text-overflow: ellipsis; /* 말줄임표(...) 표시 */
+}
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.pagination ul li {
+  margin: 0 5px;
+}
+.pagination ul li a {
+  display: block;
+  padding: 0px 10px;
+  background: #ffffff;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.pagination ul li a:hover, .pagination ul li.active a {
+  background: #0056b3;
+}
+  .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center;    /* 세로 중앙 정렬 */
+  z-index: 1000;
+}
+.popup-content {
+position: relative; /* 부모 요소(.popup-overlay) 안에서 위치를 기준 */
+margin: 0; /* 여백 제거 */
+background: #fff;
+border-radius: 5px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+width: 400px;
+height: 500px;
+max-width: 90%;
+text-align: center;
+transform: translate(-50%, -50%); /* 정 중앙으로 이동 */
+top: 50%; /* 수직 중앙 기준 */
+left: 50%; /* 가로 중앙 기준 */
+}
+.popup-content h2 {
+margin-bottom: 10px; /* 제목과 가로선 사이 간격 */
+font-size: 24px;
+color: #333;
+}
+.popup-content h2::after {
+content: "";
+display: block;
+width: 80%; /* 가로선 길이 */
+height: 1px; /* 가로선 두께 */
+background: #000000; /* 가로선 색상 */
+margin: 10px auto 0; /* 간격 및 중앙 정렬 */
+}
+.popup-content img {
+  width: 80%;
+  max-height: 300px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.col-lg-4 {
+  width: 50%; /* 모바일에서 4개 */
+  }
+.down-content h4 {
+-webkit-line-clamp: 2;   /* 최대 줄 수 제한 */
+}
+}
+
+
+
+
+/* 하단 아파트 빌라 등 스타일 */
+        /* 기본 스타일 */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f9f9;
+      }
+
+      .carousel-container {
+          max-width: 1200px;
+          margin: 50px auto;
+          padding: 0 20px;
+      }
+
+      .carousel .slide {
+          margin: 5px;
+      }
+
+      .carousel img {
+          width: 100%;
+          height: 350px !important;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+      }
+
+      /* 슬라이드 화살표 버튼 */
+      .slick-prev, .slick-next {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border-radius: 5%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+      }
+
+      .slick-prev:hover, .slick-next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+      }
+      .slick-prev {
+          display: none !important;
+          margin-top: 55%;
+          left: 35%;
+      }
+      .slick-next {
+          margin-top: 60%;
+          right: 45%;
+      }
+      .slick-slide {
+          margin: 0 10px; /* 슬라이드 간격 */
+      }
+      .slick-list {
+          margin: 0 -10px; /* 전체 슬라이드 정렬 보정 */
+      }
+
+              /* PC 전용 스타일 */
+      @media (min-width: 1024px) {
+          .carousel img {
+              width: 100%; /* 슬라이드에 꽉 차도록 */
+              height: 400px !important;
+              height: auto; /* 이미지 높이를 고정 */
+              object-fit: cover; /* 비율을 유지하며 잘림 방지 */
+          }
+
+          .slick-prev {
+              display: flex !important;
+              left: -30px !important; /* 화살표 간격 조정 */
+              margin-top: 20%;
+              left: 45% !important;
+          }
+
+          .slick-next {
+              right: -30px !important; /* 화살표 간격 조정 */
+              margin-top: 20%;
+              right: 45% !important;
+          }
+      }

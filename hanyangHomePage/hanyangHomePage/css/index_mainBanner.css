@@ -1,0 +1,197 @@
+/* 메인 슬라이더 스타일 */
+.main-slider {
+    width: 100vw;
+    /* 화면 너비 100%로 설정 */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/*  배너 텍스트 반투명 검은색 */
+.main-slider .slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 검은색, 투명도 조절 (0.4 = 40%) */
+    z-index: 1; /* 이미지 위, 텍스트 아래에 위치 */
+}
+
+
+.slide.active {
+    opacity: 1;
+}
+
+
+/* iOS에서의 뷰포트 문제 해결 */
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .main-slider {
+        height: -webkit-fill-available;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* 메인 슬라이더 높이 조정 */
+    .main-slider {
+        height: 100vh;
+        /* margin-top: 120px; */
+        /* 모바일에서 헤더 높이 증가로 인한 조정 */
+    }
+
+}
+
+
+/* 배너 텍스트 스타일 */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 10;
+    box-sizing: border-box; /* 추가: 패딩을 너비에 포함 */
+    overflow: hidden; /* 추가: 넘치는 내용 숨김 */
+}
+
+.text-line1 {
+    margin-top: 20% !important;
+    margin-right: -25% !important;
+    font-size: 30px !important;
+}
+
+.text-line2 {
+    margin-top: 20% !important;
+    font-size: 70px !important;
+}
+
+.text-line3 {
+    margin-top: 5% !important;
+    font-size: 30px;
+}
+.text-line3 a {
+    font-size: 55px;
+}
+
+.text-line4 {
+    margin-top: 20% !important;
+    font-size: 25px !important;
+}
+
+
+.banner-text h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    /* background: linear-gradient(to top, rgba(0, 119, 255, 0.701) 40%, transparent 40%); */
+    background: linear-gradient(to top, rgba(0, 119, 255, 0.701) 90%, transparent 90%);
+    padding: 0 5px;
+}
+
+.counter {
+    color: #5c6dfe;
+    font-weight: 800;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .banner-text {
+        width: 95% !important;
+        padding: 15px;
+        left: 50%;
+        /* transform: translateX(-50%); 세로 중앙은 유지 */
+        word-break: keep-all;
+        white-space: normal;
+    }
+
+    .banner-text h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        line-height: 1.8 !important;
+    }
+
+    .text-line1 {
+        position: absolute !important;
+        top:28%;
+        left: 30%;
+        /* margin-top: 25% !important; */
+        font-size: 6vw !important; /* vw 단위로 유동적 조정 */
+        margin-right: 0 !important; /* 오른쪽 마진 제거 */
+        z-index: 1;
+    }
+
+    .text-line2 {
+        position: absolute !important;
+        top: 30%;
+        /* margin-top: -60% !important; */
+        font-size: 12vw !important; /* 기존 70px → 10vw로 변경 */
+        line-height: 1.2 !important;
+    }
+
+    .text-line4 {
+        margin-top: 150% !important;
+        font-size: 5vw !important; /* 기존 25px → 5vw */
+        padding: 0 10px; /* 좌우 패딩 추가 */
+    }
+
+    .highlight, .counter {
+        display: inline-block; /* 강제 줄바꿈 방지 */
+    }
+}
+
+/* @media (max-width: 480px) {
+    .text-line1 { font-size: 7vw !important; }
+    .text-line2 { font-size: 11vw !important; }
+    .text-line4 { font-size: 5.5vw !important; }
+}
+@media (max-width: 480px) {
+    .banner-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+} */

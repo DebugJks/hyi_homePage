@@ -16,20 +16,15 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     
-    <title>한양창호 FAQ</title>
+    <title>(주) 한양창호 FAQ</title>
 
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
     <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
-
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
-
     <link rel="stylesheet" href="assets/css/lightbox.css">
-
     <link rel="stylesheet" href="assets/css/faqStyle.css" />
 
     <link rel="icon" href="assets/images/파비콘.png" type="image/x-icon"> 
@@ -60,8 +55,11 @@
                         <a href="index.html" class="logo">
                             <!-- 나중에 로고 주석 풀기 -->
                             <img src="assets/images/yLogo.png" style="margin: auto; bottom: 2px; height: 80px;">
-
                         </a>
+                        <a href="index.html" class="mlogo">
+                          <img src="assets/images/mLogo.png" style="margin-top: 5%; height: 50px;">
+                      </a>
+
                         <!-- ***** Logo End ***** -->
 
 
@@ -75,17 +73,8 @@
                                     <li><a href="about_locate.html">위치안내</a></li>
                                 </ul>
                             </li>
-
-                            <li class="submenu">
-                                <a href="javascript:;">Project</a>
-                                <ul>
-                                    <li><a href="Projects_changho.html">창호</a></li>
-                                    <li><a href="Projects_curtainWall.html">커튼월</a></li>
-                                    <li><a href="products.html">더보기</a></li>
-                                </ul>
-                            </li>
                             <li><a href="faq_page.html">FAQ</a></li>
-                            <li class="scroll-to-section"><a href="index.html#explore">Contact Us</a></li>
+                            <li><a href="submit.html#submitForm">Contact Us</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -199,17 +188,89 @@
 
 
 
-    <div style="font-size: 30px; font-weight: bold;border:1px solid; text-align: center; width: 600px; margin-left: auto; margin-right: auto;">
-        <br>궁금한 게 더 있다면!<br>
-        <a href="tel:01040102363" style="color: rgb(255, 149, 0); font-size: 30px;font-weight: bold;">010-4010-2363</a><br>
-        <div style="font-size: 15px;">
-            
-            오전 9:00 ~ 오후 8:00<br><br>
-            친절한 상담<br> 정확한 상담<br> 편안한 상담<br> 약속 합니다.
+    <div class="contact-box">
+      <div class="contact-title">궁금한 게 더 있다면!</div>
+      <a href="tel:01040102363" class="contact-phone">010-4010-2363</a>
+      <div class="contact-hours">
+        오전 9:00 ~ 오후 8:00<br>
+        <div class="contact-promise">
+          친절한 상담<br> 정확한 상담<br> 편안한 상담<br> 약속 합니다.
         </div>
-        <br>
-    </div>    
-
+      </div>
+    </div>
+    
+    <style>
+      /* 기본 스타일 (데스크톱) */
+      .contact-box {
+        border: 1px solid;
+        text-align: center;
+        width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      .contact-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      
+      .contact-phone {
+        color: rgb(255, 149, 0);
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+      }
+      
+      .contact-hours {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      
+      .contact-promise {
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+    
+      /* 모바일 반응형 스타일 */
+      @media (max-width: 768px) {
+        .contact-box {
+          width: 90%;
+          max-width: 400px;
+          padding: 15px;
+        }
+        
+        .contact-title {
+          font-size: 24px;
+        }
+        
+        .contact-phone {
+          font-size: 24px;
+        }
+        
+        .contact-hours {
+          font-size: 14px;
+        }
+      }
+    
+      /* 매우 작은 모바일 기기 */
+      @media (max-width: 480px) {
+        .contact-title {
+          font-size: 20px;
+        }
+        
+        .contact-phone {
+          font-size: 20px;
+        }
+        
+        .contact-hours {
+          font-size: 13px;
+        }
+      }
+    </style>
 
 
 
@@ -228,15 +289,15 @@
                             </div> -->
                         </div>
                         <ul style="margin-top: -50px; margin-left:-17px;">
-                            <div style="color: white; font-size: 40px; font-weight: bold;">
-                                한양창호
-                            </div>
-                            <li><a href="#">경기도 화성시 팔탄면 푸른들판로 496</a></li>
-                            <li><a href="#">ejrwls0321@naver.com</a></li>
-                            <li><a href="#">010-4010-2363</a></li>
-                            <li><a href="#">031 - 353 - 0457</a></li>
-                            <li><a href="#">사업자등록번호 : 419 - 10 - 02841</a></li>
-                        </ul>
+                          <div style="color: white; font-size: 40px; font-weight: bold;">
+                              (주) 한양창호
+                          </div>
+                          <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
+                          <li><a href="#">ejrwls0321@naver.com</a></li>
+                          <li><a href="#">010-4010-2363</a></li>
+                          <li><a href="#">031 - 353 - 0457</a></li>
+                          <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                      </ul>
                     </div>
                 </div>
 

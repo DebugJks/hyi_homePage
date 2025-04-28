@@ -82,7 +82,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: #ffffff !important;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -209,7 +209,7 @@ header
 
 .background-header {
   border-bottom: none !important;
-  background-color: #fff;
+  background-color: #0000001a;
   height: 80px!important;
   position: fixed!important;
   top: 0px;
@@ -232,9 +232,9 @@ header
 }
 
 .header-area {
-  border-bottom: 3px dotted #eee;
+  /* border-bottom: 3px dotted #eee; */
   box-shadow: none;
-  background-color: #fff;
+  background-color: #ffffff3d;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -518,6 +518,8 @@ header
 
 .header-area.header-sticky {
   min-height: 80px;
+  /* 헤더 배경색 */
+  /* background-color: #3B566E; */
 }
 
 .header-area .nav {
@@ -527,7 +529,13 @@ header
 .header-area.header-sticky .nav li a.active {
   color: #aaa;
 }
-
+  /* 로고 pc 모바일 분리하기 */
+  .mlogo{
+    display: none;
+  }
+  .header-area.header-sticky .logo{
+    display: block;
+  }
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -542,6 +550,14 @@ header
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
+  /* 로고 pc 모바일 분리하기 */
+  .header-area.header-sticky .logo{
+    display: none;
+  }
+  .header-area.header-sticky .mlogo{
+    display: flex;
+    margin-top: -4% !important;
+  }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #aaa!important;
@@ -553,18 +569,28 @@ header
   .header-area {
     background-color: #f7f7f7;
     padding: 0px 15px;
-    height: 100px;
+    height: 50px !important;
     box-shadow: none;
     text-align: center;
+    line-height: 1 !important;
+    min-height: 4px !important;
   }
   .header-area .container {
     padding: 0px;
+    height: 100% !important;
   }
-  .header-area .logo {
-    margin-left: 30px;
+  .header-area .mlogo {
+    /* 왼쪽에 붙이기 */
+    margin-left: 0;
+    /* margin-left: 30px; */
   }
+  .logo{
+    display: none;
+  }
+  /* 햄버거 */
   .header-area .menu-trigger {
     display: block !important;
+    margin-top: -7% !important;
   }
   .header-area .main-nav {
     overflow: hidden;
@@ -652,7 +678,7 @@ banner
 
 .main-banner {
   border-bottom: 3px dotted #eee;
-  padding-top: 160px;
+  /* padding-top: 160px; */
   padding-bottom: 30px;
 }
 
@@ -1906,9 +1932,9 @@ Products Page
 /* 각 페이지 상단 배너 설정 */
 .page-heading {
   height: 500px;
-  margin-top: 160px;
+  margin-top: 0;
   margin-bottom: 30px; 
-  background-image: url(../images/examples_banner.jpg);
+  background-image: url('../../images/paraBack.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2626,6 +2652,10 @@ responsive
   }
   footer h4 {
     margin-top: 30px;
+  }
+  /* 헤더해더 배경 */
+  .header-area{
+    background-color: #ffffff3d;
   }
 }
 
