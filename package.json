@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "hyi.kro.kr",
   "keywords": [],
   "author": "",
   "license": "ISC",

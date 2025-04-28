@@ -112,7 +112,6 @@
                                     <li><a href="about_locate.html">위치안내</a></li>
                                 </ul>
                             </li>
-                            <!-- <li><a href="faq_page.html">FAQ</a></li> -->
                             <li><a href="board.html">게시판</a></li>
                             <li><a href="submit.html#submitForm">문의하기</a></li>
                             <!-- <li class="scroll-to-section"><a href="#explore">Contact Us</a></li> -->
@@ -139,287 +138,22 @@
         </div>
     </section> -->
     <!-- 다시 슬라이드 시키려면 js 주석 해제하기 -->
-    <div class="banner-text" style="margin-top: 0;">
-        <h2 class="text-line1">최대</h2>
+    <div class="banner-text" style="margin-top: 0 !important;">
+        <!-- <h2 class="text-line1">최대</h2> -->
         <h2 class="text-line2" style="margin-top: -1% !important;">
-            <a>노후 샤시 지원금 <span class="highlight">50만 원</span>
+            <a class="setText">오직</a> <a class="highlight" style="color: white;">창호</a>만 <br><a class="text22">생각합니다</a>
         </h2>
         <h2 class="text-line4">누적시공 <span class="counter" data-target="10000">0</span> 세대 이상의<br>노하우로 완벽한 시공을 보장합니다.
         </h2>
 
 
-        <a class="btna" href="#" id="supportBtn" style="color: white !important;">
+        <a class="btna" href="submit.html" id="supportBtn" style="color: white !important;">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            지원금 확인하기
+            문의하기
         </a>
-
-        <!-- 배너 모달 -->
-        <!-- 팝업 배너 (처음엔 숨김) -->
-        <div class="popup-overlay" id="popupOverlay">
-            <div class="popup-container">
-                <!-- 닫기 버튼 (우측 상단) -->
-                <button class="popup-close-btn" id="popupCloseBtn">×</button>
-                <!-- 안내 이미지 -->
-                <img style="max-width: 500px;" src="images/event_banner.png" class="popup-image">
-            </div>
-        </div>
-
-
-        <!-- 배너 이미지  -->
-        <style>
-            /* 팝업 오버레이 (배경) */
-            .popup-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0);
-                z-index: 1000;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* 팝업 컨테이너 */
-            .popup-container {
-                position: relative;
-                max-width: 100vw;
-                max-height: 100vh;
-                /* 화면 높이의 90%까지 */
-                overflow: auto;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                animation: fadeIn 0.3s;
-            }
-
-            /* 안내 이미지 */
-            .popup-image {
-                width: 100%;
-                height: auto;
-                display: block;
-                border-radius: 10px 10px 0 0;
-            }
-
-            /* 닫기 버튼 */
-            .popup-close-btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: #ff4757;
-                color: white;
-                border: none;
-                width: 40px;
-                height: 40px;
-                font-size: 24px;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 1001;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            /* 모바일 대응 */
-            @media (max-width: 768px) {
-                .popup-container {
-                    max-width: 95%;
-                }
-
-                .popup-close-btn {
-                    width: 35px;
-                    height: 35px;
-                    font-size: 20px;
-                }
-            }
-
-            /* 애니메이션 */
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: scale(0.9);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-        </style>
-
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const btn = document.getElementById('supportBtn');
-                const popup = document.getElementById('popupOverlay');
-                const closeBtn = document.getElementById('popupCloseBtn');
-
-                // 1. 버튼 클릭 시 팝업 열기
-                btn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    popup.style.display = 'flex';
-                    document.body.style.overflow = 'hidden'; // 스크롤 잠금
-                });
-
-                // 2. 닫기 버튼 클릭 시 팝업 닫기
-                closeBtn.addEventListener('click', function () {
-                    popup.style.display = 'none';
-                    document.body.style.overflow = 'auto'; // 스크롤 복구
-                });
-
-                // 3. 배경 클릭 시 팝업 닫기 (옵션)
-                popup.addEventListener('click', function (e) {
-                    if (e.target === popup) {
-                        popup.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
-        </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
-            .btna {
-                position: relative;
-                display: inline-block;
-                padding: 25px 30px;
-                margin: 40px 0;
-                color: #03e9f4;
-                text-decoration: none;
-                text-transform: uppercase;
-                transition: 0.5s;
-                letter-spacing: 4px;
-                overflow: hidden;
-                margin-right: 50px;
-
-            }
-
-            .btna:hover {
-                background: #ffffff;
-                color: #050801;
-                box-shadow: 0 0 5px #ffffff,
-                    0 0 25px #ffffff,
-                    0 0 50px #ffffff,
-                    0 0 200px #ffffff;
-                -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-            }
-
-            .btna:nth-child(1) {
-                filter: hue-rotate(270deg);
-            }
-
-            .btna:nth-child(2) {
-                filter: hue-rotate(110deg);
-            }
-
-            .btna span {
-                position: absolute;
-                display: block;
-            }
-
-            .btna span:nth-child(1) {
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(90deg, transparent, #ffffff);
-                animation: animate1 1s linear infinite;
-            }
-
-            @keyframes animate1 {
-                0% {
-                    left: -100%;
-                }
-
-                50%,
-                100% {
-                    left: 100%;
-                }
-            }
-
-            a span:nth-child(2) {
-                top: -100%;
-                right: 0;
-                width: 2px;
-                height: 100%;
-                background: linear-gradient(180deg, transparent, #ffffff);
-                animation: animate2 1s linear infinite;
-                animation-delay: 0.25s;
-            }
-
-            @keyframes animate2 {
-                0% {
-                    top: -100%;
-                }
-
-                50%,
-                100% {
-                    top: 100%;
-                }
-            }
-
-            a span:nth-child(3) {
-                bottom: 0;
-                right: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(270deg, transparent, #fafafa);
-                animation: animate3 1s linear infinite;
-                animation-delay: 0.50s;
-            }
-
-            @keyframes animate3 {
-                0% {
-                    right: -100%;
-                }
-
-                50%,
-                100% {
-                    right: 100%;
-                }
-            }
-
-
-            a span:nth-child(4) {
-                bottom: -100%;
-                left: 0;
-                width: 2px;
-                height: 100%;
-                background: linear-gradient(360deg, transparent, #ffffff);
-                animation: animate4 1s linear infinite;
-                animation-delay: 0.75s;
-            }
-
-            @keyframes animate4 {
-                0% {
-                    bottom: -100%;
-                }
-
-                50%,
-                100% {
-                    bottom: 100%;
-                }
-            }
-        </style>
-
     </div>
 
 
@@ -774,6 +508,7 @@
             height: 4px;
             background: #4361ee;
         }
+
         /* .section-subtitle {
             font-size: 1.1rem;
             color: #666;
@@ -886,7 +621,7 @@
 
 
 
-<!--  슬라이딩 시공사례 -->
+    <!--  슬라이딩 시공사례 -->
     <!-- <section class="construction-cases" style="margin-top: 5%;">
     <a class="fade-element">
         <div class="section-header">
@@ -1273,31 +1008,31 @@
 
 
 
-<section class="section">
-    <a class="fade-element">
-    <div class="image-block" style="margin-top: 5%;">
-        <h2 style="text-align: center; text-align: center; font-weight: bold; color: black !important;">숨고</h2>
-        <img style="width: 60%; margin-left: auto; margin-right: auto;
+    <section class="section">
+        <a class="fade-element">
+            <div class="image-block" style="margin-top: 5%;">
+                <h2 style="text-align: center; text-align: center; font-weight: bold; color: black !important;">숨고</h2>
+                <img style="width: 60%; margin-left: auto; margin-right: auto;
         margin-top: 3%;" src="assets/images/숨고.png">
-    </div>
-</a>
-<a class="fade-element">
-    <div class="image-block">
-        <h2 style="text-align: center; font-weight: bold; color: black !important;">네이버</h2>
-        <img style="width: 60%; margin-left: auto; margin-right: auto;
+            </div>
+        </a>
+        <a class="fade-element">
+            <div class="image-block">
+                <h2 style="text-align: center; font-weight: bold; color: black !important;">네이버</h2>
+                <img style="width: 60%; margin-left: auto; margin-right: auto;
         margin-top: 3%;" src="assets/images/플레이스.png" alt="이미지 1 설명">
-    </div>
-</a>
+            </div>
+        </a>
 
-</section>
+    </section>
 
-<style>
-    @media (max-width: 768px) {
-        .image-block img{
-            width: 100% !important;
+    <style>
+        @media (max-width: 768px) {
+            .image-block img {
+                width: 100% !important;
+            }
         }
-    }
-</style>
+    </style>
 
 
 
@@ -1380,9 +1115,9 @@
         <div class="container2">
             <div class="image-container">
                 <a class="fade-element">
-                <img src="images/tab_13.png" alt="섹션 이미지" class="section-image">
+                    <img src="images/tab_13.png" alt="섹션 이미지" class="section-image">
             </div>
-        </a>
+            </a>
             <div class="button-group">
                 <button class="image-btn" onclick="window.location.href='board.html'" class="btn-icon">
                     <!-- <img src="images/btn_1.png" onclick="window.location.href='board.html'" class="btn-icon"> -->
@@ -1539,14 +1274,14 @@
 
 
 
-<!-- 실시간 채팅 -->
-<script>
-    (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
-  
-    ChannelIO('boot', {
-      "pluginKey": "13c5e7fe-87b7-4814-91ce-447693779327"
-    });
-  </script>
+    <!-- 실시간 채팅 -->
+    <script>
+        (function () { var w = window; if (w.ChannelIO) { return w.console.error("ChannelIO script included twice."); } var ch = function () { ch.c(arguments); }; ch.q = []; ch.c = function (args) { ch.q.push(args); }; w.ChannelIO = ch; function l() { if (w.ChannelIOInitialized) { return; } w.ChannelIOInitialized = true; var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js"; var x = document.getElementsByTagName("script")[0]; if (x.parentNode) { x.parentNode.insertBefore(s, x); } } if (document.readyState === "complete") { l(); } else { w.addEventListener("DOMContentLoaded", l); w.addEventListener("load", l); } })();
+
+        ChannelIO('boot', {
+            "pluginKey": "13c5e7fe-87b7-4814-91ce-447693779327"
+        });
+    </script>
 
 
 
@@ -1555,7 +1290,7 @@
 
 
 
-<!-- 이것 만큼은 -->
+    <!-- 이것 만큼은 -->
 
     <!-- <section class="info-section">
         <div class="info-container">
