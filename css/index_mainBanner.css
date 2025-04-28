@@ -101,10 +101,19 @@
 }
 
 .text-line2 {
-    margin-top: 20% !important;
+    /* margin-top: 80% !important; */
     font-size: 70px !important;
 }
-
+.textPC{
+    margin-top: 20%;
+}
+.text22{
+    color:white !important;
+}
+.setText{
+    font-size: 25px;
+    color: white !important;
+}
 .text-line3 {
     margin-top: 5% !important;
     font-size: 30px;
@@ -117,8 +126,6 @@
     margin-top: 20% !important;
     font-size: 25px !important;
 }
-
-
 .banner-text h2 {
     margin: 0;
     font-size: 2.5rem;
@@ -128,7 +135,6 @@
 }
 
 .highlight {
-    /* background: linear-gradient(to top, rgba(0, 119, 255, 0.701) 40%, transparent 40%); */
     background: linear-gradient(to top, rgba(0, 119, 255, 0.701) 90%, transparent 90%);
     padding: 0 5px;
 }
@@ -136,6 +142,10 @@
 .counter {
     color: #5c6dfe;
     font-weight: 800;
+}
+.textMob
+{
+    display: none;
 }
 
 /* 모바일 반응형 */
@@ -172,7 +182,14 @@
         line-height: 1.2 !important;
         margin-left: 10% !important;
     }
-
+    .textPC
+    {
+        display: none;
+    }
+    .textMob
+    {
+        display: block;
+    }
     .text-line4 {
         margin-top: 150% !important;
         font-size: 5vw !important; /* 기존 25px → 5vw */
