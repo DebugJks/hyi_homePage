@@ -89,8 +89,17 @@ document.querySelectorAll('.contact-option, .contact-toggle').forEach(btn => {
 
 
 // 메인 배너 숫자 카운트 애니메이션
-function animateCounter() {
-    const counterElement = document.querySelector('.counter');
+// 모든 카운터 요소에 애니메이션 적용
+function animateAllCounters() {
+    const counterElements = document.querySelectorAll('.counter');
+    
+    counterElements.forEach(counter => {
+        animateCounter(counter);
+    });
+}
+
+// 개별 카운터 애니메이션 함수
+function animateCounter(counterElement) {
     const target = parseInt(counterElement.getAttribute('data-target'));
     const duration = 5000; // 5초
     const start = 0;
@@ -106,6 +115,25 @@ function animateCounter() {
         counterElement.textContent = Math.floor(current).toLocaleString();
     }, 16);
 }
+
+// 화면에 들어왔을 때 애니메이션 시작
+function initCounters() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(counter => {
+        observer.observe(counter);
+    });
+}
+
+// DOM 로드 완료 후 초기화
+document.addEventListener('DOMContentLoaded', initCounters);
 
 // 슬라이드가 활성화될 때 카운트 애니메이션 실행
 document.addEventListener('DOMContentLoaded', function () {
