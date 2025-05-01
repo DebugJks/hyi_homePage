@@ -176,252 +176,285 @@
 
 
 
+
+
+
+    <div class="sections">
+        <div class="left-image" style="background-image: url('images/paraBack.png') !important;"></div>
+        <div class="right-side">
+            <div class="top-banner" style="background: url('images/tab_21.png') !important"></div>
+
+            <div class="bottom-board">
+
+                <h2>문의게시판 <a href="/board" class="more-link">더보기 +</a></h2>
+
+                <table id="latestPostsTable">
+                    <tr>
+                        <td colspan="2">게시글을 불러오는 중입니다...</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="brand-section" style="background-color: white;">
         <div class="container">
-          <h2 class="section-title">취급 브랜드</h2>
-          <p class="section-subtitle">한양창호는 최고의 브랜드와 함께합니다.</p>
-          
-          <div class="brand-slider">
-            <div class="brand-slider-track">
-              <!-- 영림 -->
-              <div class="brand-slide">
-                <div class="brand-card">
-                  <div class="brand-logo">
-                    <img src="images/로고/영림.png" alt="영림 로고">
-                  </div>
-                  <div class="brand-info">
-                    <h3>영림</h3>
-                    <p>보장된 품질</p>
-                  </div>
+            <h2 class="section-title">취급 브랜드</h2>
+            <p class="section-subtitle">한양창호는 최고의 브랜드와 함께합니다.</p>
+
+            <div class="brand-slider">
+                <div class="brand-slider-track">
+                    <!-- 영림 -->
+                    <div class="brand-slide">
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/로고/영림.png" alt="영림 로고">
+                            </div>
+                            <div class="brand-info">
+                                <h3>영림</h3>
+                                <p>보장된 품질</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 참존 -->
+                    <div class="brand-slide">
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/로고/참존.png" alt="참존 로고">
+                            </div>
+                            <div class="brand-info">
+                                <h3>참존</h3>
+                                <p>품질과 가성비 두 마리 모두 잡은 브랜드</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KCC -->
+                    <div class="brand-slide">
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/로고/KCC.png" alt="KCC 로고">
+                            </div>
+                            <div class="brand-info">
+                                <h3>KCC</h3>
+                                <p>보장된 국내 대표 브랜드</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              
-              <!-- 참존 -->
-              <div class="brand-slide">
-                <div class="brand-card">
-                  <div class="brand-logo">
-                    <img src="images/로고/참존.png" alt="참존 로고">
-                  </div>
-                  <div class="brand-info">
-                    <h3>참존</h3>
-                    <p>품질과 가성비 두 마리 모두 잡은 브랜드</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- KCC -->
-              <div class="brand-slide">
-                <div class="brand-card">
-                  <div class="brand-logo">
-                    <img src="images/로고/KCC.png" alt="KCC 로고">
-                  </div>
-                  <div class="brand-info">
-                    <h3>KCC</h3>
-                    <p>보장된 국내 대표 브랜드</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          
-          <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
-      </section>
-      <style>
-.brand-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-}
+    </section>
+    <style>
+        .brand-section {
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #333;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
 
-.section-subtitle {
-  text-align: center;
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 40px;
-}
+        .section-subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
 
-/* 브랜드 슬라이더 스타일 */
-.brand-slider {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  max-width: 1000px;
-}
+        /* 브랜드 슬라이더 스타일 */
+        .brand-slider {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
 
-.brand-slider-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
+        .brand-slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
-.brand-slide {
-  min-width: 100%;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
+        .brand-slide {
+            min-width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
 
-.brand-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  padding: 30px;
-  max-width: 350px;
-  margin: 0 auto;
-}
+        .brand-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
 
-.brand-logo {
-  margin-bottom: 25px;
-  text-align: center;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .brand-logo {
+            margin-bottom: 25px;
+            text-align: center;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.brand-logo img {
-  max-width: 150px;
-  max-height: 80px;
-  object-fit: contain;
-}
+        .brand-logo img {
+            max-width: 150px;
+            max-height: 80px;
+            object-fit: contain;
+        }
 
-.brand-info {
-  text-align: center;
-}
+        .brand-info {
+            text-align: center;
+        }
 
-.brand-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #222;
-}
+        .brand-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
 
-.brand-info p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
+        .brand-info p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
 
-/* 슬라이더 도트 네비게이션 */
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 10px;
-}
+        /* 슬라이더 도트 네비게이션 */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.dot.active {
-  background-color: #333;
-}
+        .dot.active {
+            background-color: #333;
+        }
 
-/* PC 버전 - 3열 그리드 */
-@media (min-width: 992px) {
-  .brand-slider {
-    overflow: visible;
-  }
-  
-  .brand-slider-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    transform: none !important;
-  }
-  
-  .brand-slide {
-    min-width: auto;
-    padding: 0;
-  }
-  
-  .slider-dots {
-    display: none;
-  }
-}
+        /* PC 버전 - 3열 그리드 */
+        @media (min-width: 992px) {
+            .brand-slider {
+                overflow: visible;
+            }
 
-/* 태블릿 버전 */
-@media (max-width: 991px) and (min-width: 576px) {
-  .brand-slide {
-    min-width: 50%;
-  }
-}
-      </style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sliderTrack = document.querySelector('.brand-slider-track');
-  const slides = document.querySelectorAll('.brand-slide');
-  const dots = document.querySelectorAll('.dot');
-  let currentIndex = 0;
-  
-  // 슬라이드 이동 함수
-  function goToSlide(index) {
-    currentIndex = index;
-    const slideWidth = slides[0].clientWidth;
-    sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    
-    // 도트 업데이트
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
-  
-  // 도트 클릭 이벤트
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      goToSlide(index);
-    });
-  });
-  
-  // 자동 슬라이드 (모바일에서만)
-  if (window.innerWidth < 992) {
-    let autoSlide = setInterval(() => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      goToSlide(nextIndex);
-    }, 3000);
-    
-    // 마우스 호버 시 슬라이드 일시 정지
-    sliderTrack.addEventListener('mouseenter', () => {
-      clearInterval(autoSlide);
-    });
-    
-    sliderTrack.addEventListener('mouseleave', () => {
-      autoSlide = setInterval(() => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        goToSlide(nextIndex);
-      }, 3000);
-    });
-  }
-  
-  // 반응형 대응
-  window.addEventListener('resize', function() {
-    if (window.innerWidth >= 992) {
-      sliderTrack.style.transform = 'none';
-    } else {
-      goToSlide(currentIndex);
-    }
-  });
-});
+            .brand-slider-track {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                transform: none !important;
+            }
+
+            .brand-slide {
+                min-width: auto;
+                padding: 0;
+            }
+
+            .slider-dots {
+                display: none;
+            }
+        }
+
+        /* 태블릿 버전 */
+        @media (max-width: 991px) and (min-width: 576px) {
+            .brand-slide {
+                min-width: 50%;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliderTrack = document.querySelector('.brand-slider-track');
+            const slides = document.querySelectorAll('.brand-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+
+            // 슬라이드 이동 함수
+            function goToSlide(index) {
+                currentIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+                // 도트 업데이트
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            // 도트 클릭 이벤트
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+
+            // 자동 슬라이드 (모바일에서만)
+            if (window.innerWidth < 992) {
+                let autoSlide = setInterval(() => {
+                    const nextIndex = (currentIndex + 1) % slides.length;
+                    goToSlide(nextIndex);
+                }, 3000);
+
+                // 마우스 호버 시 슬라이드 일시 정지
+                sliderTrack.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlide);
+                });
+
+                sliderTrack.addEventListener('mouseleave', () => {
+                    autoSlide = setInterval(() => {
+                        const nextIndex = (currentIndex + 1) % slides.length;
+                        goToSlide(nextIndex);
+                    }, 3000);
+                });
+            }
+
+            // 반응형 대응
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 992) {
+                    sliderTrack.style.transform = 'none';
+                } else {
+                    goToSlide(currentIndex);
+                }
+            });
+        });
     </script>
 
 
@@ -452,35 +485,35 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p class="slide2-caption">경기도 부천시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/커튼월/8.jpg" alt="시공 사진 2">
+                                <img src="images/re/8.jpg" alt="시공 사진 2">
                                 <p class="slide2-caption">경기도 의왕시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/커튼월/커튼월_1.jpg" alt="시공 사진 3">
+                                <img src="images/re/커튼월_1.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">경기도 화성시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/3.jpg" alt="시공 사진 3">
+                                <img src="images/re/3.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">경기도 파주시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/2.jpg" alt="시공 사진 3">
+                                <img src="images/re/2.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">경기도 안양시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/1.jpg" alt="시공 사진 3">
+                                <img src="images/re/1.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">서울특별시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/4.jpg" alt="시공 사진 3">
+                                <img src="images/re/4.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">서울특별시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/5.jpg" alt="시공 사진 3">
+                                <img src="images/re/5.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">인천광역시</p>
                             </div>
                             <div class="slide2">
-                                <img src="assets/images/단독주택/10.jpg" alt="시공 사진 3">
+                                <img src="images/re/10.jpg" alt="시공 사진 3">
                                 <p class="slide2-caption">서울특별시</p>
                             </div>
                         </div>
@@ -494,151 +527,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </section>
 
-    <style>
-        .feature-section {
-            padding: 60px 20px;
-            background-color: #f8f8f8;
-        }
-
-        .border-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            border: 3px solid #000;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .text-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .text-content h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .text-content .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .counter-container {
-            margin-top: 40px;
-        }
-
-
-        .image-slider2 {
-            flex: 1;
-            min-width: 300px;
-            position: relative;
-            max-width: 450px;
-            margin: 0 auto;
-            overflow: hidden;
-            /* 추가: 컨테이너 넘치는 내용 숨김 */
-        }
-
-        .slider2-container {
-            width: 100%;
-            position: relative;
-        }
-
-        .slider2-track {
-            display: flex;
-            transition: transform 0.5s ease;
-            width: 100%;
-        }
-
-        .slide2 {
-            min-width: 100%;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 10px;
-            /* 양쪽 패딩 조정 */
-            box-sizing: border-box;
-        }
-
-        .slide2 img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 8px;
-            display: block;
-        }
-
-        .slide2-caption {
-            text-align: center;
-            margin-top: 15px;
-            width: 100%;
-        }
-
-        .slider2-controls {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .slider2-prev,
-        .slider2-next {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid #333;
-            background: white;
-            color: #333;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .slider2-prev:hover,
-        .slider2-next:hover {
-            background: #333;
-            color: white;
-        }
-
-        /* 반응형 디자인 */
-        @media (max-width: 768px) {
-            .feature-section{
-                /* 모바일에서 잠시 꺼둠 */
-                display: none;
-            }
-            .border-container {
-                padding: 30px 20px;
-            }
-
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            .text-content {
-                margin-bottom: 40px;
-            }
-
-            .counter {
-                font-size: 2.5rem;
-            }
-            .counter-container{
-                margin-top: -120%;
-            }
-
-
-        }
-    </style>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -650,8 +538,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 슬라이드 너비 계산 (패딩 포함)
             function getSlideWidth() {
-    return document.querySelector('.slider2-container').offsetWidth;
+  const container = document.querySelector('.slider2-container');
+  // 컨테이너의 실제 사용 가능한 너비 계산 (패딩 제외)
+  const style = window.getComputedStyle(container);
+  const padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+  return container.offsetWidth - padding;
 }
+
 
 
             // 슬라이드 이동 함수
@@ -694,210 +587,215 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<section class="kakao-review-section">
-    <div class="review2-wrapper">
-      
-      <!-- 왼쪽 핸드폰 프레임 -->
-      <div class="phone-frame">
-        <div class="phone-screen">
-          <div class="phone-slider-track">
-            <div class="phone-slide"><img src="images/카톡1.png" alt="리뷰 1"></div>
-            <div class="phone-slide"><img src="assets/images/kakao-review2.jpg" alt="리뷰 2"></div>
-            <div class="phone-slide"><img src="assets/images/kakao-review3.jpg" alt="리뷰 3"></div>
-          </div>
-          <div class="phone-slider-controls">
-            <button class="phone-prev">←</button>
-            <button class="phone-next">→</button>
-          </div>
+    <section class="kakao-review-section">
+        <div class="review2-wrapper">
+
+            <!-- 왼쪽 핸드폰 프레임 -->
+            <div class="phone-frame">
+                <div class="phone-screen">
+                    <div class="phone-slider-track">
+                        <div class="phone-slide"><img src="images/카톡1.png" alt="리뷰 1"></div>
+                        <div class="phone-slide"><img src="assets/images/kakao-review2.jpg" alt="리뷰 2"></div>
+                        <div class="phone-slide"><img src="assets/images/kakao-review3.jpg" alt="리뷰 3"></div>
+                    </div>
+                    <div class="phone-slider-controls">
+                        <button class="phone-prev">←</button>
+                        <button class="phone-next">→</button>
+                    </div>
+                </div>
+                <!-- <img src="images/phone.png" alt="핸드폰 프레임" class="frame-image"> -->
+            </div>
+
+            <!-- 오른쪽 사진 -->
+            <div class="review-right">
+                <img src="images/외부리뷰.png">
+            </div>
+
         </div>
-        <!-- <img src="images/phone.png" alt="핸드폰 프레임" class="frame-image"> -->
-      </div>
-  
-      <!-- 오른쪽 사진 -->
-      <div class="review-right">
-        <img src="images/외부리뷰.png">
-      </div>
-  
-    </div>
-  </section>
-  
-  <style>
-.kakao-review-section {
-  background: #ffffff;
-  padding: 60px 20px;
-}
+    </section>
 
-.review2-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+    <style>
+        .kakao-review-section {
+            background: #ffffff;
+            padding: 60px 20px;
+        }
 
-.review-left, .review-right {
-  flex: 1 1 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 300px;
-}
+        .review2-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-/* 핸드폰 프레임 */
-.phone-frame {
-  position: relative;
-  width: 500px;
-  height: 600px;
-  z-index: 2;
-}
+        .review-left,
+        .review-right {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px;
+        }
 
-.frame-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  z-index: 2;
-}
+        /* 핸드폰 프레임 */
+        .phone-frame {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            z-index: 2;
+        }
 
-.phone-screen {
-  position: absolute;
-  top: 8%;
-  left: 8%;
-  width: 84%;
-  height: 84%;
-  overflow: hidden;
-  border-radius: 20px;
-  z-index: 2;
-}
+        .frame-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            z-index: 2;
+        }
 
-.phone-slider-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
-}
+        .phone-screen {
+            position: absolute;
+            top: 8%;
+            left: 8%;
+            width: 84%;
+            height: 84%;
+            overflow: hidden;
+            border-radius: 20px;
+            z-index: 2;
+        }
 
-.phone-slide {
-  min-width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-}
+        .phone-slider-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
 
-.phone-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
+        .phone-slide {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
 
-/* 슬라이더 컨트롤 */
-.phone-slider-controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
+        .phone-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
 
-.phone-prev,
-.phone-next {
-  width: 30px;
-  height: 30px;
-  background: white;
-  border: 2px solid #333;
-  border-radius: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-}
+        /* 슬라이더 컨트롤 */
+        .phone-slider-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
 
-/* 오른쪽 사진 */
-.review-right img {
-  width: 100%;
-  max-width: 500px;
-  /* border-radius: 15px; */
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
-}
+        .phone-prev,
+        .phone-next {
+            width: 30px;
+            height: 30px;
+            background: white;
+            border: 2px solid #333;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
 
-/* 반응형 */
-@media (max-width: 768px) {
-  .review2-wrapper {
-    flex-direction: column;
-  }
-  .review-left, .review-right {
-    flex: 1 1 100%;
-  }
-  .phone-frame {
-    margin-bottom: 30px;
-  }
-  .review-right{
-    display: none;
-  }
-}
-  </style>
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const phoneSliderTrack = document.querySelector('.phone-slider-track');
-    const phoneSlides = document.querySelectorAll('.phone-slide');
-    const phonePrev = document.querySelector('.phone-prev');
-    const phoneNext = document.querySelector('.phone-next');
-    let phoneIndex = 0;
-    let autoSlideInterval;
-  
-    function getPhoneSlideWidth() {
-      return phoneSlides[0].offsetWidth;
-    }
-  
-    function movePhoneSlide(index) {
-      const width = getPhoneSlideWidth();
-      phoneSliderTrack.style.transform = `translateX(-${index * width}px)`;
-      phoneIndex = index;
-    }
-  
-    function nextPhoneSlide() {
-      const next = (phoneIndex + 1) % phoneSlides.length;
-      movePhoneSlide(next);
-    }
-  
-    function prevPhoneSlide() {
-      const prev = (phoneIndex - 1 + phoneSlides.length) % phoneSlides.length;
-      movePhoneSlide(prev);
-    }
-  
-    phoneNext.addEventListener('click', nextPhoneSlide);
-    phonePrev.addEventListener('click', prevPhoneSlide);
-  
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(nextPhoneSlide, 3000); // 3초마다
-    }
-  
-    function stopAutoSlide() {
-      clearInterval(autoSlideInterval);
-    }
-  
-    // 시작
-    movePhoneSlide(0);
-    startAutoSlide();
-  
-    // 유저가 버튼 누르면 자동 슬라이드 리셋
-    phonePrev.addEventListener('click', function() {
-      stopAutoSlide();
-      startAutoSlide();
-    });
-    phoneNext.addEventListener('click', function() {
-      stopAutoSlide();
-      startAutoSlide();
-    });
-  
-    // 창 크기 조정 대응
-    window.addEventListener('resize', function () {
-      movePhoneSlide(phoneIndex);
-    });
-  });
-  </script>
-  
+        /* 오른쪽 사진 */
+        .review-right img {
+            width: 100%;
+            max-width: 500px;
+            /* border-radius: 15px; */
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .review2-wrapper {
+                flex-direction: column;
+            }
+
+            .review-left,
+            .review-right {
+                flex: 1 1 100%;
+            }
+
+            .phone-frame {
+                margin-bottom: 30px;
+            }
+
+            .review-right {
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const phoneSliderTrack = document.querySelector('.phone-slider-track');
+            const phoneSlides = document.querySelectorAll('.phone-slide');
+            const phonePrev = document.querySelector('.phone-prev');
+            const phoneNext = document.querySelector('.phone-next');
+            let phoneIndex = 0;
+            let autoSlideInterval;
+
+            function getPhoneSlideWidth() {
+                return phoneSlides[0].offsetWidth;
+            }
+
+            function movePhoneSlide(index) {
+                const width = getPhoneSlideWidth();
+                phoneSliderTrack.style.transform = `translateX(-${index * width}px)`;
+                phoneIndex = index;
+            }
+
+            function nextPhoneSlide() {
+                const next = (phoneIndex + 1) % phoneSlides.length;
+                movePhoneSlide(next);
+            }
+
+            function prevPhoneSlide() {
+                const prev = (phoneIndex - 1 + phoneSlides.length) % phoneSlides.length;
+                movePhoneSlide(prev);
+            }
+
+            phoneNext.addEventListener('click', nextPhoneSlide);
+            phonePrev.addEventListener('click', prevPhoneSlide);
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextPhoneSlide, 3000); // 3초마다
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            // 시작
+            movePhoneSlide(0);
+            startAutoSlide();
+
+            // 유저가 버튼 누르면 자동 슬라이드 리셋
+            phonePrev.addEventListener('click', function () {
+                stopAutoSlide();
+                startAutoSlide();
+            });
+            phoneNext.addEventListener('click', function () {
+                stopAutoSlide();
+                startAutoSlide();
+            });
+
+            // 창 크기 조정 대응
+            window.addEventListener('resize', function () {
+                movePhoneSlide(phoneIndex);
+            });
+        });
+    </script>
+
 
 
 
@@ -1048,145 +946,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-    <!--  슬라이딩 시공사례 -->
-    <!-- <section class="construction-cases" style="margin-top: 5%;">
-    <a class="fade-element">
-        <div class="section-header">
-            <h2 class="section-title">시공사례</h2>
-        </div>
-    </a>
-        <div class="slider-container">
-            <div class="slider-track">
-
-                <div class="case-card">
-                    <img src="assets/images/리뷰/1.jpg" alt="아파트 창호 시공" class="case-image">
-                    <div class="case-info">
-                        <h3 class="case-title">두번째 공사까지 만족합니다.</h3>
-                        <p class="case-location">경기도 부천시</p>
-                        <p class="case-date">2023년 8월 시공</p>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <img src="images/tab_12.png" alt="빌라 리모델링" class="case-image">
-                    <div class="case-info">
-                        <h3 class="case-title">너무 훌륭한 공사비, 시공입니다.</h3>
-                        <p class="case-location">경기도 화성시</p>
-                        <p class="case-date">2024년 3월 시공</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sliderContainer = document.querySelector('.slider-container');
-            const sliderTrack = document.querySelector('.slider-track');
-            let isDragging = false;
-            let startPosX = 0;
-            let currentTranslate = 0;
-            let prevTranslate = 0;
-            let animationID;
-            let currentIndex = 0;
-
-            // 터치 이벤트를 위한 변수
-            let touchStartPosX = 0;
-            let touchCurrentPosX = 0;
-
-            // 드래그 시작
-            const dragStart = (positionX) => {
-                isDragging = true;
-                startPosX = positionX;
-                sliderContainer.classList.add('grabbing');
-                cancelAnimationFrame(animationID);
-            };
-
-            // 드래그 중
-            const drag = (positionX) => {
-                if (!isDragging) return;
-                const currentPosition = positionX;
-                const diff = currentPosition - startPosX;
-                sliderTrack.style.transform = `translateX(${currentTranslate + diff}px)`;
-            };
-
-            // 드래그 종료
-            const dragEnd = () => {
-                if (!isDragging) return;
-                isDragging = false;
-                sliderContainer.classList.remove('grabbing');
-
-                // 마지막 이동 거리 계산
-                const movedBy = currentTranslate - prevTranslate;
-
-                // 이동 거리가 충분히 크면 슬라이드 변경
-                if (movedBy < -100 && currentIndex < sliderTrack.children.length - 1) {
-                    currentIndex += 1;
-                } else if (movedBy > 100 && currentIndex > 0) {
-                    currentIndex -= 1;
-                }
-
-                // 슬라이드 위치 설정
-                setPositionByIndex();
-            };
-
-            // 인덱스 기반 위치 설정
-            const setPositionByIndex = () => {
-                const slideWidth = sliderTrack.children[0].offsetWidth + 30; // gap 포함
-                currentTranslate = currentIndex * -slideWidth;
-                prevTranslate = currentTranslate;
-
-                // 부드러운 애니메이션 적용
-                sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-
-                // 애니메이션 종료 후 트랜지션 제거
-                sliderTrack.addEventListener('transitionend', () => {
-                    sliderTrack.style.transition = 'none';
-                }, { once: true });
-            };
-
-            // 마우스 이벤트
-            sliderTrack.addEventListener('mousedown', (e) => {
-                dragStart(e.clientX);
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                drag(e.clientX);
-            });
-
-            document.addEventListener('mouseup', dragEnd);
-
-            // 터치 이벤트
-            sliderTrack.addEventListener('touchstart', (e) => {
-                touchStartPosX = e.touches[0].clientX;
-                dragStart(e.touches[0].clientX);
-            });
-
-            sliderTrack.addEventListener('touchmove', (e) => {
-                touchCurrentPosX = e.touches[0].clientX;
-                drag(e.touches[0].clientX);
-            });
-
-            sliderTrack.addEventListener('touchend', () => {
-                // 터치 이동 거리 계산
-                const touchDiff = touchCurrentPosX - touchStartPosX;
-                if (Math.abs(touchDiff) > 50) {
-                    e.preventDefault(); // 스크롤 방지
-                }
-                dragEnd();
-            });
-
-            // 초기 위치 설정
-            setPositionByIndex();
-
-            // 창 크기 변경시 위치 재조정
-            window.addEventListener('resize', () => {
-                setPositionByIndex();
-            });
-        });
-    </script> -->
 
 
     <!-- 리뷰 -->
@@ -1629,25 +1388,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-    <!-- 실시간 채팅 -->
-    <script>
-        (function () { var w = window; if (w.ChannelIO) { return w.console.error("ChannelIO script included twice."); } var ch = function () { ch.c(arguments); }; ch.q = []; ch.c = function (args) { ch.q.push(args); }; w.ChannelIO = ch; function l() { if (w.ChannelIOInitialized) { return; } w.ChannelIOInitialized = true; var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js"; var x = document.getElementsByTagName("script")[0]; if (x.parentNode) { x.parentNode.insertBefore(s, x); } } if (document.readyState === "complete") { l(); } else { w.addEventListener("DOMContentLoaded", l); w.addEventListener("load", l); } })();
-
-        ChannelIO('boot', {
-            "pluginKey": "13c5e7fe-87b7-4814-91ce-447693779327"
-        });
-    </script>
-
-
-
-
-
-
-
-
     <!-- 이것 만큼은 -->
 
     <!-- <section class="info-section">
@@ -1826,6 +1566,180 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+
+    </script>
+
+
+    <!-- firebase Database 연결 -->
+    <!-- 스프레드 시트로 변경 2025-03-24 -->
+    <!-- <script type="module">  
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child, push } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
+        authDomain: "hyihomepage.firebaseapp.com",
+        databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
+        projectId: "hyihomepage",
+        storageBucket: "hyihomepage.firebasestorage.app",
+        messagingSenderId: "175712717780",
+        appId: "1:175712717780:web:8b775bded241f7043ba441",
+        measurementId: "G-JJ3ZDL0X2F"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase(app);
+
+    document.getElementById("submit").addEventListener('click', function (e) {
+        e.preventDefault();
+        const currentTime = new Date().toISOString(); // Get current time in ISO format
+        const phoneNumber = document.getElementById("userName").value;  // 연락처 11자링 입력확인하기 위함
+
+
+        // 전화번호 길이 체크
+        if (phoneNumber.length !== 11 || isNaN(phoneNumber)) {
+            alert("연락처를 확인해주세요.");
+            return;
+        }
+
+        push(ref(db, 'user/' + document.getElementById("userName").value), {
+            userName: document.getElementById("userName").value,
+            contents: document.getElementById("contents").value,
+            timestamp: currentTime // Add timestamp
+        });
+
+        alert("상담 접수가 완료되었습니다");
+    });
+</script> -->
+    <!-- iOS section Text image 안나오는 거 해결하기 위함 -->
+
+    <script>
+        //ios 이미지 문제
+        if (/iP(hone|ad|od)/.test(navigator.userAgent)) {
+            const fixIOSRendering = () => {
+                const images = document.querySelectorAll('.large-image img');
+                images.forEach(img => {
+                    // iOS에서 이미지 강제 리렌더링
+                    img.style.opacity = '0.99';
+                    setTimeout(() => {
+                        img.style.opacity = '1';
+                    }, 50);
+                });
+            };
+
+            // 페이지 로드 시 실행
+            document.addEventListener('DOMContentLoaded', fixIOSRendering);
+
+            // 사용자 인터랙션 시 추가 실행
+            document.addEventListener('touchstart', fixIOSRendering);
+            window.addEventListener('scroll', fixIOSRendering);
+        }
+    </script>
+
+
+
+
+    <!-- 구석 카톡 문의 Toggle 버튼 -->
+    <div class="contact-container">
+        <button class="contact-option submit-btn" onclick="openSubmit()"></button>
+        <button class="contact-option kakao-btn" onclick="openKakao()"></button>
+        <button class="contact-option call-btn" onclick="makeCall()"></button>
+        <button class="contact-toggle" onclick="toggleContact()"></button>
+    </div>
+
+
+
+
+
+    <script>
+        document.getElementById("cal").addEventListener("click", function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+
+            // 팝업 창 열기
+            const popupWindow = window.open(
+                "견적/calculatePage.html", // 팝업으로 열릴 HTML 파일 경로
+                "간편견적",         // 팝업 창 이름
+                "width=800,height=600,scrollbars=yes,resizable=yes" // 팝업 창 속성
+            );
+
+            // 팝업 차단 확인
+            if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
+                alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업 차단을 해제해주세요.");
+            }
+        });
+    </script>
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+
+                        </div>
+                        <ul style="margin-top: -50px; margin-left:-17px;">
+                            <div style="color: white; font-size: 40px; font-weight: bold;">
+                                (주) 한양창호
+                            </div>
+                            <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
+                            <li><a href="#">ejrwls0321@naver.com</a></li>
+                            <li><a href="#">010-4010-2363</a></li>
+                            <li><a href="#">031 - 353 - 0457</a></li>
+                            <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
     <!-- fade 페이드효과 -->
     <style>
         /* 기본적으로 요소들을 숨김 */
@@ -1990,231 +1904,6 @@ document.addEventListener('DOMContentLoaded', function() {
             window.addEventListener('scroll', fixIOSRendering);
         }
     </script>
-
-
-
-
-<!-- 구석 카톡 문의 Toggle 버튼 -->
-<div class="contact-container">
-    <button class="contact-option submit-btn" onclick="openSubmit()"></button>
-    <button class="contact-option kakao-btn" onclick="openKakao()"></button>
-    <button class="contact-option call-btn" onclick="makeCall()"></button>
-    <button class="contact-toggle" onclick="toggleContact()"></button>
-</div>
-
-
-
-
-
-<script>
-    document.getElementById("cal").addEventListener("click", function (event) {
-        event.preventDefault(); // 기본 링크 동작 방지
-
-        // 팝업 창 열기
-        const popupWindow = window.open(
-            "견적/calculatePage.html", // 팝업으로 열릴 HTML 파일 경로
-            "간편견적",         // 팝업 창 이름
-            "width=800,height=600,scrollbars=yes,resizable=yes" // 팝업 창 속성
-        );
-
-        // 팝업 차단 확인
-        if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
-            alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업 차단을 해제해주세요.");
-        }
-    });
-</script>
-
-
-<!-- ***** Footer Start ***** -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="first-item">
-                    <div class="logo">
-
-                    </div>
-                    <ul style="margin-top: -50px; margin-left:-17px;">
-                        <div style="color: white; font-size: 40px; font-weight: bold;">
-                            (주) 한양창호
-                        </div>
-                        <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
-                        <li><a href="#">ejrwls0321@naver.com</a></li>
-                        <li><a href="#">010-4010-2363</a></li>
-                        <li><a href="#">031 - 353 - 0457</a></li>
-                        <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-<!-- fade 페이드효과 -->
-<style>
-    /* 기본적으로 요소들을 숨김 */
-    .fade-element {
-        opacity: 0;
-        transform: translateY(30px) translateZ(0);
-        /* iOS호환용 하드웨어 가속 적용 */
-        transform: translateY(30px);
-        /* 아래에서 위로 올라오는 효과 */
-        transition: opacity 1.6s ease-out, transform 1.6s ease-out;
-        /* iOS 호환용 */
-        -webkit-transition: opacity 1.6s ease-out, -webkit-transform 1.6s ease-out;
-        will-change: opacity, transform;
-        /* iOS 성능 최적화 */
-    }
-
-    /* 화면에 보일 때 fade-in 효과 */
-    .fade-element.visible {
-        opacity: 1;
-        transform: translateY(0);
-        -webkit-transform: translateY(0);
-        /* iOS 지원 */
-    }
-</style>
-
-<script>
-    // Intersection Observer 설정
-    const observerOptions = {
-        threshold: 0.3 // 요소의 30%가 화면에 나타나면 효과 적용
-    };
-
-    // 인터섹션 옵저버 콜백 함수
-    const fadeInOnScroll = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // 요소가 화면에 나타나면 'visible' 클래스 추가
-                entry.target.classList.add('visible');
-            }
-        });
-    };
-
-    // Intersection Observer 생성
-    const observer = new IntersectionObserver(fadeInOnScroll, observerOptions);
-
-    // 페이지 로드 시 모든 fade-element 요소들을 감시하도록 등록
-    document.querySelectorAll('.fade-element').forEach(element => {
-
-        observer.observe(element);
-    });
-</script>
-
-
-
-<!-- jQuery -->
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="assets/js/popper.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-<!-- Plugins -->
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/accordions.js"></script>
-<script src="assets/js/datepicker.js"></script>
-<script src="assets/js/scrollreveal.min.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/imgfix.min.js"></script>
-<script src="assets/js/slick.js"></script>
-<script src="assets/js/lightbox.js"></script>
-<script src="assets/js/isotope.js"></script>
-
-<!-- Global Init -->
-<script src="assets/js/custom.js"></script>
-
-<script>
-
-    $(function () {
-        var selectedClass = "";
-        $("p").click(function () {
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-            $("#portfolio div").not("." + selectedClass).fadeOut();
-            setTimeout(function () {
-                $("." + selectedClass).fadeIn();
-                $("#portfolio").fadeTo(50, 1);
-            }, 500);
-
-        });
-    });
-
-</script>
-
-
-<!-- firebase Database 연결 -->
-<!-- 스프레드 시트로 변경 2025-03-24 -->
-<!-- <script type="module">  
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-    import { getDatabase, ref, set, get, child, push } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-    
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyCRLoGsE02q2LgqO7JZOaPZkdKG1ibVl4o",
-        authDomain: "hyihomepage.firebaseapp.com",
-        databaseURL: "https://hyihomepage-default-rtdb.firebaseio.com",
-        projectId: "hyihomepage",
-        storageBucket: "hyihomepage.firebasestorage.app",
-        messagingSenderId: "175712717780",
-        appId: "1:175712717780:web:8b775bded241f7043ba441",
-        measurementId: "G-JJ3ZDL0X2F"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const db = getDatabase(app);
-
-    document.getElementById("submit").addEventListener('click', function (e) {
-        e.preventDefault();
-        const currentTime = new Date().toISOString(); // Get current time in ISO format
-        const phoneNumber = document.getElementById("userName").value;  // 연락처 11자링 입력확인하기 위함
-
-
-        // 전화번호 길이 체크
-        if (phoneNumber.length !== 11 || isNaN(phoneNumber)) {
-            alert("연락처를 확인해주세요.");
-            return;
-        }
-
-        push(ref(db, 'user/' + document.getElementById("userName").value), {
-            userName: document.getElementById("userName").value,
-            contents: document.getElementById("contents").value,
-            timestamp: currentTime // Add timestamp
-        });
-
-        alert("상담 접수가 완료되었습니다");
-    });
-</script> -->
-<!-- iOS section Text image 안나오는 거 해결하기 위함 -->
-
-<script>
-    //ios 이미지 문제
-    if (/iP(hone|ad|od)/.test(navigator.userAgent)) {
-        const fixIOSRendering = () => {
-            const images = document.querySelectorAll('.large-image img');
-            images.forEach(img => {
-                // iOS에서 이미지 강제 리렌더링
-                img.style.opacity = '0.99';
-                setTimeout(() => {
-                    img.style.opacity = '1';
-                }, 50);
-            });
-        };
-
-        // 페이지 로드 시 실행
-        document.addEventListener('DOMContentLoaded', fixIOSRendering);
-
-        // 사용자 인터랙션 시 추가 실행
-        document.addEventListener('touchstart', fixIOSRendering);
-        window.addEventListener('scroll', fixIOSRendering);
-    }
-</script>
 </body>
 
 </html>

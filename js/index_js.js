@@ -92,7 +92,7 @@ document.querySelectorAll('.contact-option, .contact-toggle').forEach(btn => {
 // 모든 카운터 요소에 애니메이션 적용
 function animateAllCounters() {
     const counterElements = document.querySelectorAll('.counter');
-    
+
     counterElements.forEach(counter => {
         animateCounter(counter);
     });
@@ -163,3 +163,85 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(slide, { attributes: true });
     });
 });
+
+
+
+//  글 5개 불러오기
+document.addEventListener('DOMContentLoaded', function () {
+    const latestPostsTable = document.getElementById('latestPostsTable');
+    if (!latestPostsTable) return;
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZpxFxSbgN4ylGicJUsUb-UyNXzTcdJnMSfb2Nf4p9ioY8JRyMeNSwOPPt5mwHypFXCw/exec';
+
+    function fetchLatestPosts() {
+        fetch(`${scriptURL}?boardType=inquiry`)
+            .then(response => response.json())
+            .then(data => {
+                if (!Array.isArray(data)) throw new Error("데이터 형식 오류");
+
+                const latestPosts = data.slice().reverse().slice(0, 5);
+                latestPostsTable.innerHTML = '';
+
+                latestPosts.forEach((post, index) => {
+                    const row = document.createElement('tr');
+                    row.className = 'post-title';
+
+                    const titleCell = document.createElement('td');
+                    titleCell.className = 'title';
+                    titleCell.textContent = post["제목"] || '제목 없음';
+
+                    const dateCell = document.createElement('td');
+                    dateCell.className = 'date';
+                    dateCell.textContent = post["작성일"] ? formatDate(post["작성일"]) : '날짜 없음';
+
+                    row.appendChild(titleCell);
+                    row.appendChild(dateCell);
+
+                    const contentRow = document.createElement('tr');
+                    contentRow.className = 'post-content';
+                    contentRow.style.display = 'none';
+
+                    const contentCell = document.createElement('td');
+                    contentCell.colSpan = 2;
+                    contentCell.innerHTML = `
+                            <div style="margin-bottom: 10px; font-weight: 500;">내용</div>
+                            <div style="white-space: pre-line;">${post["내용"] || '내용 없음'}</div>
+                        `;
+
+                    contentRow.appendChild(contentCell);
+
+                    row.addEventListener('click', () => {
+                        const isHidden = contentRow.style.display === 'none';
+                        document.querySelectorAll('.post-content').forEach(item => item.style.display = 'none');
+                        contentRow.style.display = isHidden ? 'table-row' : 'none';
+                    });
+
+                    latestPostsTable.appendChild(row);
+                    latestPostsTable.appendChild(contentRow);
+                });
+            })
+            .catch(error => {
+                latestPostsTable.innerHTML = `
+                        <tr>
+                            <td colspan="2" style="text-align: center; padding: 20px;">
+                                게시글을 불러오는 데 실패했습니다.<br>
+                                ${error.message}
+                            </td>
+                        </tr>`;
+            });
+    }
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        if (isNaN(date.getTime())) return '날짜 오류';
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+    }
+
+    fetchLatestPosts();
+});
+
+
+
