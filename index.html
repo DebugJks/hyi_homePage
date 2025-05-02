@@ -174,6 +174,297 @@
 
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+        .slider-section4 {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            position: relative;
+        }
+
+        .section-title4 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .slider-container4 {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-track4 {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 400px;
+        }
+
+        .slide4 {
+            min-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row; /* 가로 정렬 */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 이미지 사이 간격 */
+    padding: 0 20px;
+        }
+
+        .slide-image4 {
+            width: calc(33.33% - 14px); /* 3열 레이아웃 */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+        }
+
+        .slide-title4 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .slider-nav4 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            color: #333;
+            font-size: 24px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .slider-nav4:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-nav4.prev4 {
+            left: 20px;
+        }
+
+        .slider-nav4.next4 {
+            right: 20px;
+        }
+
+        .slider-indicators4 {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .slider-indicators4 span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .slider-indicators4 span.active4 {
+            background: #4a6bff;
+            transform: scale(1.2);
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .slider-track4 {
+                height: 350px;
+            }
+            
+            .slide-image4 {
+                width: 90%;
+                height: 250px;
+            }
+            
+            .slide-title4 {
+                font-size: 1.3rem;
+                margin-top: 15px;
+            }
+            
+            .slider-nav4 {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-track4 {
+                height: 300px;
+            }
+            
+            .slide-image4 {
+                width: 95%;
+                height: 200px;
+            }
+            
+            .slide-title4 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+
+    <section class="slider-section4">
+        <h2 class="section-title4">한양도어 제품 갤러리</h2>
+        
+        <div class="slider-container4">
+            <div class="slider-track4">
+                <div class="slide4">
+                    <img src="images/24.png" class="slide-image4" alt="프리미엄 현관문">
+                    <h3 class="slide-title4">프리미엄 현관문 시리즈</h3>
+                </div>
+                <div class="slide4">
+                    <img src="https://via.placeholder.com/800x500/33ff57/ffffff?text=디럭스+도어" class="slide-image4" alt="디럭스 도어">
+                    <h3 class="slide-title4">디럭스 도어</h3>
+                </div>
+                <div class="slide4">
+                    <img src="https://via.placeholder.com/800x500/ff5733/ffffff?text=시큐리티+도어" class="slide-image4" alt="시큐리티 도어">
+                    <h3 class="slide-title4">시큐리티 도어</h3>
+                </div>
+                <div class="slide4">
+                    <img src="https://via.placeholder.com/800x500/a533ff/ffffff?text=모던+디자인" class="slide-image4" alt="모던 디자인">
+                    <h3 class="slide-title4">모던 디자인</h3>
+                </div>
+            </div>
+            
+            <button class="slider-nav4 prev4"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-nav4 next4"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="slider-indicators4"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track4 = document.querySelector('.slider-track4');
+            const slides4 = document.querySelectorAll('.slide4');
+            const prevBtn4 = document.querySelector('.prev4');
+            const nextBtn4 = document.querySelector('.next4');
+            const indicatorsContainer4 = document.querySelector('.slider-indicators4');
+            
+            let currentIndex4 = 0;
+            const slideCount4 = slides4.length;
+            
+            // 인디케이터 생성
+            slides4.forEach((_, index) => {
+                const indicator4 = document.createElement('span');
+                indicator4.addEventListener('click', () => goToSlide4(index));
+                indicatorsContainer4.appendChild(indicator4);
+            });
+            
+            const indicators4 = document.querySelectorAll('.slider-indicators4 span');
+            
+            // 슬라이드 이동 함수
+            function updateSlider4() {
+                track4.style.transform = `translateX(-${currentIndex4 * 100}%)`;
+                
+                // 인디케이터 업데이트
+                indicators4.forEach((indicator4, index) => {
+                    indicator4.classList.toggle('active4', index === currentIndex4);
+                });
+            }
+            
+            // 특정 슬라이드로 이동
+            function goToSlide4(index) {
+                currentIndex4 = index;
+                if (currentIndex4 >= slideCount4) currentIndex4 = 0;
+                if (currentIndex4 < 0) currentIndex4 = slideCount4 - 1;
+                updateSlider4();
+            }
+            
+            // 버튼 이벤트
+            nextBtn4.addEventListener('click', () => {
+                goToSlide4(currentIndex4 + 1);
+            });
+            
+            prevBtn4.addEventListener('click', () => {
+                goToSlide4(currentIndex4 - 1);
+            });
+            
+            // 키보드 화살표로 제어
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    goToSlide4(currentIndex4 + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    goToSlide4(currentIndex4 - 1);
+                }
+            });
+            
+            // 터치 이벤트 (모바일 대응)
+            let touchStartX4 = 0;
+            let touchEndX4 = 0;
+            
+            track4.addEventListener('touchstart', (e) => {
+                touchStartX4 = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            track4.addEventListener('touchend', (e) => {
+                touchEndX4 = e.changedTouches[0].screenX;
+                handleSwipe4();
+            }, {passive: true});
+            
+            function handleSwipe4() {
+                if (touchEndX4 < touchStartX4 - 50) {
+                    goToSlide4(currentIndex4 + 1);
+                } else if (touchEndX4 > touchStartX4 + 50) {
+                    goToSlide4(currentIndex4 - 1);
+                }
+            }
+            
+            // 초기화
+            updateSlider4();
+            indicators4[0].classList.add('active4');
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -460,10 +751,10 @@
 
 
 
-    <section class="feature-section">
+    <!-- <section class="feature-section">
         <div class="border-container">
             <div class="content-wrapper">
-                <!-- 왼쪽 텍스트 영역 -->
+
                 <div class="text-content">
                     <h2>한양창호의 성과</h2>
                     <p class="description">지금까지 쌓아온 신뢰와 경험을 바탕으로 최고의 서비스를 제공합니다.</p>
@@ -473,7 +764,7 @@
                     </div>
                 </div>
 
-                <!-- 오른쪽 이미지 슬라이더 영역 -->
+
                 <div class="image-slider2">
                     <div class="slider2-container">
                         <div class="slider2-track">
@@ -575,12 +866,28 @@
                 }, 250); // 리사이즈 완료 후 250ms 뒤에 실행
             });
         });
-    </script>
+    </script> -->
 
 
 
-
-
+<a class="fade-element">
+    <div style="text-align: center; font-weight: bold;">
+        <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 50px;">시공 후기</h1>
+    </div>
+</a>
+<a class="fade-element">
+    <div style=" font-size: 30px; color: #ffb535;text-align: center; font-weight: bold; margin-top: 2%;">
+        <h1>|</h1>
+    </div>
+</a>
+<a class="fade-element">
+    <div style=" font-size: 20px; text-align: center; font-weight: bold; margin-top: 2%; margin-bottom: 2%;">
+        <a class="fade-element">
+            <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 25px;"><a style="color: #ffb535;">만족하신
+                    고객님들의</a> <br>
+                생생한 리뷰입니다.</h1>
+    </div>
+</a>
 
 
 <!-- 리뷰슬라이드 -->
@@ -881,7 +1188,7 @@
     </style>
     <section class="section" id="products">
 
-        <a class="fade-element">
+        <!-- <a class="fade-element">
             <div style="text-align: center; font-weight: bold;">
                 <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 50px;">시공 후기</h1>
             </div>
@@ -891,7 +1198,6 @@
                 <h1>|</h1>
             </div>
         </a>
-
         <a class="fade-element">
             <div style=" font-size: 20px; text-align: center; font-weight: bold; margin-top: 2%; margin-bottom: 2%;">
                 <a class="fade-element">
@@ -899,7 +1205,7 @@
                             고객님들의</a> <br>
                         생생한 리뷰입니다.</h1>
             </div>
-        </a>
+        </a> -->
 
         <a class="fade-element">
             <div class="container">

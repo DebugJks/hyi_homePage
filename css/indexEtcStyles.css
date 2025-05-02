@@ -1109,7 +1109,7 @@ td {
 
 /* 리뷰 슬라이드 */
 .slide3-container {
-  width: 100%;
+  width: 150%;
   overflow: hidden;
   background: #fff;
   padding: 20px 0;
@@ -1123,8 +1123,8 @@ td {
 
 .slide3-item {
   flex: none;
-  width: 200px;
-  margin-right: 20px;
+  width: 300px;
+  margin-right: 30px;
 }
 
 .slide3-item img {
