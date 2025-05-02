@@ -186,7 +186,7 @@
 
             <div class="bottom-board">
 
-                <h2>문의게시판 <a href="/board" class="more-link">더보기 +</a></h2>
+                <h2>문의게시판 <a href="board.html" class="more-link">더보기 +</a></h2>
 
                 <table id="latestPostsTable">
                     <tr>
@@ -224,7 +224,6 @@
                             </div>
                             <div class="brand-info">
                                 <h3>영림</h3>
-                                <p>보장된 품질</p>
                             </div>
                         </div>
                     </div>
@@ -237,7 +236,6 @@
                             </div>
                             <div class="brand-info">
                                 <h3>참존</h3>
-                                <p>품질과 가성비 두 마리 모두 잡은 브랜드</p>
                             </div>
                         </div>
                     </div>
@@ -250,7 +248,6 @@
                             </div>
                             <div class="brand-info">
                                 <h3>KCC</h3>
-                                <p>보장된 국내 대표 브랜드</p>
                             </div>
                         </div>
                     </div>
@@ -538,12 +535,12 @@
 
             // 슬라이드 너비 계산 (패딩 포함)
             function getSlideWidth() {
-  const container = document.querySelector('.slider2-container');
-  // 컨테이너의 실제 사용 가능한 너비 계산 (패딩 제외)
-  const style = window.getComputedStyle(container);
-  const padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
-  return container.offsetWidth - padding;
-}
+                const container = document.querySelector('.slider2-container');
+                // 컨테이너의 실제 사용 가능한 너비 계산 (패딩 제외)
+                const style = window.getComputedStyle(container);
+                const padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+                return container.offsetWidth - padding;
+            }
 
 
 
@@ -579,6 +576,95 @@
             });
         });
     </script>
+
+
+
+
+
+
+    <!-- 리뷰 슬라이드 -->
+    <style>
+        .slide3-container {
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px 0;
+        }
+
+        .slide3-track {
+            display: flex;
+            width: fit-content;
+            animation: slide3Scroll 50s linear infinite;
+        }
+
+        .slide3-item {
+            flex: none;
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        .slide3-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+
+        @keyframes slide3Scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
+<img src="images/외부리뷰/네이버.jpg" alt="리뷰 타이틀" style="width: 200px; margin: 0 auto; display: block;">
+
+    <div class="slide3-container">
+        <div class="slide3-track" id="slide3Track">
+            <!-- 이미지 반복 2번 -->
+            <div class="slide3-item"><img src="images/외부리뷰/1.png" alt="현관문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/2.png" alt="중문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/3.png" alt="방문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/4.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/5.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/6.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/7.png" alt="방문 B"></div>
+
+            <!--반복이미지 -->
+            <div class="slide3-item"><img src="images/외부리뷰/1.png" alt="현관문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/2.png" alt="중문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/3.png" alt="방문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/4.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/5.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/6.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/7.png" alt="방문 B"></div>
+        </div>
+    </div>
+
+    <img src="images/외부리뷰/숨고.png" alt="리뷰 타이틀" style="width: 200px; margin: 0 auto; display: block;">
+
+    <div class="slide3-container">
+        <div class="slide3-track" id="slide3Track">
+            <!-- 이미지 반복 2번 -->
+            <div class="slide3-item"><img src="images/외부리뷰/숨1.png" alt="현관문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨2.png" alt="중문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨3.png" alt="방문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨4.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨5.png" alt="방문 B"></div>
+
+            <!--반복이미지 -->
+            <div class="slide3-item"><img src="images/외부리뷰/숨1.png" alt="현관문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨2.png" alt="중문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨3.png" alt="방문 A"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨4.png" alt="방문 B"></div>
+            <div class="slide3-item"><img src="images/외부리뷰/숨5.png" alt="방문 B"></div>
+        </div>
+    </div>
+
 
 
 
@@ -803,142 +889,6 @@
 
 
 
-    <style>
-        /* 섹션 스타일 */
-        .construction-cases {
-            padding: 80px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: #333;
-            font-weight: 700;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #4361ee;
-        }
-
-        /* .section-subtitle {
-            font-size: 1.1rem;
-            color: #666;
-        } */
-
-        /* 슬라이더 컨테이너 */
-        .slider-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .slider-track {
-            display: flex;
-            gap: 15px;
-            padding: 20px 0;
-            cursor: url('images/drag.png') 20 20, grab;
-            transition: transform 0.3s ease-out;
-            will-change: transform;
-        }
-
-        .slider-container.grabbing .slider-track {
-            cursor: url('images/drag.png') 20 20, grabbing;
-            transition: none;
-        }
-
-        /* 슬라이드 아이템 */
-        .case-card {
-            flex: 0 0 380px;
-            height: 420px;
-            background: white;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .case-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-
-        .case-info {
-            padding: 20px;
-        }
-
-        .case-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .case-location {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .case-date {
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .slider-container:hover .drag-hint {
-            opacity: 1;
-        }
-
-        /* 반응형 디자인 */
-        @media (max-width: 768px) {
-            .construction-cases {
-                padding: 60px 15px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .case-card {
-                flex: 0 0 300px;
-                height: 380px;
-            }
-
-            .case-image {
-                height: 240px;
-            }
-
-            .drag-hint {
-                display: none;
-            }
-
-            .slider-track {
-                gap: 20px;
-                cursor: grab;
-            }
-        }
-    </style>
 
 
 
