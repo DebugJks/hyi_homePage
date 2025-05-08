@@ -70,7 +70,7 @@
     <link rel="stylesheet" href="css/indexEtcStyles.css">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -176,11 +176,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-
         .slider-section4 {
-            padding: 60px 20px;
+            padding: 60px 20px 100px;
             background-color: #f8f8f8;
             position: relative;
+            /* overflow: hidden; */
         }
 
         .section-title4 {
@@ -192,6 +192,7 @@
 
         .slider-container4 {
             max-width: 1200px;
+            padding-bottom: 60px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
@@ -200,43 +201,44 @@
         .slider-track4 {
             display: flex;
             transition: transform 0.5s ease;
-            height: 400px;
         }
 
         .slide4 {
             min-width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row; /* 가로 정렬 */
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* 이미지 사이 간격 */
-    padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .slide-item4 {
+            width: calc(33.33% - 14px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .slide-image4 {
-            width: calc(33.33% - 14px); /* 3열 레이아웃 */
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    flex-shrink: 0;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .slide-title4 {
-            margin-top: 20px;
-            font-size: 1.5rem;
+            margin-top: 10px;
+            font-size: 1rem;
             font-weight: 600;
             color: #333;
             text-align: center;
-            padding: 0 20px;
         }
 
         .slider-nav4 {
             position: absolute;
-            top: 50%;
+            top: 40%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border: none;
             color: #333;
             font-size: 24px;
@@ -248,12 +250,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
         }
 
         .slider-nav4:hover {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             transform: translateY(-50%) scale(1.1);
         }
 
@@ -279,7 +281,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             cursor: pointer;
             transition: all 0.3s;
         }
@@ -289,158 +291,190 @@
             transform: scale(1.2);
         }
 
-        /* 반응형 디자인 */
         @media (max-width: 768px) {
-            .slider-track4 {
-                height: 350px;
+            .slide4 {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
             }
-            
-            .slide-image4 {
+
+            .slide-item4 {
                 width: 90%;
-                height: 250px;
             }
-            
+
+            .slide-image4 {
+                height: 200px;
+            }
+
             .slide-title4 {
-                font-size: 1.3rem;
-                margin-top: 15px;
+                font-size: 1rem;
             }
-            
+
             .slider-nav4 {
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
             }
+            .slider-nav4 {
+                top: 35%;
         }
-
-        @media (max-width: 480px) {
-            .slider-track4 {
-                height: 300px;
-            }
-            
-            .slide-image4 {
-                width: 95%;
-                height: 200px;
-            }
-            
-            .slide-title4 {
-                font-size: 1.1rem;
-            }
         }
     </style>
 
 
     <section class="slider-section4">
         <h2 class="section-title4">한양도어 제품 갤러리</h2>
-        
         <div class="slider-container4">
-            <div class="slider-track4">
-                <div class="slide4">
-                    <img src="images/24.png" class="slide-image4" alt="프리미엄 현관문">
-                    <h3 class="slide-title4">프리미엄 현관문 시리즈</h3>
-                </div>
-                <div class="slide4">
-                    <img src="https://via.placeholder.com/800x500/33ff57/ffffff?text=디럭스+도어" class="slide-image4" alt="디럭스 도어">
-                    <h3 class="slide-title4">디럭스 도어</h3>
-                </div>
-                <div class="slide4">
-                    <img src="https://via.placeholder.com/800x500/ff5733/ffffff?text=시큐리티+도어" class="slide-image4" alt="시큐리티 도어">
-                    <h3 class="slide-title4">시큐리티 도어</h3>
-                </div>
-                <div class="slide4">
-                    <img src="https://via.placeholder.com/800x500/a533ff/ffffff?text=모던+디자인" class="slide-image4" alt="모던 디자인">
-                    <h3 class="slide-title4">모던 디자인</h3>
-                </div>
-            </div>
-            
+            <div class="slider-track4"></div>
             <button class="slider-nav4 prev4"><i class="fas fa-chevron-left"></i></button>
             <button class="slider-nav4 next4"><i class="fas fa-chevron-right"></i></button>
-            
             <div class="slider-indicators4"></div>
         </div>
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageData4 = [
+                { src: "assets/images/창호/창호_8.jpg", title: "경기도 부천시" },
+                { src: "images/re/8.jpg", title: "경기도 의왕시" },
+                { src: "images/re/4.jpg", title: "서울특별시" },
+                { src: "images/re/5.jpg", title: "인천광역시" },
+                { src: "images/re/10.jpg", title: "서울특별시" },
+                { src: "images/re/커튼월_1.jpg", title: "경기도 화성시" },
+                { src: "images/re/3.jpg", title: "경기도 파주시" },
+                { src: "images/re/2.jpg", title: "경기도 안양시" },
+                { src: "images/re/1.jpg", title: "서울특별시" }
+            ];
+
             const track4 = document.querySelector('.slider-track4');
-            const slides4 = document.querySelectorAll('.slide4');
             const prevBtn4 = document.querySelector('.prev4');
             const nextBtn4 = document.querySelector('.next4');
             const indicatorsContainer4 = document.querySelector('.slider-indicators4');
-            
+
             let currentIndex4 = 0;
-            const slideCount4 = slides4.length;
-            
-            // 인디케이터 생성
-            slides4.forEach((_, index) => {
-                const indicator4 = document.createElement('span');
-                indicator4.addEventListener('click', () => goToSlide4(index));
-                indicatorsContainer4.appendChild(indicator4);
-            });
-            
-            const indicators4 = document.querySelectorAll('.slider-indicators4 span');
-            
-            // 슬라이드 이동 함수
-            function updateSlider4() {
-                track4.style.transform = `translateX(-${currentIndex4 * 100}%)`;
-                
-                // 인디케이터 업데이트
-                indicators4.forEach((indicator4, index) => {
-                    indicator4.classList.toggle('active4', index === currentIndex4);
+            let slides4 = [];
+
+            function isMobileView() {
+                return window.innerWidth <= 768;
+            }
+
+            function groupSlides(images, groupSize) {
+                const grouped = [];
+                for (let i = 0; i < images.length; i += groupSize) {
+                    grouped.push({ images: images.slice(i, i + groupSize) });
+                }
+                return grouped;
+            }
+
+            function createSlides4() {
+                track4.innerHTML = '';
+                slides4.forEach(slideGroup => {
+                    const slide = document.createElement('div');
+                    slide.className = 'slide4';
+                    slideGroup.images.forEach(img => {
+                        slide.innerHTML += `
+                            <div class="slide-item4">
+                                <img src="${img.src}" class="slide-image4" alt="${img.title}">
+                                <h3 class="slide-title4">${img.title}</h3>
+                            </div>
+                        `;
+                    });
+                    track4.appendChild(slide);
                 });
             }
-            
-            // 특정 슬라이드로 이동
+
+            function createIndicators4() {
+                indicatorsContainer4.innerHTML = '';
+                slides4.forEach((_, index) => {
+                    const indicator = document.createElement('span');
+                    indicator.addEventListener('click', () => goToSlide4(index));
+                    indicatorsContainer4.appendChild(indicator);
+                });
+            }
+
+            function updateSlider4() {
+                track4.style.transform = `translateX(-${currentIndex4 * 100}%)`;
+                const indicators = document.querySelectorAll('.slider-indicators4 span');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active4', index === currentIndex4);
+                });
+            }
+
             function goToSlide4(index) {
-                currentIndex4 = index;
-                if (currentIndex4 >= slideCount4) currentIndex4 = 0;
-                if (currentIndex4 < 0) currentIndex4 = slideCount4 - 1;
+                const maxIndex = slides4.length - 1;
+                currentIndex4 = Math.max(0, Math.min(index, maxIndex));
                 updateSlider4();
             }
-            
-            // 버튼 이벤트
+
+            function handleResponsive() {
+                const slideItems = document.querySelectorAll('.slide-item4');
+                const isMobile = window.innerWidth <= 768;
+
+                slideItems.forEach(item => {
+                    if (isMobile) {
+                        item.style.width = '90%';
+                        item.style.margin = '0 auto 15px';
+                    } else {
+                        item.style.width = 'calc(33.33% - 14px)';
+                        item.style.margin = '0';
+                    }
+                });
+            }
+
+            function rebuildSlidesIfNeeded() {
+                const newSlides = groupSlides(imageData4, isMobileView() ? 1 : 3);
+                if (JSON.stringify(newSlides) !== JSON.stringify(slides4)) {
+                    slides4 = newSlides;
+                    currentIndex4 = 0;
+                    createSlides4();
+                    createIndicators4();
+                    handleResponsive();
+                    updateSlider4();
+                }
+            }
+
             nextBtn4.addEventListener('click', () => {
                 goToSlide4(currentIndex4 + 1);
             });
-            
+
             prevBtn4.addEventListener('click', () => {
                 goToSlide4(currentIndex4 - 1);
             });
-            
-            // 키보드 화살표로 제어
+
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight') {
-                    goToSlide4(currentIndex4 + 1);
-                } else if (e.key === 'ArrowLeft') {
-                    goToSlide4(currentIndex4 - 1);
-                }
+                if (e.key === 'ArrowRight') goToSlide4(currentIndex4 + 1);
+                else if (e.key === 'ArrowLeft') goToSlide4(currentIndex4 - 1);
             });
-            
-            // 터치 이벤트 (모바일 대응)
+
             let touchStartX4 = 0;
             let touchEndX4 = 0;
-            
+
             track4.addEventListener('touchstart', (e) => {
                 touchStartX4 = e.changedTouches[0].screenX;
-            }, {passive: true});
-            
+            }, { passive: true });
+
             track4.addEventListener('touchend', (e) => {
                 touchEndX4 = e.changedTouches[0].screenX;
-                handleSwipe4();
-            }, {passive: true});
-            
-            function handleSwipe4() {
                 if (touchEndX4 < touchStartX4 - 50) {
                     goToSlide4(currentIndex4 + 1);
                 } else if (touchEndX4 > touchStartX4 + 50) {
                     goToSlide4(currentIndex4 - 1);
                 }
-            }
-            
+            }, { passive: true });
+
+            window.addEventListener('resize', () => {
+                rebuildSlidesIfNeeded();
+            });
+
             // 초기화
+            slides4 = groupSlides(imageData4, isMobileView() ? 1 : 3);
+            createSlides4();
+            createIndicators4();
+            handleResponsive();
             updateSlider4();
-            indicators4[0].classList.add('active4');
         });
     </script>
+
 
 
 
@@ -870,28 +904,28 @@
 
 
 
-<a class="fade-element">
-    <div style="text-align: center; font-weight: bold;">
-        <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 50px;">시공 후기</h1>
-    </div>
-</a>
-<a class="fade-element">
-    <div style=" font-size: 30px; color: #ffb535;text-align: center; font-weight: bold; margin-top: 2%;">
-        <h1>|</h1>
-    </div>
-</a>
-<a class="fade-element">
-    <div style=" font-size: 20px; text-align: center; font-weight: bold; margin-top: 2%; margin-bottom: 2%;">
-        <a class="fade-element">
-            <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 25px;"><a style="color: #ffb535;">만족하신
-                    고객님들의</a> <br>
-                생생한 리뷰입니다.</h1>
-    </div>
-</a>
+    <a class="fade-element">
+        <div style="text-align: center; font-weight: bold;">
+            <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 50px;">시공 후기</h1>
+        </div>
+    </a>
+    <a class="fade-element">
+        <div style=" font-size: 30px; color: #ffb535;text-align: center; font-weight: bold; margin-top: 2%;">
+            <h1>|</h1>
+        </div>
+    </a>
+    <a class="fade-element">
+        <div style=" font-size: 20px; text-align: center; font-weight: bold; margin-top: 2%; margin-bottom: 2%;">
+            <a class="fade-element">
+                <h1 style="color: rgb(0, 0, 0); font-weight: bold; font-size: 25px;"><a style="color: #ffb535;">만족하신
+                        고객님들의</a> <br>
+                    생생한 리뷰입니다.</h1>
+        </div>
+    </a>
 
 
-<!-- 리뷰슬라이드 -->
-<img src="images/외부리뷰/네이버.jpg" alt="리뷰 타이틀" style="width: 200px; margin: 0 auto; display: block;">
+    <!-- 리뷰슬라이드 -->
+    <img src="images/외부리뷰/네이버.jpg" alt="리뷰 타이틀" style="width: 200px; margin: 0 auto; display: block;">
 
     <div class="slide3-container">
         <div class="slide3-track" id="slide3Track">
