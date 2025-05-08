@@ -315,23 +315,22 @@
                 height: 40px;
                 font-size: 20px;
             }
-
             .slider-nav4 {
                 top: 35%;
-            }
+        }
         }
     </style>
 
 
-    <!-- <section class="slider-section4">
-        <h2 class="section-title4">한양도어 제품 갤러리</h2>
+    <section class="slider-section4">
+        <h2 class="section-title4">한양창호 제품 갤러리</h2>
         <div class="slider-container4">
             <div class="slider-track4"></div>
             <button class="slider-nav4 prev4"><i class="fas fa-chevron-left"></i></button>
             <button class="slider-nav4 next4"><i class="fas fa-chevron-right"></i></button>
             <div class="slider-indicators4"></div>
         </div>
-    </section> -->
+    </section>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -488,23 +487,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="sections">
         <div class="left-image" style="background-image: url('images/paraBack.png') !important;"></div>
         <div class="right-side">
@@ -587,142 +569,9 @@
             </div>
         </div>
     </section>
-    <style>
-        .brand-section {
-            padding: 60px 20px;
-            background-color: #f9f9f9;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #333;
-        }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        /* 브랜드 슬라이더 스타일 */
-        .brand-slider {
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto;
-            max-width: 1000px;
-        }
-
-        .brand-slider-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .brand-slide {
-            min-width: 100%;
-            padding: 0 15px;
-            box-sizing: border-box;
-        }
-
-        .brand-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            padding: 30px;
-            max-width: 350px;
-            margin: 0 auto;
-        }
-
-        .brand-logo {
-            margin-bottom: 25px;
-            text-align: center;
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .brand-logo img {
-            max-width: 150px;
-            max-height: 80px;
-            object-fit: contain;
-        }
-
-        .brand-info {
-            text-align: center;
-        }
-
-        .brand-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        .brand-info p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* 슬라이더 도트 네비게이션 */
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ddd;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .dot.active {
-            background-color: #333;
-        }
-
-        /* PC 버전 - 3열 그리드 */
-        @media (min-width: 992px) {
-            .brand-slider {
-                overflow: visible;
-            }
-
-            .brand-slider-track {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-                transform: none !important;
-            }
-
-            .brand-slide {
-                min-width: auto;
-                padding: 0;
-            }
-
-            .slider-dots {
-                display: none;
-            }
-        }
-
-        /* 태블릿 버전 */
-        @media (max-width: 991px) and (min-width: 576px) {
-            .brand-slide {
-                min-width: 50%;
-            }
-        }
-    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const sliderTrack = document.querySelector('.brand-slider-track');
@@ -978,29 +827,7 @@
 
 
 
-    <section class="kakao-review-section">
-        <div class="review2-wrapper">
 
-            <div class="phone-frame">
-                <div class="phone-screen">
-                    <div class="phone-slider-track">
-                        <div class="phone-slide"><img src="images/카톡1.png" alt="리뷰 1"></div>
-                        <div class="phone-slide"><img src="assets/images/kakao-review2.jpg" alt="리뷰 2"></div>
-                        <div class="phone-slide"><img src="assets/images/kakao-review3.jpg" alt="리뷰 3"></div>
-                    </div>
-                    <div class="phone-slider-controls">
-                        <button class="phone-prev">←</button>
-                        <button class="phone-next">→</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="review-right">
-                <img src="images/외부리뷰.png">
-            </div>
-
-        </div>
-    </section>
 
     <style>
         .kakao-review-section {
@@ -1098,6 +925,8 @@
         .review-right img {
             width: 100%;
             max-width: 500px;
+            /* border-radius: 15px; */
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
         }
 
         /* 반응형 */

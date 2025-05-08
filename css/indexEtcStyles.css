@@ -1143,3 +1143,140 @@ td {
       transform: translateX(-50%);
   }
 }
+
+
+/* 브랜드 로고 */
+.brand-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* 브랜드 슬라이더 스타일 */
+.brand-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.brand-slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.brand-slide {
+  min-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.brand-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  margin-bottom: 25px;
+  text-align: center;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.brand-info {
+  text-align: center;
+}
+
+.brand-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.brand-info p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 슬라이더 도트 네비게이션 */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* PC 버전 - 3열 그리드 */
+@media (min-width: 992px) {
+  .brand-slider {
+      overflow: visible;
+  }
+
+  .brand-slider-track {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      transform: none !important;
+  }
+
+  .brand-slide {
+      min-width: auto;
+      padding: 0;
+  }
+
+  .slider-dots {
+      display: none;
+  }
+}
+
+/* 태블릿 버전 */
+@media (max-width: 991px) and (min-width: 576px) {
+  .brand-slide {
+      min-width: 50%;
+  }
+}
