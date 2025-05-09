@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 
-    <title>(주) 한양창호 소개</title>
+    <title>(주) 한양창호 브랜드 소개</title>
 
 
     <!-- Additional CSS Files -->
@@ -168,90 +168,118 @@
                 /* 탭 간의 세로 간격 */
             }
         }
+
+        /* 유튜브 스타일 */
+        /* YouTube 동영상 컨테이너 스타일 */
+  /* 기본 스타일 (모바일 우선) */
+  .youtube-video-section {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .youtube-container {
+    width: 100%;
+    max-width: 1200px; /* 데스크탑 최대 너비 제한 */
+    margin: 0 auto;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율 고정 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* 모바일에서 테두리 제거 */
+  }
+
+  /* 태블릿/데스크탑 스타일 (768px 이상) */
+  @media (min-width: 768px) {
+    .youtube-video-section {
+      padding: 0 20px; /* 데스크탑에서만 양쪽 여백 추가 */
+      margin: 40px auto;
+    }
+    
+    .youtube-wrapper {
+      border-radius: 8px; /* 데스크탑에서만 둥근 모서리 */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  }
+
+  /* 모바일 가로모드 대응 (선택사항) */
+  @media (max-width: 767px) and (orientation: landscape) {
+    .youtube-wrapper {
+      padding-bottom: 75%; /* 가로모드 시 비율 조정 */
+    }
+  }
     </style>
 
     <body>
 
         <div class="tab-area">
             <input type="radio" name="tabs" id="tab1" checked>
-            <label for="tab1">공장소개</label>
+            <label for="tab1">영림</label>
             <input type="radio" name="tabs" id="tab2">
-            <label for="tab2">특징 & 강점</label>
+            <label for="tab2">참존샤시</label>
             <input type="radio" name="tabs" id="tab3">
-            <label for="tab3">제품소개</label>
-            <input type="radio" name="tabs" id="tab4">
-            <label for="tab4">인증현황</label>
+            <label for="tab3">KCC</label>
+
 
             <div id="content1" class="tab-content red active">
-                <div class="about-us">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="left-image">
-                                    <img src="assets/images/about/main_factory.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="right-content">
-                                    <h4>Our Factory</h4>
-                                    <div class="quote">
-                                        <i class="fa fa-quote-left"></i>
-                                    </div>
-                                    <p style="margin-top: 80px; color: black; font-size: 15px;">저희 공장은 최신식 설비들과 숙련된 기능공을
-                                        보유하고 있어 높은 품질의
-                                        제품을 생산합니다.<br> 또한 경험이 풍부한 현장 기술자들이 직접 시공하여
-                                        안전하고 빠른 시공을 진행하고 있습니다.
-                                        <br><br>화성 본점 및 서울과 수원에 지점이 위치해 있어 서울, 경기, 인천 이외에도 층청 등 전지역 방문 가능합니다.
-                                    </p>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
+
+                <div class="youtube-container">
+                    <div class="youtube-wrapper">
+                      <iframe 
+                        src="https://www.youtube.com/embed/tBceuAXMziE?si=MdnN51LgF6GYpdo2" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                      </iframe>
                     </div>
-                </div>
+                  </div>
                 <!-- ***** About Area Ends ***** -->
+                <img src="images/영림1.jpg" style="margin-top: 10%; align-content: center; width: 100%; max-width: 1000px;">
 
 
-                <!-- ***** Services Area Starts ***** -->
-                <section class="our-services">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="service-item">
-                                    <h4>확실한 시공</h4>
-                                    <p>빈틈없는 마감 공사를 통해 <br>누수 및 우풍 차단 효과</p>
-                                    <img src="assets/images/about/about_1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="service-item">
-                                    <h4>품질 보장</h4>
-                                    <p>넓은 프로파일 구조로 <br>단열성 및 내구성 우수 제품 사용</p>
-                                    <img src="assets/images/about/about_2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="service-item">
-                                    <h4>세련된 디자인</h4>
-                                    <p>네추럴하며 세련된 디자인으로 편안하고<br> 세련된 분위기 확보</p>
-                                    <img src="assets/images/about/about_3.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
             </div>
             <div id="content2" class="tab-content blue">
-                <img src="images/강점.png" style="align-content: center; width: 100%; max-width: 1000px;">
+                <div class="youtube-container">
+                    <div class="youtube-wrapper">
+                      <iframe 
+                        src="https://www.youtube.com/embed/c3OD5ksEsZw?si=deSMid79J8vvza5m" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                  </div>
+
             </div>
             <div id="content3" class="tab-content yellow">
-                <img src="assets/images/img/about_products.png"
-                    style="align-content: center; width: 100%; max-width: 1000px;">
+                <div class="youtube-container">
+                    <div class="youtube-wrapper">
+                      <iframe 
+                        src="https://www.youtube.com/embed/QmgT1WoCFgA?si=Mf81UNj_he9VztL7" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                  </div>
+
             </div>
-            <div id="content4" class="tab-content green">
-                <img src="assets/images/img/about_certification.png"
-                    style="align-content: center; width: 100%; max-width: 1000px;">
-            </div>
+
+            
         </div>
 
 

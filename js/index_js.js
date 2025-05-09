@@ -244,4 +244,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// 탭 코드
+// URL에서 'tab' 파라미터를 추출하는 함수
+function getTabFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('tab'); // 'tab' 파라미터 값 반환
+}
 
+// 모든 라디오 버튼과 탭 콘텐츠를 가져옴
+const tabs = document.querySelectorAll('input[name="tabs"]');
+const contents = document.querySelectorAll('.tab-content');
+
+// 페이지 로드 시 URL의 'tab' 파라미터에 따라 탭 활성화
+window.onload = function() {
+    const tab = getTabFromUrl(); // URL에서 탭 번호 가져오기
+    if (tab) {
+        const targetTab = document.getElementById('tab' + tab); // 해당 탭 버튼 찾기
+        if (targetTab) {
+            targetTab.checked = true; // 해당 탭 버튼을 체크
+            // 탭 콘텐츠 활성화
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById('content' + tab).classList.add('active');
+        }
+    }
+};
+
+
+// 라디오 버튼이 변경될 때마다 실행되는 함수
+tabs.forEach(tab => {
+    tab.addEventListener('change', function() {
+        // 모든 콘텐츠를 숨기고
+        contents.forEach(content => {
+            content.classList.remove('active');
+        });
+        // 선택된 탭에 해당하는 콘텐츠만 표시
+        const contentId = 'content' + this.id.slice(-1);
+        document.getElementById(contentId).classList.add('active');
+    });
+});
