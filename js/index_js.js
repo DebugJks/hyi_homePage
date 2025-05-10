@@ -282,3 +282,12 @@ tabs.forEach(tab => {
         document.getElementById(contentId).classList.add('active');
     });
 });
+
+
+// 스크롤되면서 이동
+function smoothScrollTo(targetId) {
+    const target = document.getElementById(targetId);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
