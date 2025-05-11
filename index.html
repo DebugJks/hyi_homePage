@@ -94,13 +94,13 @@
                         <!-- ***** Menu Start ***** -->
 
                         <ul class="nav">
-                            <li class="submenu">
+                            <!-- <li class="submenu">
                                 <a href="#">소개</a>
                                 <ul>
                                     <li><a href="about.html">공장소개</a></li>
-                                    <!-- <li><a href="about_locate.html">위치안내</a></li> -->
+                                    <li><a href="about_locate.html">위치안내</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="board.html">게시판</a></li>
                             <li><a href="submit.html#submitForm">문의하기</a></li>
                             <li class="scroll-to-section"><a href="#faq">FAQ</a></li>
@@ -153,21 +153,15 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
     <section class="main-slider">
         <div class="slides">
             <div class="slide active" style="background-image: url('assets/images/SlidingBanner/ex1.jpg')">
             </div>
         </div>
     </section>
+
+
+
 
 
 
@@ -329,26 +323,26 @@
                 </div>
 
                 <!-- 3. 계약서 작성 -->
-                                         <!-- 표준계약서 다운로드 -->
-                        <div class="download-section">
-                                            <div class="check-section">
-                    <h4>3. <strong>계약서를 꼭 작성하세요!</strong></h4>
-                    <p><strong>하자이행보증</strong>을 꼭 받으셔야 합니다!</p>
-                    <!-- <p><a href="#" class="download-link">계약서 양식 다운로드</a></p> -->
-                </div>
-                            <div class="download-card">
-                                <div class="file-icon">📄</div>
-                                <div>
-                                    <h4>창호 시공 표준계약서</h4>
-                                    <p>표준 양식 계약서</p>
-                                    <a href="2025년도_중소기업_정책자금_융자계획_공고_참고자료.hwp" class="download-btn" download>
-                                        DOCX 파일 다운로드
-                                        <span class="download-icon">↓</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="download-notice">※ 계약 전 반드시 전문가와 최종 검토를 권장합니다</p>
+                <!-- 표준계약서 다운로드 -->
+                <div class="download-section">
+                    <div class="check-section">
+                        <h4>3. <strong>계약서를 꼭 작성하세요!</strong></h4>
+                        <p><strong>하자이행보증</strong>을 꼭 받으셔야 합니다!</p>
+                        <!-- <p><a href="#" class="download-link">계약서 양식 다운로드</a></p> -->
+                    </div>
+                    <!-- <div class="download-card">
+                        <div class="file-icon">📄</div>
+                        <div>
+                            <h4>창호 시공 표준계약서</h4>
+                            <p>표준 양식 계약서</p>
+                            <a href="2025년도_중소기업_정책자금_융자계획_공고_참고자료.hwp" class="download-btn" download>
+                                DOCX 파일 다운로드
+                                <span class="download-icon">↓</span>
+                            </a>
                         </div>
+                    </div> -->
+                    <p class="download-notice">※ 계약 전 반드시 전문가와 최종 검토를 권장합니다</p>
+                </div>
 
             </div>
 
@@ -432,57 +426,64 @@
                     </div>
                 </div>
 
-                <!-- 꼭 확인해야 할 사항 -->
+                <!-- 단계별 확인사항 -->
                 <div class="accordion-item fade-element">
                     <button class="accordion-btn">
-                        <span class="accordion-title"><span>꼭 확인해야 할 핵심 요소</span></span>
+                        <span class="accordion-title"><span>시공 단계별 확인해야할 사항</span></span>
                         <span class="accordion-icon">+</span>
                     </button>
                     <div class="accordion-content">
                         <!-- 3단계 확인 카드 -->
                         <div class="check-cards">
                             <!-- 보강재 카드 -->
-                            <div class="check-card steel-bg">
-                                <div class="card-icon">🛠️</div>
-                                <div class="card-content">
+                            <div class="step-card-wrapper">
+                                <div class="step-card steel-bg">
                                     <h3>1. 보강재 확인</h3>
                                     <div class="card-desc">
                                         <p><span class="highlight-round">프로파일 내부</span> <strong>강철 보강재</strong> 삽입 필수
                                         </p>
                                         <div class="spec-box">
-                                            <span>내구, 기밀성을 향상</span>
+                                            <span>내구성, 기밀성 향상</span>
+                                            <span>대형 창호 필수</span>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="step-image">
+                                    <img src="https://example.com/images/reinforcement.jpg" alt="예시">
+                                </div>
                             </div>
 
-                            <!-- 발코니 카드 -->
-                            <div class="check-card balcony-bg">
-                                <div class="card-icon">🌊</div>
-                                <div class="card-content">
+                            <!-- 2. 발코니 전용창 -->
+                            <div class="step-card-wrapper">
+                                <div class="step-card balcony-bg">
                                     <h3>2. 발코니 전용창</h3>
                                     <div class="card-desc">
                                         <p><span class="highlight-round">방수/하중</span> <strong>특화 설계</strong> 여부 확인</p>
                                         <div class="spec-box">
-                                            <span>방수공사 여부</span>
-                                            <span>하중강도 확인</span>
+                                            <span>방수 등급: IPX4↑</span>
+                                            <span>하중 강도: 500kgf/㎡↑</span>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="step-image">
+                                    <img src="https://example.com/images/balcony-window.jpg" alt="예시">
+                                </div>
                             </div>
 
-                            <!-- 유리 카드 -->
-                            <div class="check-card glass-bg">
-                                <div class="card-icon">🔍</div>
-                                <div class="card-content">
+                            <!-- 3. 유리 사양 -->
+                            <div class="step-card-wrapper">
+                                <div class="step-card glass-bg">
                                     <h3>3. 유리 사양</h3>
                                     <div class="card-desc">
-                                        <p><span class="highlight-round">용도에 맞는</span> <strong>유리 두께</strong> 선택</p>
+                                        <p><span class="highlight-round">복층 유리</span> <strong>두께 12mm↑</strong> 권장</p>
                                         <div class="spec-box">
-                                            <span>단열등급 확인</span>
-                                            <span>유리 종류 확인</span>
+                                            <span>단열 등급: 1등급</span>
+                                            <span>자외선 차단: 70%↑</span>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="https://example.com/images/glass-spec.jpg" alt="예시">
                                 </div>
                             </div>
                         </div>
@@ -511,7 +512,76 @@
                     </div>
                 </div>
 
+                <!--  -->
+                <!-- 창 종류 및 용도 구분 -->
+                <div class="accordion-item fade-element">
+                    <button class="accordion-btn">
+                        <span class="accordion-title"><span>창 종류 및 용도 구분</span></span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="checklist-grid">
+                            <!--단창 이중창 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>단창 vs 이중창</h4>
+                                    <p>단창은 창이 한 겹인 구조, 이중창은 창이 두 겹인 구조로 이중창은 단창에 비해 단열 성능에 우수</p>
+                                    <span class="detail-note">※이중창에 비해 단창이 더 저렴</span>
+                                </div>
+                            </div>
+                            <!-- 시스템창 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>시스템창</h4>
+                                    <p>유럽식 고급 창호 개폐기능을 부여한 신개념의 다기능 복합창호로 성능이 뛰어남</p>
+                                    <span class="detail-note">※창호의 성능을 극대화 시킨 창</span>
+                                </div>
+                            </div>
 
+                            <!-- 픽스창 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>픽스창 (고정창)</h4>
+                                    <p>열리지 않는 창으로, 조망이나 채광 목적에 사용</p>
+                                    <span class="detail-note">기밀성 우수하지만 환기 불가</span>
+                                </div>
+                            </div>
+
+                            <!-- 발코니창 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>발코니창</h4>
+                                    <p>방수와 하중에 강한 구조로 설계되어 외기 접하는 위치에 적합</p>
+                                    <span class="detail-note">주로 확장 발코니 구간에 설치</span>
+                                </div>
+                            </div>
+
+                            <!-- PVC창 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>PVC창 vs 알루미늄창</h4>
+                                    <p>PVC창은 단열 성능 우수, 알루미늄창은 내구성 우수하며 PVC창을 하이샤시라고도 한다</p>
+                                    <span class="detail-note">※알루미늄창은 주로 상가 등에 사용</span>
+                                </div>
+                            </div>
+
+                            <!-- 확장 vs 비확장 -->
+                            <div class="check-item">
+                                <!-- <div class="check-icon">✔️</div> -->
+                                <div>
+                                    <h4>확장 vs 비확장</h4>
+                                    <p>확장은 베란다 공간을 내부로 포함하여 실사용 면적을 늘리는 방식이고, 비확장형은 기존 베란다 공간을 유지하는 구조</p>
+                                    <span class="detail-note">※비확장으로 지은 아파트를 확장으로 확장할 경우 단열 등 문제 발생할 수 있습니다</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <!-- 계약서 작성시 주의사항 -->
@@ -567,7 +637,7 @@
                         </div>
 
                         <!-- 표준계약서 다운로드 -->
-                        <div class="download-section">
+                        <!-- <div class="download-section">
                             <div class="download-card">
                                 <div class="file-icon">📄</div>
                                 <div>
@@ -580,7 +650,7 @@
                                 </div>
                             </div>
                             <p class="download-notice">※ 계약 전 반드시 전문가와 최종 검토를 권장합니다</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
     </section>
