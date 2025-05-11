@@ -99,22 +99,22 @@ function animateAllCounters() {
 }
 
 // 개별 카운터 애니메이션 함수
-// function animateCounter(counterElement) {
-//     const target = parseInt(counterElement.getAttribute('data-target'));
-//     const duration = 5000; // 5초
-//     const start = 0;
-//     const increment = target / (duration / 16); // 60fps 기준
+function animateCounter(counterElement) {
+    const target = parseInt(counterElement.getAttribute('data-target'));
+    const duration = 5000; // 5초
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps 기준
 
-//     let current = start;
-//     const timer = setInterval(() => {
-//         current += increment;
-//         if (current >= target) {
-//             clearInterval(timer);
-//             current = target;
-//         }
-//         counterElement.textContent = Math.floor(current).toLocaleString();
-//     }, 16);
-// }
+    let current = start;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            clearInterval(timer);
+            current = target;
+        }
+        counterElement.textContent = Math.floor(current).toLocaleString();
+    }, 16);
+}
 
 // 화면에 들어왔을 때 애니메이션 시작
 function initCounters() {
