@@ -89,7 +89,7 @@
                                 </ul>
                             </li> -->
                             <li><a href="board.html">게시판</a></li>
-                            <li><a href="submit.html#submitForm">문의하기</a></li>
+                            <li><a href="#submits">문의하기</a></li>
                             <li class="scroll-to-section"><a href="#faq">FAQ</a></li>
                         </ul>
                         <!-- 햄버거 인듯 -->
@@ -152,7 +152,7 @@
 
     <!-- onclick="smoothScrollTo('ex')" -->
 
-    <section class="button-grid-section11" style="margin-top: 5%;">
+    <section class="button-grid-section11" id="test" style="margin-top: 5%;">
         <div class="button-container11">
             <!-- 버튼 1 -->
             <button class="image-button11 fade-element" onclick="location.href='examples_reivew.html'">
@@ -196,8 +196,6 @@
             </button>
         </div>
     </section>
-
-
 
     <!-- 이것만큼은 -->
     <style>
@@ -286,16 +284,14 @@
                     <p>보강재가 누락되면 변형이 생기고 큰 하자가 발생합니다.</p>
                     <div class="steel-photo">
                         <img src="images/보강재.png" alt="보강재 유무 비교 이미지" style="max-width: 100%; height: auto;" />
-                        <div style="display: flex; justify-content: space-around; margin-top: 8px;">
+                        <!-- <div style="display: flex; justify-content: space-around; margin-top: 8px;">
                             <div class="steel-photo">
                                 <img src="./src/assets/rebar_yes.png" alt="보강재 유 이미지" />
                             </div>
-
                             <div class="steel-photo">
                                 <img src="./src/assets/rebar_no.png" alt="보강재 무 이미지" />
                             </div>
-
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -476,7 +472,7 @@
                                     </div>
                                 </div>
                                 <div class="step-image">
-                                    <img src="https://example.com/images/reinforcement.jpg" alt="예시">
+                                    <img src="images/ex1.png" alt="예시">
                                 </div>
                             </div>
 
@@ -493,7 +489,7 @@
                                     </div>
                                 </div>
                                 <div class="step-image">
-                                    <img src="https://example.com/images/balcony-window.jpg" alt="예시">
+                                    <img src="images/ex2.png" alt="예시">
                                 </div>
                             </div>
 
@@ -511,7 +507,7 @@
                                     </div>
                                 </div>
                                 <div class="step-image">
-                                    <img src="https://example.com/images/glass-spec.jpg" alt="예시">
+                                    <img src="images/ex3.png" alt="예시">
                                 </div>
                             </div>
                         </div>
@@ -540,7 +536,7 @@
                     </div>
                 </div>
 
-                <!--  -->
+
                 <!-- 창 종류 및 용도 구분 -->
                 <div class="accordion-item fade-element">
                     <button class="accordion-btn">
@@ -762,72 +758,72 @@
 
     <script>
         // 퀴즈 데이터
-        const quizData = [
-            {
-                question: "거실 창호의 가장 중요한 기능은?",
-                options: [
-                    { text: "단열 성능", value: "A" },
-                    { text: "방음 효과", value: "B" },
-                    { text: "디자인", value: "C" }
-                ]
-            },
-            {
-                question: "주거 지역은 어디신가요?",
-                options: [
-                    { text: "도심 번화가 (소음多)", value: "A" },
-                    { text: "일반 주택가", value: "B" },
-                    { text: "교외/시골", value: "C" }
-                ]
-            },
-            {
-                question: "창호 교체 주요 목적은?",
-                options: [
-                    { text: "에너지 절감", value: "A" },
-                    { text: "소음 차단", value: "B" },
-                    { text: "인테리어 개선", value: "C" }
-                ]
-            },
-            {
-                question: "방향은 어떻게 되나요?",
-                options: [
-                    { text: "북향/그늘진 곳", value: "A" },
-                    { text: "남향/일조량 많음", value: "B" },
-                    { text: "동서향", value: "C" }
-                ]
-            },
-            {
-                question: "예산은 어떻게 계획중이신가요?",
-                options: [
-                    { text: "비용보다 품질 우선", value: "A" },
-                    { text: "적당한 가성비", value: "B" },
-                    { text: "최저가 위주", value: "C" }
-                ]
-            }
-        ];
+        // const quizData = [
+        //     {
+        //         question: "거실 창호의 가장 중요한 기능은?",
+        //         options: [
+        //             { text: "단열 성능", value: "A" },
+        //             { text: "방음 효과", value: "B" },
+        //             { text: "디자인", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "주거 지역은 어디신가요?",
+        //         options: [
+        //             { text: "도심 번화가 (소음多)", value: "A" },
+        //             { text: "일반 주택가", value: "B" },
+        //             { text: "교외/시골", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "창호 교체 주요 목적은?",
+        //         options: [
+        //             { text: "에너지 절감", value: "A" },
+        //             { text: "소음 차단", value: "B" },
+        //             { text: "인테리어 개선", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "방향은 어떻게 되나요?",
+        //         options: [
+        //             { text: "북향/그늘진 곳", value: "A" },
+        //             { text: "남향/일조량 많음", value: "B" },
+        //             { text: "동서향", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "예산은 어떻게 계획중이신가요?",
+        //         options: [
+        //             { text: "비용보다 품질 우선", value: "A" },
+        //             { text: "적당한 가성비", value: "B" },
+        //             { text: "최저가 위주", value: "C" }
+        //         ]
+        //     }
+        // ];
 
-        // 결과 데이터
-        const resultData = {
-            "AAA": {
-                title: "로이(Low-E) 3중 유리 + 1.8mm 프로파일",
-                desc: "극한의 단열 성능이 필요한 북향 집에 최적화된 프리미엄 조합",
-                price: "3,800,000원~"
-            },
-            "BBB": {
-                title: "페어유리 + 1.6mm 프로파일",
-                desc: "도로변 소음을 효과적으로 차단하는 밸런스형 조합",
-                price: "3,200,000원~"
-            },
-            "CCC": {
-                title: "일반 복층 유리 + 1.4mm 프로파일",
-                desc: "비용 효율성을 중시하는 기본형 조합",
-                price: "2,500,000원~"
-            },
-            "default": {
-                title: "로이(Low-E) 복층 유리 + 1.6mm 프로파일",
-                desc: "대부분의 주거 환경에 적합한 베스트셀러 조합",
-                price: "3,200,000원~"
-            }
-        };
+        // // 결과 데이터
+        // const resultData = {
+        //     "AAA": {
+        //         title: "로이(Low-E) 3중 유리 + 1.8mm 프로파일",
+        //         desc: "극한의 단열 성능이 필요한 북향 집에 최적화된 프리미엄 조합",
+        //         price: "3,800,000원~"
+        //     },
+        //     "BBB": {
+        //         title: "페어유리 + 1.6mm 프로파일",
+        //         desc: "도로변 소음을 효과적으로 차단하는 밸런스형 조합",
+        //         price: "3,200,000원~"
+        //     },
+        //     "CCC": {
+        //         title: "일반 복층 유리 + 1.4mm 프로파일",
+        //         desc: "비용 효율성을 중시하는 기본형 조합",
+        //         price: "2,500,000원~"
+        //     },
+        //     "default": {
+        //         title: "로이(Low-E) 복층 유리 + 1.6mm 프로파일",
+        //         desc: "대부분의 주거 환경에 적합한 베스트셀러 조합",
+        //         price: "3,200,000원~"
+        //     }
+        // };
 
         // 아코디언 기능
         document.querySelectorAll('.accordion-btn').forEach(btn => {
@@ -839,68 +835,68 @@
         });
 
 
-        // 퀴즈 기능
-        let currentQuestion = 0;
-        let answers = [];
+        // // 퀴즈 기능
+        // let currentQuestion = 0;
+        // let answers = [];
 
-        function showQuestion() {
-            const quiz = quizData[currentQuestion];
-            document.getElementById('question').textContent = quiz.question;
+        // function showQuestion() {
+        //     const quiz = quizData[currentQuestion];
+        //     document.getElementById('question').textContent = quiz.question;
 
-            const optionsContainer = document.getElementById('options');
-            optionsContainer.innerHTML = '';
+        //     const optionsContainer = document.getElementById('options');
+        //     optionsContainer.innerHTML = '';
 
-            quiz.options.forEach((option, index) => {
-                const optionElement = document.createElement('label');
-                optionElement.className = 'option';
-                optionElement.innerHTML = `
-            <input type="radio" name="quiz" value="${option.value}">
-            <span class="custom-radio"></span>
-            <span>${option.text}</span>
-          `;
-                optionsContainer.appendChild(optionElement);
-            });
+        //     quiz.options.forEach((option, index) => {
+        //         const optionElement = document.createElement('label');
+        //         optionElement.className = 'option';
+        //         optionElement.innerHTML = `
+        //     <input type="radio" name="quiz" value="${option.value}">
+        //     <span class="custom-radio"></span>
+        //     <span>${option.text}</span>
+        //   `;
+        //         optionsContainer.appendChild(optionElement);
+        //     });
 
-            document.querySelector('.current').textContent = currentQuestion + 1;
-        }
+        //     document.querySelector('.current').textContent = currentQuestion + 1;
+        // }
 
-        function showResult() {
-            const resultKey = answers.join('').substring(0, 3) || 'default';
-            const result = resultData[resultKey] || resultData['default'];
+        // function showResult() {
+        //     const resultKey = answers.join('').substring(0, 3) || 'default';
+        //     const result = resultData[resultKey] || resultData['default'];
 
-            document.getElementById('result-title').textContent = `"${result.title}"`;
-            document.getElementById('result-desc').textContent = result.desc;
-            document.querySelector('.result-details strong').textContent = result.price;
+        //     document.getElementById('result-title').textContent = `"${result.title}"`;
+        //     document.getElementById('result-desc').textContent = result.desc;
+        //     document.querySelector('.result-details strong').textContent = result.price;
 
-            document.getElementById('quiz-container').style.display = 'none';
-            document.getElementById('result-container').style.display = 'block';
-        }
+        //     document.getElementById('quiz-container').style.display = 'none';
+        //     document.getElementById('result-container').style.display = 'block';
+        // }
 
-        document.getElementById('next-btn').addEventListener('click', () => {
-            const selectedOption = document.querySelector('input[name="quiz"]:checked');
-            if (!selectedOption) return alert('옵션을 선택해주세요');
+        // document.getElementById('next-btn').addEventListener('click', () => {
+        //     const selectedOption = document.querySelector('input[name="quiz"]:checked');
+        //     if (!selectedOption) return alert('옵션을 선택해주세요');
 
-            answers.push(selectedOption.value);
+        //     answers.push(selectedOption.value);
 
-            if (currentQuestion < quizData.length - 1) {
-                currentQuestion++;
-                showQuestion();
-            } else {
-                showResult();
-            }
-        });
+        //     if (currentQuestion < quizData.length - 1) {
+        //         currentQuestion++;
+        //         showQuestion();
+        //     } else {
+        //         showResult();
+        //     }
+        // });
 
-        document.getElementById('retry-btn').addEventListener('click', () => {
-            currentQuestion = 0;
-            answers = [];
-            showQuestion();
-            document.getElementById('quiz-container').style.display = 'block';
-            document.getElementById('result-container').style.display = 'none';
-        });
+        // document.getElementById('retry-btn').addEventListener('click', () => {
+        //     currentQuestion = 0;
+        //     answers = [];
+        //     showQuestion();
+        //     document.getElementById('quiz-container').style.display = 'block';
+        //     document.getElementById('result-container').style.display = 'none';
+        // });
 
-        // 초기화
-        showQuestion();
-        updateSpecs();
+        // // 초기화
+        // showQuestion();
+        // updateSpecs();
     </script>
 
 
@@ -1475,10 +1471,11 @@
         }
     </style>
     <section class="section" id="products">
-        <div class="section-header">
-            <h2 class="section-title">시공 스토리</h2>
-            <p class="section-subtitle">고객님들의 실제 시공 후기</p>
+        <div class="fp-header fade-element" style="margin-top: 5%; margin-bottom: 5%;">
+            <p class="fp-subtitle fade-element">시공 <span>스토리</span></p>
+            <div class="fp-divider"></div>
         </div>
+
 
         <a class="fade-element">
             <div class="container">
@@ -1746,72 +1743,113 @@
 
     <!-- 시공사례 그리드 -->
     <section class="construction-gallery" id="ex">
+        <h2 class="dcs-title">베스트 <span class="highlight" style="color: white !important;">포트폴리오</span></h2>
+
         <div class="gallery-container">
-            <!-- <h2 class="gallery-title">시공 사례 갤러리</h2> -->
             <p class="gallery-subtitle">실제로 완성된 작업 결과</p>
 
             <div class="gallery-grid">
 
                 <div class="gallery-item">
-                    <img src="assets/images/아파트빌라/3.jpg" alt="아파트 발코니 샷시 시공" class="gallery-image">
+                    <img src="images/re/1.jpg" alt="아파트 발코니 샷시 시공" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>경기도 부천시</h3>
-                        <p>베란다 · 25평형</p>
+                        <h3>단독주택 신축 창호공사</h3>
+                        <p>시스템 FM-Y140, BF-230, BF-248 </p>
+                        <p>26mm 투명 + 로이</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/리뷰/9.jpg" alt="단독주택 파노라마 창" class="gallery-image">
+                    <img src="images/re/2.jpg" alt="단독주택 파노라마 창" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>경기도 의왕시</h3>
-                        <p>단창 · 35평형</p>
+                        <h3>빌라 신축 창호공사</h3>
+                        <p>BF-248</p>
+                        <p>26mm 투명 + 로이</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/리뷰/13.jpg" alt="상가 파티션 도어" class="gallery-image">
+                    <img src="images/re/3.jpg" alt="상가 파티션 도어" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>서울특별시</h3>
-                        <p>서울특별시 시공</p>
+                        <h3>빌라 신축 창호공사</h3>
+                        <p>시스템 (틸트앤턴) FM-Y70, BF-248</p>
+                        <p>26mm 투명 + 로이</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/리뷰/24.jpg" alt="오피스 창호" class="gallery-image">
+                    <img src="images/re/4.jpg" alt="오피스 창호" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>인천광역시</h3>
-                        <p>단독주택 시공</p>
+                        <h3>빌라 신축 픽스 시스템 공사 </h3>
+                        <p>FIX, FM-Y70</p>
+                        <p>강화유리</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/리뷰/22.jpg" alt="빌라 테라스" class="gallery-image">
+                    <img src="images/re/5.jpg" alt="빌라 테라스" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>경기도 화성시</h3>
-                        <p>커튼월 공사</p>
+                        <h3>복층 빌라 창호 신축 공사</h3>
+                        <p>BF-Y250</p>
+                        <p>26mm 투명 + 로이</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/아파트빌라/5.jpg" alt="호텔 로비" class="gallery-image">
+                    <img src="images/re/6.jpg" alt="호텔 로비" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>경기도 파주시</h3>
-                        <p>초대형 픽스드 창 · 50평형</p>
+                        <h3>아파트 창호 리모델링</h3>
+                        <p>BF-Y260</p>
+                        <p>26mm 투명 + 로이 (아르곤)</p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/아파트빌라/7.jpg" alt="호텔 로비" class="gallery-image">
+                    <img src="images/re/7.jpg" alt="호텔 로비" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>경기도 안양시</h3>
-                        <p>초대형 픽스드 창 · 50평형</p>
+                        <h3>아파트 주방 시스템창</h3>
+                        <p>시스템창 FM-T70</p>
+                        <p>24mm 페어유리(복층)</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/아파트빌라/1.jpg" alt="호텔 로비" class="gallery-image">
+                    <img src="images/re/8.jpg" alt="호텔 로비" class="gallery-image">
                     <div class="item-overlay">
-                        <h3>서울특별시</h3>
-                        <p>초대형 픽스드 창 · 50평형</p>
+                        <h3>단독주택 창호 리모델링</h3>
+                        <p>FIX 및 알루미늄</p>
+                        <p>강화유리 및 26mm 페어유리(복층)</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/9.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>공장동 창호 리모델링</h3>
+                        <p>스테인레스 창</p>
+                        <p>24mm 페어유리, 강화유리</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/10.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>썬룸 공사</h3>
+                        <p>BF-Y250, FIX</p>
+                        <p>26mm 투명 + 로이, 강화유리</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/11.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>사무실 유리 가벽</h3>
+                        <p>FIX 및 알루미늄</p>
+                        <p>18mm 투명+투명</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/12.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>썬룸 공사</h3>
+                        <p>세이프도어 및 전면 FIX</p>
+                        <h3>브론즈 5mm, 강화유리(천장)</h3>
                     </div>
                 </div>
             </div>
@@ -2040,7 +2078,7 @@
             style="text-align: center; margin-bottom: 2.5rem; font-size: 1.8rem; color: #1e293b; font-weight: 500; letter-spacing: -0.5px;">
             문의하기
         </h2>
-        <div class="form-container" id="explore" style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
+        <div class="form-container" id="submits" style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
             <h2>
                 <br></br>
             </h2>
@@ -2377,13 +2415,13 @@
                         </div>
                         <ul style="margin-top: -50px; margin-left:-17px;">
                             <div style="color: white; font-size: 40px; font-weight: bold;">
-                                (주) 한양창호
+                                대양산업
                             </div>
                             <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
                             <li><a href="#">ejrwls0321@naver.com</a></li>
                             <li><a href="#">010-4010-2363</a></li>
                             <li><a href="#">031 - 353 - 0457</a></li>
-                            <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                            <li><a href="#">사업자등록번호 : 419 - 10 - 02841</a></li>
                         </ul>
                     </div>
                 </div>

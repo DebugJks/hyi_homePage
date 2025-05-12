@@ -1964,13 +1964,22 @@ td {
 }
 
 /* 반응형 대응 */
+/* 모바일 반응형 수정 (768px 이하) */
 @media (max-width: 768px) {
     .step-card-wrapper {
         flex-direction: column;
+        align-items: flex-start; /* 좌측 정렬로 자연스럽게 */
+        gap: 16px; /* 카드-이미지 간격 추가 */
     }
+
+    .step-card {
+        width: 100%; /* 전체 너비 사용 */
+        padding: 16px;
+    }
+
     .step-image {
         width: 100%;
-        max-width: none;
+        max-width: 100%; /* 제한 해제 */
     }
 }
 
