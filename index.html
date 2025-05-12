@@ -2034,12 +2034,18 @@
                 item.addEventListener('click', function () {
                     const img = this.querySelector('.gallery-image');
                     const title = this.querySelector('h3').textContent;
-                    const desc = this.querySelector('p').textContent;
+                    // const desc = this.querySelector('p').textContent;
+                    // 변경 후 (모든 <p> 내용을 가져와서 줄바꿈 처리)
+const paragraphs = Array.from(this.querySelectorAll('p'))
+    .map(p => p.textContent)
+    .join('<br>');
 
                     modal.style.display = 'block';
                     modalImg.src = img.src;
                     modalImg.alt = img.alt;
-                    captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
+                    captionText.innerHTML = `<strong>${title}</strong><br>${paragraphs}`;
+
+                    // captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
                     document.body.style.overflow = 'hidden';
                 });
             });
