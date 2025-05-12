@@ -2660,7 +2660,7 @@ responsive
 }
 
 
-
+/* 
 
 
 #preloader {
@@ -2710,9 +2710,9 @@ responsive
 #preloader .jumper > div:nth-child(3) {
   -webkit-animation-delay: 0.66666s;
   animation-delay: 0.66666s;
-}
+} */
 
-@-webkit-keyframes jumper {
+/* @-webkit-keyframes jumper {
   0% {
     opacity: 0;
     -webkit-transform: scale(0);
@@ -2740,7 +2740,7 @@ responsive
   100% {
     opacity: 0;
   }
-}
+} */
 
 /* 메인화면 상단 버튼 */
 /* 기본 버튼 크기 (PC에서 적용) */
