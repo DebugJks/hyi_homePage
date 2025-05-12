@@ -705,7 +705,7 @@ img {
 
 .top-banner {
   flex: 1;
-  background: url('your-top-banner.jpg') center/cover no-repeat;
+  /* background: url('your-top-banner.jpg') center/cover no-repeat; */
   min-height: 250px;
 }
 
@@ -1479,7 +1479,7 @@ td {
 
 .mks-header p {
   color: var(--gray-color);
-  font-size: 1rem;
+  font-size: 35rem;
 }
 
 /* 퀴즈 카드 스타일 */
