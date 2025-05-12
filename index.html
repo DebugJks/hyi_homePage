@@ -152,7 +152,7 @@
 
 
 
- <!-- onclick="smoothScrollTo('ex')" -->
+    <!-- onclick="smoothScrollTo('ex')" -->
 
     <section class="button-grid-section11" style="margin-top: 5%;">
         <div class="button-container11">
@@ -287,8 +287,7 @@
                     <h4>1. <strong>보강재를 꼭 확인하세요!</strong></h4>
                     <p>보강재가 누락되면 변형이 생기고 큰 하자가 발생합니다.</p>
                     <div class="steel-photo">
-                        <img src="images/보강재.png" alt="보강재 유무 비교 이미지"
-                            style="max-width: 100%; height: auto;" />
+                        <img src="images/보강재.png" alt="보강재 유무 비교 이미지" style="max-width: 100%; height: auto;" />
                         <div style="display: flex; justify-content: space-around; margin-top: 8px;">
                             <div class="steel-photo">
                                 <img src="./src/assets/rebar_yes.png" alt="보강재 유 이미지" />
@@ -488,7 +487,8 @@
                                 <div class="step-card balcony-bg">
                                     <h3>2. 단열재 확인</h3>
                                     <div class="card-desc">
-                                        <p><span class="highlight-round">폼과 실리콘 및</span> <strong>수평</strong>, 창호용 실리콘 사용 여부(방수)확인</p>
+                                        <p><span class="highlight-round">폼과 실리콘 및</span> <strong>수평</strong>, 창호용 실리콘 사용
+                                            여부(방수)확인</p>
                                         <div class="spec-box">
                                             <span>샷시틀에 폼을 빈틈없이 채워야 함 (단열)</span>
                                         </div>
@@ -1310,76 +1310,56 @@
     </style>
 
     <script>
-// 기존 코드 전체 삭제 후 아래 코드로 교체
-document.addEventListener('DOMContentLoaded', function () {
-    // 평형 선택 데이터 (성능 데이터 삭제)
-    const priceData = {
-        '20': { our: 510, competitor: 600 },
-        '30': { our: 540, competitor: 630 },
-        '40': { our: 680, competitor: 800 },
-    };
+        // 기존 코드 전체 삭제 후 아래 코드로 교체
+        document.addEventListener('DOMContentLoaded', function () {
+            // 평형 선택 데이터 (성능 데이터 삭제)
+            const priceData = {
+                '20': { our: 510, competitor: 600 },
+                '30': { our: 540, competitor: 630 },
+                '40': { our: 680, competitor: 800 },
+            };
 
-    // DOM 요소 (성능 관련 요소 삭제)
-    const sizeSelect = document.getElementById('size');
-    const ourAmount = document.querySelector('.our-company .amount');
-    const competitorAmount = document.querySelector('.competitor .amount');
-    const savingsBadge = document.querySelector('.savings-badge span');
+            // DOM 요소 (성능 관련 요소 삭제)
+            const sizeSelect = document.getElementById('size');
+            const ourAmount = document.querySelector('.our-company .amount');
+            const competitorAmount = document.querySelector('.competitor .amount');
+            const savingsBadge = document.querySelector('.savings-badge span');
 
-    // 숫자 애니메이션 (유지)
-    function animateValue(element, start, end, duration) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const value = Math.floor(progress * (end - start) + start);
-            element.textContent = value.toLocaleString();
-            if (progress < 1) {
+            // 숫자 애니메이션 (유지)
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    element.textContent = value.toLocaleString();
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
                 window.requestAnimationFrame(step);
             }
-        };
-        window.requestAnimationFrame(step);
-    }
 
-    // 데이터 업데이트 (성능 로직 삭제)
-    function updateData() {
-        const size = sizeSelect.value;
-        const ourPrice = priceData[size].our;
-        const competitorPrice = priceData[size].competitor;
-        const savings = competitorPrice - ourPrice;
+            // 데이터 업데이트 (성능 로직 삭제)
+            function updateData() {
+                const size = sizeSelect.value;
+                const ourPrice = priceData[size].our;
+                const competitorPrice = priceData[size].competitor;
+                const savings = competitorPrice - ourPrice;
 
-        animateValue(ourAmount, 0, ourPrice, 1000);
-        animateValue(competitorAmount, 0, competitorPrice, 1000);
-        savingsBadge.textContent = `${savings.toLocaleString()}만원 절감`;
-    }
+                animateValue(ourAmount, 0, ourPrice, 1000);
+                animateValue(competitorAmount, 0, competitorPrice, 1000);
+                savingsBadge.textContent = `${savings.toLocaleString()}만원 절감`;
+            }
 
-    // 이벤트 리스너 (토글 관련 삭제)
-    sizeSelect.addEventListener('change', updateData);
+            // 이벤트 리스너 (토글 관련 삭제)
+            sizeSelect.addEventListener('change', updateData);
 
-    // 초기화
-    updateData();
-});
+            // 초기화
+            updateData();
+        });
 
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1497,10 +1477,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     </style>
     <section class="section" id="products">
-    <div class="section-header">
-        <h2 class="section-title">시공 스토리</h2>
-        <p class="section-subtitle">고객님들의 실제 시공 후기</p>
-    </div>
+        <div class="section-header">
+            <h2 class="section-title">시공 스토리</h2>
+            <p class="section-subtitle">고객님들의 실제 시공 후기</p>
+        </div>
 
         <a class="fade-element">
             <div class="container">
@@ -2357,23 +2337,6 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <!-- Bootstrap -->
-    <!-- <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script> -->
-
-    <!-- Plugins -->
-    <!-- <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/isotope.js"></script> -->
-
-    <!-- Global Init -->
 
 
 
@@ -2403,37 +2366,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
 
-
-
-    <!-- 구석 카톡 문의 Toggle 버튼 -->
-    <div class="contact-container">
-        <button class="contact-option submit-btn" onclick="openSubmit()"></button>
-        <button class="contact-option kakao-btn" onclick="openKakao()"></button>
-        <button class="contact-option call-btn" onclick="makeCall()"></button>
-        <button class="contact-toggle" onclick="toggleContact()"></button>
-    </div>
-
-
-
-
-
-    <script>
-        document.getElementById("cal").addEventListener("click", function (event) {
-            event.preventDefault(); // 기본 링크 동작 방지
-
-            // 팝업 창 열기
-            const popupWindow = window.open(
-                "견적/calculatePage.html", // 팝업으로 열릴 HTML 파일 경로
-                "간편견적",         // 팝업 창 이름
-                "width=800,height=600,scrollbars=yes,resizable=yes" // 팝업 창 속성
-            );
-
-            // 팝업 차단 확인
-            if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
-                alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업 차단을 해제해주세요.");
-            }
-        });
-    </script>
 
 
     <!-- ***** Footer Start ***** -->
@@ -2515,4 +2447,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 </body>
+
 </html>
