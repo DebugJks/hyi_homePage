@@ -270,8 +270,8 @@
     <section class="must-know-section">
         <div class="mks-container">
             <!-- 섹션 헤더 -->
-            <div class="mks-header">
-                <h2><span class="warning-icon">⚠️</span> 창호 공사전 <span class="highlight">이것만큼은 알고계세요!</span></h2>
+            <div class="mks-header fade-element">
+                <h2><span class="warning-icon">⚠️</span> 창호 공사전 <span class="highlight" style="color: white !important; font-weight: bold;">꼭</span>확인해주세요</h2>
                 <!-- <p>자가체크를 통해 집에 맞는 최적의 창호를 추천 받아보세요</p> -->
             </div>
 
@@ -298,6 +298,9 @@
                 <!-- 2. 샤시와 유리 확인 -->
                 <div class="check-section">
                     <h4>2. <strong>샤시와 유리를 확인하세요!</strong></h4>
+                    <div class="steel-photo">
+                        <img src="images/ex3.png" style="width: 50%;" alt="1" />
+                    </div>
                     <p>설치 위치별로 적절한 사양이 있습니다.<br />
                         가장 저렴한 모델을 설치하는지 꼭 확인하세요!</p>
                 </div>
@@ -902,7 +905,104 @@
 
 
 
+    <!-- 4개 원 -->
+    <section class="features-section">
+        <p class="fp-subtitle fade-element"><span>믿을 수 있는 이유</span><br><br></p>
+        <div class="features-grid fade-element">
+            <div class="feature">
+                <img src="images/c1.jpg" alt="c1">
+                <h3>제품설계</h3>
+                <p>고객님과 충분한 소통 후<br>정확한 제품 사양을 선택하고 제조합니다</p>
+            </div>
+            <div class="feature fade-element">
+                <p class="feature2-label">※대양산업 1공장</p>
+                <img src="images/c2.jpg" alt="c2">
+                <h3>창호생산</h3>
+                <p>보강재를 필수 조립하고<br>정밀한 품질관리로 생산합니다</p>
+            </div>
+            <div class="feature fade-element">
+                <p class="feature2-label">※소장님 직접 시공</p>
+                <img src="images/c3.jpg" alt="c3">
+                <h3>창호시공</h3>
+                <p>평균 근속 10년 이상의 기술자들이<br>완벽하고 안전한 시공을 합니다</p>
+            </div>
+            <div class="feature fade-element">
+                <img src="images/c4.jpg" alt="c4">
+                <h3>품질보증</h3>
+                <p>설치 후 발생하는 문제까지<br>책임지고 신속하게 해결합니다</p>
+            </div>
+        </div>
+    </section>
+    <style>
+        .features-section {
+            /* 좌우여백 */
+            padding: 60px 8px;
+            background: #f9fafb;
+            text-align: center;
+            font-family: 'Pretendard', sans-serif;
+        }
 
+        .features-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+            color: #0f172a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            position: relative;
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature2-label {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .feature img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 12px auto 12px;
+            display: block;
+        }
+
+        .feature h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #15803d;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* 반응형 */
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 100%;
+            }
+        }
+    </style>
 
 
 
@@ -910,7 +1010,7 @@
         <div class="fp-container">
             <div class="fp-header">
                 <h2 class="fp-title fade-element">유통망 단순화로</h2>
-                <p class="fp-subtitle fade-element"><span>15% 더 스마트한 가격</span></br></p>
+                <p class="fp-subtitle fade-element"><span>10% 더 스마트한 가격</span></br></p>
                 <div class="fp-divider"></div>
             </div>
 
@@ -949,7 +1049,7 @@
                         <h3>통합 시공 시스템</h3>
                         <p>제작부터 설치까지 단일 팀이<br>일괄 책임</p>
                         <div class="fp-price-tag">
-                            <span>-5%</span>
+                            <span>-2%</span>
                         </div>
                     </div>
                     <div class="fp-card-bg"></div>
@@ -968,9 +1068,9 @@
                             </svg>
                         </div>
                         <h3>원자재 대량 구매 할인</h3>
-                        <p>창호 원자재 일괄 구매로 더욱 저렴하게</p>
+                        <p>창호 원자재 일괄 구매로 더욱 <br>저렴하게</p>
                         <div class="fp-price-tag">
-                            <span>-5%</span>
+                            <span>-3%</span>
                         </div>
                     </div>
                     <div class="fp-card-bg"></div>
@@ -985,19 +1085,20 @@
     <!-- 타사 비교 -->
     <section class="dynamic-comparison-section">
         <div class="dcs-container">
-            <h2 class="dcs-title">타사 대비 <span class="highlight" style="color: white !important;">평균 15% 절감</span></h2>
+            <h2 class="dcs-title">타사 대비 <span class="highlight" style="color: white !important;">평균 10% 스마트</span></h2>
             <p class="dcs-subtitle">동일 평형·동일 사양 기준 비교</p>
 
             <div class="dcs-controls">
                 <div class="size-selector">
                     <label for="size">평형 선택</label>
                     <select id="size">
-                        <option value="20">20평형 (49.5㎡)</option>
-                        <option value="30">30평형 (99㎡)</option>
-                        <option value="40" selected>35평형 (132㎡)</option>
+                        <option value="20">20평대 (49.5㎡)</option>
+                        <option value="30">30평대 (99㎡)</option>
+                        <option value="40" selected>40평대 (132㎡)</option>
                     </select>
                 </div>
             </div>
+
 
             <div class="comparison-visual">
                 <!-- 우리 회사 -->
@@ -1013,7 +1114,7 @@
                         <div class="slider-track">
                             <div class="slider-fill" style="width: 85%"></div>
                         </div>
-                        <span class="slider-label">단열등급 1등급</span>
+                        <!-- <span class="slider-label">단열등급 1등급</span> -->
                     </div>
                     <div class="savings-badge">
                         <span>1,450만원 절감</span>
@@ -1034,11 +1135,11 @@
                         <div class="slider-track">
                             <div class="slider-fill" style="width: 70%"></div>
                         </div>
-                        <span class="slider-label">단열등급 2등급</span>
+                        <!-- <span class="slider-label">단열등급 2등급</span> -->
                     </div>
                 </div>
             </div>
-
+            <p class="dcs-subtitle">※외부창 기준입니다.</p>
             <div class="dcs-legend">
                 <div class="legend-item">
                     <div class="color-dot our-dot"></div>
@@ -1050,7 +1151,31 @@
                 </div>
             </div>
         </div>
+        <!-- <h2 class="section-title">왜 자사가 더 합리적일까요?</h2> -->
 
+        <div class="cost-boxes" style="margin-top: 5% !important;">
+            <!-- 자사 -->
+            <div class="cost-box">
+                <!-- <div class="cost-label">자사</div> -->
+                <div class="cost-visual self">
+                    <div class="bar base-cost">원가</div>
+                    <div class="bar margin1" style="color: white !important;">최소 공장 마진</div>
+                </div>
+            </div>
+
+            <!-- 타업체 -->
+            <div class="cost-box">
+                <!-- <div class="cost-label">타업체</div> -->
+                <div class="cost-visual others">
+                    <div class="bar base-cost">원가</div>
+                    <div class="bar margin1">공업사 마진</div>
+                    <div class="bar margin2">유통비용</div>
+                    <div class="bar margin3">제작 마진</div>
+                </div>
+            </div>
+
+
+        </div>
 
         <!-- <div class="fp-cta fade-element">
             <div class="fp-badge">PRICE GUARANTEE</div>
@@ -1304,22 +1429,38 @@
     </style>
 
     <script>
-        // 기존 코드 전체 삭제 후 아래 코드로 교체
         document.addEventListener('DOMContentLoaded', function () {
-            // 평형 선택 데이터 (성능 데이터 삭제)
+            // 평형별 데이터 (가격 + 슬라이드 값)
             const priceData = {
-                '20': { our: 510, competitor: 600 },
-                '30': { our: 540, competitor: 630 },
-                '40': { our: 680, competitor: 800 },
+                '20': {
+                    our: 540,
+                    competitor: 600,
+                    ourSlide: 60,
+                    compSlide: 70
+                },
+                '30': {
+                    our: 567,
+                    competitor: 830,
+                    ourSlide: 75,
+                    compSlide: 85
+                },
+                '40': {
+                    our: 720,
+                    competitor: 800,
+                    ourSlide: 70,
+                    compSlide: 80
+                }
             };
 
-            // DOM 요소 (성능 관련 요소 삭제)
+            // DOM 요소 선택
             const sizeSelect = document.getElementById('size');
             const ourAmount = document.querySelector('.our-company .amount');
             const competitorAmount = document.querySelector('.competitor .amount');
             const savingsBadge = document.querySelector('.savings-badge span');
+            const ourSliderFill = document.querySelector('.our-company .slider-fill');
+            const compSliderFill = document.querySelector('.competitor .slider-fill');
 
-            // 숫자 애니메이션 (유지)
+            // 숫자 애니메이션 함수
             function animateValue(element, start, end, duration) {
                 let startTimestamp = null;
                 const step = (timestamp) => {
@@ -1334,26 +1475,36 @@
                 window.requestAnimationFrame(step);
             }
 
-            // 데이터 업데이트 (성능 로직 삭제)
+            // 데이터 업데이트 함수
             function updateData() {
                 const size = sizeSelect.value;
-                const ourPrice = priceData[size].our;
-                const competitorPrice = priceData[size].competitor;
-                const savings = competitorPrice - ourPrice;
+                const data = priceData[size];
 
-                animateValue(ourAmount, 0, ourPrice, 1000);
-                animateValue(competitorAmount, 0, competitorPrice, 1000);
-                savingsBadge.textContent = `${savings.toLocaleString()}만원 절감`;
+                // 가격 업데이트
+                animateValue(ourAmount, 0, data.our, 1000);
+                animateValue(competitorAmount, 0, data.competitor, 1000);
+                savingsBadge.textContent = `${(data.competitor - data.our).toLocaleString()}만원 절감`;
+
+                // 슬라이드 애니메이션
+                ourSliderFill.style.width = data.ourSlide + '%';
+                compSliderFill.style.width = data.compSlide + '%';
             }
 
-            // 이벤트 리스너 (토글 관련 삭제)
+            // 이벤트 리스너
             sizeSelect.addEventListener('change', updateData);
 
             // 초기화
             updateData();
         });
-
     </script>
+    </script>
+
+
+
+
+
+
+
 
 
 
@@ -2036,9 +2187,9 @@
                     const title = this.querySelector('h3').textContent;
                     // const desc = this.querySelector('p').textContent;
                     // 변경 후 (모든 <p> 내용을 가져와서 줄바꿈 처리)
-const paragraphs = Array.from(this.querySelectorAll('p'))
-    .map(p => p.textContent)
-    .join('<br>');
+                    const paragraphs = Array.from(this.querySelectorAll('p'))
+                        .map(p => p.textContent)
+                        .join('<br>');
 
                     modal.style.display = 'block';
                     modalImg.src = img.src;
