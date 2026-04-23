@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta property="og:title" content="문에 대한 모든 것 오늘의 문">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="창호 및 도어 전문 업체">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
@@ -73,10 +73,10 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="images/logo.png" style="margin: auto; bottom: 2px; height: 80px;">
+                            <img src="images/로고.png" style="margin: auto; bottom: 2px; height: 80px;">
                         </a>
                         <a href="index.html" class="mlogo">
-                            <img src="images/logo.png" style="margin-top: 5%; height: 50px;">
+                            <img src="images/로고.png" style="margin-top: 5%; height: 50px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -126,9 +126,19 @@
                 <a class="setText">오직</a> <a class="highlight" style="color: white;">창호</a>만 생각합니다
             </h2>
         </div> -->
-        <h2 class="text-line4"><span class="counter" data-target="8000">0</span> 세대 이상의<br>노하우로 완벽한 시공을 보장합니다.
-        </h2>
 
+
+        <!-- <h2 class="text-line4"><span class="counter" data-target="8000">0</span> 세대 이상의<br>노하우로 완벽한 시공을 보장합니다.
+        </h2> -->
+    <!-- <section class="main-slider">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('images/Main.jpg')">
+            </div>
+        </div>
+    </section> -->
+<h2 class="playfair-font" style="font-size: 3rem;margin-top: 40%; margin-left: -60%; font-family: 'PlayfairDisplay', serif; font-weight: 500;">
+    <a style="font-size: 1.5rem;">The Best</a> Window 
+</h2>
 
         <!-- <a class="btna" href="submit.html" id="supportBtn" style="color: white !important;">
             <span></span>
@@ -137,20 +147,1001 @@
             <span></span>
             문의하기
         </a> -->
+        
     </div>
-
 
     <section class="main-slider">
         <div class="slides">
-            <div class="slide active" style="background-image: url('assets/images/SlidingBanner/ex1.jpg')">
+            <div class="slide active" style="background-image: url('images/Main.jpg')">
             </div>
         </div>
+    </section>
+
+<style>
+    @font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* 가변 폰트이므로 범위를 지정해줍니다 */
+    font-style: normal;
+}
+
+/* 적용할 클래스 생성 */
+.playfair-font {
+    font-family: 'PlayfairDisplay', serif;
+}
+</style>
+
+
+    <!-- onclick="smoothScrollTo('ex')" -->
+
+    <style>
+        /* 섹션 레이아웃 */
+        .section-slide-container {
+            width: 100%;
+            min-height: 40vh;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+            overflow: hidden;
+            /* 가로 스크롤 방지 */
+        }
+
+        .slide-content-wrapper_slide {
+            width: 85%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+        }
+
+        .slide-text-box_slide {
+            flex: 1;
+            /* 초기 상태: 왼쪽으로 150px 밀려있고 투명함 */
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        /* 애니메이션 활성화 상태 */
+        .slide-text-box_slide.active_slide {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-main-title_slide {
+            font-size: 42px;
+            font-weight: 900;
+            color: #111;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .slide-sub-desc_slide {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        .slide-empty-space_slide {
+            flex: 0.8;
+            /* 오른쪽 여백 확보 */
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 768px) {
+            .slide-content-wrapper_slide {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .slide-main-title_slide {
+                font-size: 30px;
+            }
+
+            .slide-empty-space_slide {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer_slide = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 등장할 때 active 클래스 추가
+                    entry.target.classList.add('active_slide');
+                } else {
+                    // 화면에서 벗어나면 다시 제거 (스크롤 시 반복 효과)
+                    entry.target.classList.remove('active_slide');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // 대상 요소 감시 시작
+        const target_slide = document.querySelector('.slide-text-box_slide');
+        if (target_slide) observer_slide.observe(target_slide);
+    });
+</script> -->
+
+    <!-- 팝업 및 버튼 -->
+    <!-- 팝업 포트폴리오 -->
+    <section class="section-slide-container" id="slideSection_slide">
+        <div class="slide-content-wrapper_slide">
+            <div class="slide-text-box_slide">
+                <h2 class="slide-main-title_slide">공간의 가치를 높이는 선택</h2>
+                <p class="slide-sub-desc_slide">
+                    공학의 정밀함이 공간의 아름다움으로 변환되는 지점을 연구합니다.<br>
+                    단열과 방음을 위한 최적의 설계를 경험해 보세요.<br>
+                    <span class="line-deco_slide">_____________________</span><br>
+                    <span class="eng-sub_slide">The Engine of window</span>
+                </p>
+            </div>
+
+            <div class="slide-btn-space_slide">
+                <button class="open-portfolio-btn_slide" onclick="togglePortfolio_slide(true)">
+                    포트폴리오 갤러리 <span>+</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="sidePortfolio_slide" class="portfolio-floating-modal_slide">
+        <div class="modal-header_slide">
+            <h3>PROJECT GALLERY</h3>
+            <button class="close-btn_slide" onclick="togglePortfolio_slide(false)">✕</button>
+        </div>
+
+        <div class="modal-body_slide">
+            <div class="port-grid_slide">
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('인천 송도 시공', 'KCC 뉴프라임 140 적용 현장입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('청라 자이 아파트', '에너지 효율 1등급 로이유리 시공 사례입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('청라 자이 아파트', '에너지 효율 1등급 로이유리 시공 사례입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('청라 자이 아파트', '에너지 효율 1등급 로이유리 시공 사례입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('청라 자이 아파트', '에너지 효율 1등급 로이유리 시공 사례입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('images/tab_13.png');"
+                    onclick="showDetail_slide('청라 자이 아파트', '에너지 효율 1등급 로이유리 시공 사례입니다.', 'images/tab_13.png')">
+                </div>
+                <div class="port-card-btn_slide" style="background-image: url('assets/images/image_3833e6.png');"
+                    onclick="showDetail_slide('김포 전원주택', '풍압 보강재를 삽입한 대형 창호 시공입니다.', 'assets/images/image_3833e6.png')">
+                </div>
+            </div>
+        </div>
+
+        <div id="detailView_slide" class="portfolio-detail-full_slide">
+            <div id="detailImg_slide" class="detail-img-zoom_slide">
+                <button class="back-btn_slide" onclick="hideDetail_slide()">← Back</button>
+            </div>
+            <div class="detail-text-zone_slide">
+                <h2 id="detailTitle_slide">현장명</h2>
+                <p id="detailDesc_slide">설명 문구</p>
+            </div>
+        </div>
+    </div>
+    <div id="overlay_slide" class="portfolio-overlay_slide" onclick="togglePortfolio_slide(false)"></div>
+
+    <style>
+        .open-portfolio-btn_slide {
+            padding: 20px 45px;
+            background: #111;
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .open-portfolio-btn_slide:hover {
+            background: #ff3e3e;
+            transform: translateY(-5px);
+        }
+
+        /* 중앙 플로팅 팝업 (흰색 네모) */
+        .portfolio-floating-modal_slide {
+            position: fixed;
+            top: 50%;
+            left: 150%;
+            /* 초기 위치: 오른쪽 밖 */
+            transform: translate(-50%, -50%);
+            width: 95%;
+            max-width: 1200px;
+            height: 80vh;
+            background: #fff;
+            z-index: 2000;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .portfolio-floating-modal_slide.open_slide {
+            left: 50%;
+        }
+
+        .modal-header_slide {
+            padding: 25px 35px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header_slide h3 {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .close-btn_slide {
+            background: none;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        /* 내부 스크롤 영역 */
+        .modal-body_slide {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .port-grid_slide {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .port-card-btn_slide {
+            aspect-ratio: 4/3;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: all 0.4s;
+            border-radius: 2px;
+        }
+
+        .port-card-btn_slide:hover {
+            transform: scale(0.98);
+            filter: brightness(0.8);
+        }
+
+        /* 이미지 클릭 시 커지며 채우는 애니메이션 컨테이너 */
+        .portfolio-detail-full_slide {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: #ffffff;
+            z-index: 2100;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            /* 좀 더 부드러운 가속도 */
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 활성화 상태 (전체 채움) */
+        .portfolio-detail-full_slide.show_slide {
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* 확대되는 이미지 영역: 높이를 75%로 상향 (기존 50%에서 변경) */
+        .detail-img-zoom_slide {
+            width: 100%;
+            height: 85%;
+            /* 이미지 영역 확장 */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .detail-text-zone_slide {
+            width: 100%;
+            height: 10%;
+            /* 설명 영역 축소 */
+            padding: 30px 40px;
+            background: #ffffff;
+            box-sizing: border-box;
+            /* overflow-y: auto; 내용이 많을 경우 내부 스크롤 */
+        }
+
+        .detail-text-zone_slide h2 {
+            font-size: 1.5rem;
+            /* 텍스트 크기 살짝 조정 */
+            font-weight: 800;
+            margin-top: -1%;
+            margin-bottom: 0.5%;
+            color: #111;
+        }
+
+        .detail-text-zone_slide p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1;
+        }
+
+        .back-btn_slide {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 2200;
+        }
+
+        .portfolio-overlay_slide {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1900;
+            display: none;
+        }
+
+        /* 배경 스크롤 방지용 클래스 */
+        .stop-scroll_slide {
+            overflow: hidden !important;
+        }
+    </style>
+
+    <script>
+        // 좌측 텍스트 슬라이드 애니메이션
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer_slide = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 등장할 때 active 클래스 추가
+                        entry.target.classList.add('active_slide');
+                    } else {
+                        // 화면에서 벗어나면 다시 제거 (스크롤 시 반복 효과)
+                        entry.target.classList.remove('active_slide');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // 대상 요소 감시 시작
+            const target_slide = document.querySelector('.slide-text-box_slide');
+            if (target_slide) observer_slide.observe(target_slide);
+        });
+
+
+        function togglePortfolio_slide(isOpen) {
+            const modal = document.getElementById('sidePortfolio_slide');
+            const overlay = document.getElementById('overlay_slide');
+
+            if (isOpen) {
+                // 1. 팝업 및 오버레이 표시
+                modal.classList.add('open_slide');
+                overlay.style.display = 'block';
+
+                // 2. 배경 스크롤 차단 (이 부분이 핵심입니다)
+                document.body.classList.add('stop-scroll_slide');
+            } else {
+                // 3. 팝업 및 오버레이 제거
+                modal.classList.remove('open_slide');
+                overlay.style.display = 'none';
+
+                // 4. 배경 스크롤 복구
+                document.body.classList.remove('stop-scroll_slide');
+
+                hideDetail_slide(); // 상세 페이지 열려있으면 초기화
+            }
+        }
+
+        function showDetail_slide(title, desc, img) {
+            const detail = document.getElementById('detailView_slide');
+            document.getElementById('detailTitle_slide').innerText = title;
+            document.getElementById('detailDesc_slide').innerText = desc;
+            document.getElementById('detailImg_slide').style.backgroundImage = `url('${img}')`;
+            detail.classList.add('show_slide');
+        }
+
+        function hideDetail_slide() {
+            document.getElementById('detailView_slide').classList.remove('show_slide');
+        }
+    </script>
+
+
+    <section class="section-pop-container" id="popSection_pop">
+        <div class="pop-text-wrapper_pop">
+            <h1 class="main-title_pop">디자인과 공학이 만나다</h1>
+        </div>
+    </section>
+
+    <section class="section-bounce-container" id="bounceSection_pop">
+        <div class="bounce-flex-box_pop">
+
+            <div class="bounce-btn_pop" style="background-image: url('images/도어.jpg');">
+                <div class="btn-overlay_pop">
+                    <div class="btn-content_pop">
+                        <span class="btn-num_pop">01</span>
+                        <h3 class="btn-title_pop">철저한 보양</h3>
+                        <p class="btn-desc_pop">가구와 바닥을 보호하기 위한 전문 보양 공정입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bounce-btn_pop" style="background-image: url('images/tab_12.png');">
+                <div class="btn-overlay_pop">
+                    <div class="btn-content_pop">
+                        <span class="btn-num_pop">02</span>
+                        <h3 class="btn-title_pop">정밀한 시공</h3>
+                        <p class="btn-desc_pop">1mm의 오차도 허용하지 않는 수평/수직 정밀 시공입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bounce-btn_pop" style="background-image: url('assets/images/image_3833e6.png');">
+                <div class="btn-overlay_pop">
+                    <div class="btn-content_pop">
+                        <span class="btn-num_pop">03</span>
+                        <h3 class="btn-title_pop">완벽한 마감</h3>
+                        <p class="btn-desc_pop">최고급 실리콘과 우레탄 폼을 사용한 기밀 마감입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            /* 가로 스크롤을 원천 차단합니다 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-pop-container,
+        .section-bounce-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* 1번 섹션: 텍스트 팝업 (배경 흰색) */
+        .section-pop-container {
+            height: 50vh;
+            /* 높이 소폭 조절 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            /* 배경 흰색 */
+            overflow: hidden;
+        }
+
+        .main-title_pop {
+            color: #111;
+            /* 텍스트 검정색 */
+            font-size: clamp(2rem, 5vw, 4rem);
+            /* 반응형 폰트 크기 */
+            font-weight: 900;
+            transform: scale(0.1);
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .main-title_pop.active_pop {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* 2번 섹션: 3분할 버튼 (배경 흰색) */
+        .section-bounce-container {
+            width: 100%;
+            background: #ffffff;
+            padding: 40px 0;
+            /* 위아래 여백 추가 */
+        }
+
+        .bounce-flex-box_pop {
+            display: flex;
+            width: 100%;
+            height: 450px;
+            /* 세로 사이즈 줄임 (기존 600px -> 450px) */
+        }
+
+        .bounce-btn_pop {
+            flex: 1;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
+            cursor: pointer;
+            overflow: hidden;
+
+            /* 물결 애니메이션을 위한 초기 설정 */
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        /* 물결치듯 튕겨 올라오는 애니메이션 정의 */
+        @keyframes waveBounce_pop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            60% {
+                transform: translateY(-30px);
+                opacity: 1;
+            }
+
+            /* 원래 위치보다 위로 튕김 */
+            80% {
+                transform: translateY(10px);
+            }
+
+            /* 다시 살짝 내려옴 */
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            /* 제자리 */
+        }
+
+        .bounce-btn_pop.active_pop {
+            animation: waveBounce_pop 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        /* 호버 효과 */
+        .bounce-btn_pop:hover {
+            filter: grayscale(0%);
+        }
+
+        .btn-overlay_pop {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .btn-content_pop {
+            transform: translateY(50px);
+            transition: transform 0.4s ease;
+        }
+
+        .btn-num_pop {
+            font-size: 13px;
+            color: #ff3e3e;
+            font-weight: 800;
+        }
+
+        .btn-title_pop {
+            font-size: 22px;
+            color: #fff;
+            margin: 8px 0;
+            font-weight: 700;
+        }
+
+        .btn-desc_pop {
+            font-size: 14px;
+            color: #eee;
+            opacity: 0;
+            transition: opacity 0.4s;
+            line-height: 1.4;
+        }
+
+        .bounce-btn_pop:hover .btn-content_pop {
+            transform: translateY(0);
+        }
+
+        .bounce-btn_pop:hover .btn-desc_pop {
+            opacity: 1;
+        }
+
+        /* 순차적 물결 딜레이 (1번->2번->3번 순서) */
+        .bounce-btn_pop:nth-child(1).active_pop {
+            animation-delay: 0s;
+        }
+
+        .bounce-btn_pop:nth-child(2).active_pop {
+            animation-delay: 0.15s;
+        }
+
+        .bounce-btn_pop:nth-child(3).active_pop {
+            animation-delay: 0.3s;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer_pop = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('main-title_pop')) {
+                            entry.target.classList.add('active_pop');
+                        } else {
+                            // 섹션 진입 시 버튼들에 active 클래스 부여 (애니메이션 실행)
+                            const btns = entry.target.querySelectorAll('.bounce-btn_pop');
+                            btns.forEach(btn => btn.classList.add('active_pop'));
+                        }
+                    } else {
+                        // 화면을 벗어나면 다시 초기화 (반복 효과)
+                        if (entry.target.classList.contains('main-title_pop')) {
+                            entry.target.classList.remove('active_pop');
+                        } else {
+                            const btns = entry.target.querySelectorAll('.bounce-btn_pop');
+                            btns.forEach(btn => btn.classList.remove('active_pop'));
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer_pop.observe(document.querySelector('.main-title_pop'));
+            observer_pop.observe(document.querySelector('.bounce-flex-box_pop'));
+        });
+    </script>
+
+
+
+
+
+
+
+
+    <section class="mz-magazine-section" id="portfolioMagazineMz">
+        <div class="mz-viewport-container">
+            <div class="mz-magazine-stack" id="mzStack">
+
+                <div class="mz-page-item active-mz" id="mzPage1" data-sidebar="BF-Y250B">
+                    <div class="mz-content-layout">
+                        <div class="mz-img-area" style="background-image: url('images/제품소개/1.jpg');"></div>
+
+                        <div class="mz-info-area">
+                            <div class="mz-header-info">
+                                <span class="mz-page-idx">01</span>
+                                <span class="mz-category-tag">BALCONY WINDOW</span>
+                            </div>
+                            <div class="mz-text-group">
+                                <h2 class="mz-main-title">발코니 전용창 <br>BF-Y250B</h2>
+                                <ul class="mz-spec-list">
+                                    <li><strong>유리:</strong> 26T 로이그린 + 아르곤</li>
+                                    <li><strong>프레임:</strong> 고기밀성 단열 창호</li>
+                                    <li><strong>특징:</strong> 우수한 내풍압 및 수밀성</li>
+                                </ul>
+                                <p class="mz-sub-desc">거실 발코니에 적용된 KCC 뉴프라임 창호로, 넓은 조망권과 뛰어난 단열 성능을 동시에 확보했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mz-page-item" id="mzPage2" data-sidebar="스마트 평면 설계">
+                    <div class="mz-content-layout">
+                        <div class="mz-img-area" style="background-image: url('sl2.jpg');"></div>
+                        <div class="mz-info-area">
+                            <div class="mz-header-info">
+                                <span class="mz-page-idx">02</span>
+                                <span class="mz-category-tag">3D MODELING</span>
+                            </div>
+                            <div class="mz-text-group">
+                                <h2 class="mz-main-title">스마트 <br>평면 설계</h2>
+                                <ul class="mz-spec-list">
+                                    <li><strong>유형:</strong> 아파트 확장형</li>
+                                    <li><strong>면적:</strong> 84㎡ (34평형)</li>
+                                    <li><strong>설계:</strong> 창호 위치 최적화</li>
+                                </ul>
+                                <p class="mz-sub-desc">3D 시뮬레이션을 통해 창호 교체 후의 실내 채광과 환기 흐름을 미리 예측하여 최적의 위치를 설계했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mz-sidebar" id="mzSidebar">
+            <span class="mz-sidebar-text" id="mzSidebarProduct">로딩 중...</span>
+        </div>
+
+        <div class="mz-footer-controls">
+            <button class="mz-nav-btn prev-mz" onclick="turnPageMz(-1)">PREVIOUS WORK</button>
+            <div class="mz-page-numbers">
+                <span id="mzCurrentNum">01</span> / <span id="mzTotalNum">02</span>
+            </div>
+            <button class="mz-nav-btn next-mz" onclick="turnPageMz(1)">NEXT WORK</button>
+        </div>
+
+        <script>
+            let currentMzPage = 0;
+            const mzPages = document.querySelectorAll('.mz-page-item');
+            const mzCurrentNum = document.getElementById('mzCurrentNum');
+            const sidebarText = document.getElementById('mzSidebarProduct');
+
+            // [핵심] 현재 페이지의 data-sidebar 속성값을 가져와 사이드바에 넣는 함수
+            function updateSidebar(pageIndex) {
+                const currentPage = mzPages[pageIndex];
+                const productTitle = currentPage.getAttribute('data-sidebar');
+                sidebarText.innerText = productTitle;
+            }
+
+            function turnPageMz(direction) {
+                const nextIdx = currentMzPage + direction;
+                if (nextIdx < 0 || nextIdx >= mzPages.length) return;
+
+                if (direction === 1) {
+                    mzPages[currentMzPage].classList.remove('active-mz');
+                    mzPages[currentMzPage].classList.add('flipped-mz');
+                    mzPages[nextIdx].classList.add('active-mz');
+                } else {
+                    mzPages[currentMzPage].classList.remove('active-mz');
+                    mzPages[nextIdx].classList.remove('flipped-mz');
+                    mzPages[nextIdx].classList.add('active-mz');
+                }
+
+                currentMzPage = nextIdx;
+                const num = currentMzPage + 1;
+                mzCurrentNum.innerText = num < 10 ? `0${num}` : num;
+
+                // 페이지 전환 시 사이드바 텍스트 업데이트
+                updateSidebar(currentMzPage);
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('mzTotalNum').innerText =
+                    mzPages.length < 10 ? `0${mzPages.length}` : mzPages.length;
+
+                // 첫 로딩 시 1페이지의 사이드바 텍스트 설정
+                updateSidebar(0);
+            });
+        </script>
+
+        <style>
+            .mz-magazine-section {
+                background-color: #ffffff;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                justify-content: flex-start;
+                perspective: 2500px;
+                font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+                overflow: hidden;
+                padding: 0;
+                position: relative;
+            }
+
+            .mz-viewport-container {
+                flex: 1;
+                width: auto;
+                max-width: none;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                display: flex;
+                gap: 0;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 0;
+            }
+
+            .mz-magazine-stack {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform-style: preserve-3d;
+                flex: 1;
+            }
+
+            .mz-page-item {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                transform-origin: left center;
+                transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.8s;
+                backface-visibility: hidden;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            .mz-page-item.active-mz {
+                opacity: 1;
+                z-index: 10;
+                transform: rotateY(0deg);
+            }
+
+            .mz-page-item.flipped-mz {
+                opacity: 0;
+                transform: rotateY(-160deg) scale(0.95);
+                z-index: 1;
+            }
+
+            .mz-content-layout {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* 왼쪽 이미지 영역 */
+            /* t.html 파일의 <style> 부분 수정 */
+            .mz-img-area {
+                flex: 1.5;
+                background-size: cover;
+                /* 이미지가 영역에 꽉 차게 설정 */
+                background-position: center;
+                /* 이미지 중심을 맞춤 */
+                background-repeat: no-repeat;
+                /* 이미지 반복 방지 */
+                min-height: 75vh;
+                /* 영역이 찌그러지지 않도록 최소 높이 설정 */
+                border-radius: 4px;
+            }
+
+            /* 오른쪽 정보 영역 (첨부 디자인 적용) */
+            .mz-info-area {
+                flex: 0.5;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 40px 0 60px 50px;
+                border-left: 1px solid #f0f0f0;
+            }
+
+            .mz-header-info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mz-page-idx {
+                font-size: 60px;
+                font-weight: 900;
+                line-height: 1;
+                color: #eee;
+                /* 배경처럼 흐리게 */
+            }
+
+            .mz-category-tag {
+                font-size: 13px;
+                font-weight: 800;
+                color: #ff3e3e;
+                letter-spacing: 2px;
+            }
+
+            .mz-text-group {
+                margin-bottom: 20px;
+            }
+
+            .mz-main-title {
+                font-size: 48px;
+                font-weight: 900;
+                line-height: 1.1;
+                margin-bottom: 30px;
+                color: #111;
+            }
+
+            .mz-spec-list {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 30px;
+                border-top: 2px solid #111;
+                padding-top: 20px;
+            }
+
+            .mz-spec-list li {
+                font-size: 14px;
+                margin-bottom: 8px;
+                color: #444;
+            }
+
+            .mz-spec-list li strong {
+                display: inline-block;
+                width: 70px;
+                color: #111;
+            }
+
+            .mz-sub-desc {
+                font-size: 15px;
+                line-height: 1.7;
+                color: #777;
+            }
+
+            /* 네비게이션 */
+            .mz-footer-controls {
+                position: absolute;
+                bottom: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                z-index: 20;
+            }
+
+            .mz-nav-btn {
+                background: none;
+                border: none;
+                border-bottom: 2px solid #111;
+                padding: 5px 0;
+                font-size: 12px;
+                font-weight: 900;
+                cursor: pointer;
+                color: #111;
+                transition: all 0.3s;
+            }
+
+            .mz-nav-btn:hover {
+                color: #ff3e3e;
+                border-bottom-color: #ff3e3e;
+            }
+
+            .mz-page-numbers {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            /* 우측 사이드바 스타일 */
+            .mz-sidebar {
+                width: 60px;
+                min-width: 60px;
+                max-width: 60px;
+                height: 30vh;
+                padding: 0;
+                background-color: #f5f5f5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                flex-grow: 0;
+                box-sizing: border-box;
+            }
+
+            .mz-sidebar-text {
+                font-size: 14px;
+                font-weight: 700;
+                color: #111;
+                margin: 0;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+        </style>
     </section>
 
 
 
 
-    <!-- onclick="smoothScrollTo('ex')" -->
 
     <section class="button-grid-section11" id="test" style="margin-top: 5%;">
         <div class="button-container11">
@@ -197,722 +1188,449 @@
         </div>
     </section>
 
-    <!-- 이것만큼은 -->
+
+<!-- 시공 포트폴리오 -->
+
+
+
+    <!-- 시공사례 그리드 -->
+    <section class="construction-gallery" id="ex">
+        <h2 class="dcs-title">베스트 <span class="highlight" style="color: white !important;">포트폴리오</span></h2>
+
+        <div class="gallery-container">
+            <p class="gallery-subtitle">수많은 시공 경험</p>
+
+            <div class="gallery-grid" style="margin-top: 10%;">
+
+                <div class="gallery-item">
+                    <img src="images/re/1.jpg" alt="아파트 발코니 샷시 시공" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>단독주택 신축 창호공사</h3>
+                        <p>시스템 FM-Y140, BF-230, BF-248 </p>
+                        <p>26mm 투명 + 로이</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/2.jpg" alt="단독주택 파노라마 창" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>빌라 신축 창호공사</h3>
+                        <p>BF-248</p>
+                        <p>26mm 투명 + 로이</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/3.jpg" alt="상가 파티션 도어" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>빌라 신축 창호공사</h3>
+                        <p>시스템 (틸트앤턴) FM-Y70, BF-248</p>
+                        <p>26mm 투명 + 로이</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/4.jpg" alt="오피스 창호" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>빌라 신축 픽스 시스템 공사 </h3>
+                        <p>FIX, FM-Y70</p>
+                        <p>강화유리</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/5.jpg" alt="빌라 테라스" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>복층 빌라 창호 신축 공사</h3>
+                        <p>BF-Y250</p>
+                        <p>26mm 투명 + 로이</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/6.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>아파트 창호 리모델링</h3>
+                        <p>BF-Y260</p>
+                        <p>26mm 투명 + 로이 (아르곤)</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/re/7.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>아파트 주방 시스템창</h3>
+                        <p>시스템창 FM-T70</p>
+                        <p>24mm 페어유리(복층)</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/8.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>단독주택 창호 리모델링</h3>
+                        <p>FIX 및 알루미늄</p>
+                        <p>강화유리 및 26mm 페어유리(복층)</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/9.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>공장동 창호 리모델링</h3>
+                        <p>스테인레스 창</p>
+                        <p>24mm 페어유리, 강화유리</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/10.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>썬룸 공사</h3>
+                        <p>BF-Y250, FIX</p>
+                        <p>26mm 투명 + 로이, 강화유리</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/11.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>사무실 유리 가벽</h3>
+                        <p>FIX 및 알루미늄</p>
+                        <p>18mm 투명+투명</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/re/12.jpg" alt="호텔 로비" class="gallery-image">
+                    <div class="item-overlay">
+                        <h3>썬룸 공사</h3>
+                        <p>세이프도어 및 전면 FIX</p>
+                        <h3>브론즈 5mm, 강화유리(천장)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 창 -->
+        <div class="gallery-modal" id="gallery-modal">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </section>
+
     <style>
-        .quiz-card {
-            background-color: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 24px;
-            margin: 32px auto;
-            max-width: 700px;
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #333;
+        /* 기본 스타일 */
+        .construction-gallery {
+            padding: 60px 0;
+            background: #f8fafc;
+            font-family: 'Pretendard', sans-serif;
         }
 
-        .quiz-card h3 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 24px;
-            color: #222;
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .gallery-title {
             text-align: center;
-        }
-
-        .check-section {
-            margin-bottom: 32px;
-        }
-
-        .check-section h4 {
             font-size: 2rem;
-            margin-bottom: 8px;
-            color: #1a73e8;
-        }
-
-        .check-section p {
-            font-size: 1.3rem;
-            line-height: 1.6;
+            color: #1e293b;
             margin-bottom: 10px;
         }
 
-        .steel-photo {
-            margin-top: 12px;
+        .gallery-subtitle {
             text-align: center;
-        }
-
-        .steel-photo img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        .steel-photo div {
             font-size: 0.9rem;
-            color: #666;
+            color: #64748b;
+            margin-bottom: 30px;
+            text-decoration-line: underline;
+            text-decoration-color: #90bbf3;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 3px;
         }
 
-        .download-link {
-            display: inline-block;
-            margin-top: 10px;
-            background-color: #1a73e8;
-            color: white;
-            padding: 10px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .download-link:hover {
-            background-color: #155ab6;
-        }
-        @media (max-width: 768px) {
-        .check-section h4 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-            color: #1a73e8;
-        }
-
-
-}
-    </style>
-
-    <section class="must-know-section">
-        <div class="mks-container">
-            <!-- 섹션 헤더 -->
-            <div class="mks-header fade-element" style="margin-bottom: 15%;margin-top: 5%;">
-                <h2><span class="warning-icon">✅</span>공사전 <span class="highlight"
-                        style="color: white !important; font-weight: bold;font-size: 3.3rem;">꼭</span>확인해주세요!</h2>
-                <!-- <p>확인해주세요</p> -->
-            </div>
-
-            <!-- 기존 퀴즈 카드 자리에 대체 콘텐츠 -->
-            <div class="quiz-card" id="quiz-container">
-
-                <!-- 1. 보강재 확인 -->
-                <div class="check-section">
-                    <h4>1. <strong>보강재를 꼭 확인해 주세요</strong></h4>
-                    <p><strong>보강재</strong>가 누락되면 변형이 생겨 큰 하자가 발생합니다.</p>
-                    <div class="steel-photo">
-                        <img src="images/보강재.png" alt="보강재 유무 비교 이미지"
-                            style="max-width: 100%; height: auto;margin-top: 6% !important;" />
-                        <!-- <div style="display: flex; justify-content: space-around; margin-top: 8px;">
-                            <div class="steel-photo">
-                                <img src="./src/assets/rebar_yes.png" alt="보강재 유 이미지" />
-                            </div>
-                            <div class="steel-photo">
-                                <img src="./src/assets/rebar_no.png" alt="보강재 무 이미지" />
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-
-                <!-- 2. 샤시와 유리 확인 -->
-                <div class="check-section" style="margin-top: 20% !important;">
-                    <h4>2. <strong>샤시와 유리를 확인해 주세요</strong></h4>
-                    <p>설치 위치별로 <strong>적절한 사양</strong>이 있습니다. <br>가장 저렴한 모델을 설치하는지 꼭 확인하세요!</p>
-
-                    <div class="steel-photo">
-                        <img src="images/ex3.png" style="width: 50%; margin-top: 7% !important;" alt="1" />
-                    </div>
-                </div>
-
-                <!-- 3. 계약서 작성 -->
-                <!-- 표준계약서 다운로드 -->
-                <div class="download-section" style="margin-top: 20% !important;">
-                    <div class="check-section">
-                        <h4>3. <strong>계약서를 꼭 작성해 주세요</strong></h4>
-                        <p><strong>하자이행보증</strong>은 필수로 받아주세요</p>
-                    </div>
-                    <div class="contract-checklist">
-                        <div class="contract-card warning">
-                            <div class="contract-icon">❗</div>
-                            <div>
-                                <h4>필수 항목</h4>
-                                <ul>
-                                    <li><strong>정품 확인</strong>: 제품 모델, 유리 사양 등</li>
-                                    <li><strong>픔질 보증</strong>: 무상 A/S 기간(최소 3년 권장) 및 범위</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="contract-card danger">
-                            <div class="contract-icon">⚠️</div>
-                            <div>
-                                <h4>주의사항</h4>
-                                <ul>
-                                    <li><strong>"추가 비용"</strong>에 대한 명확한 명시</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 계약서 검토 포인트 -->
-                    <div class="review-points">
-                        <h4>🔍 계약서 검토 시 필수 확인사항</h4>
-                        <div class="review-grid">
-                            <div class="review-item">
-                                <div class="review-number">1</div>
-                                <p>사업자등록번호 확인</p>
-                            </div>
-                            <div class="review-item">
-                                <div class="review-number">2</div>
-                                <p>계약서 상의 자재 사양과 견적서 일치 여부</p>
-                            </div>
-                            <div class="review-item">
-                                <div class="review-number">3</div>
-                                <p>하자 발생 시 책임 소재</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="download-card">
-                        <div class="file-icon">📄</div>
-                        <div>
-                            <h4>창호 시공 표준계약서</h4>
-                            <p>표준 양식 계약서</p>
-                            <a href="실내건축·창호 공사 표준계약서.hwp" class="download-btn" download>
-                                표준계약서 다운로드
-                                <span class="download-icon">↓</span>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="download-notice">※ 계약 전 반드시 최종 검토를 권장합니다</p>
-                </div>
-
-            </div>
-
-            <!-- 체크리스트 퀴즈 -->
-            <!-- <div class="quiz-card" id="quiz-container">
-                <div class="quiz-progress">
-                    <span class="current">1</span>/<span class="total">5</span>
-                </div>
-                <h3 class="quiz-question" id="question">거실 창호의 가장 중요한 기능은?</h3>
-                <div class="quiz-options" id="options">
-                    <label class="option">
-                        <input type="radio" name="quiz" value="A">
-                        <span class="custom-radio"></span>
-                        <span>단열 성능</span>
-                    </label>
-                    <label class="option">
-                        <input type="radio" name="quiz" value="B">
-                        <span class="custom-radio"></span>
-                        <span>방음 효과</span>
-                    </label>
-                    <label class="option">
-                        <input type="radio" name="quiz" value="C">
-                        <span class="custom-radio"></span>
-                        <span>디자인</span>
-                    </label>
-                </div>
-                <button class="quiz-next" id="next-btn">다음 질문 →</button>
-            </div> -->
-
-            <!-- 퀴즈 결과 (초기 숨김) -->
-            <div class="result-card" id="result-container" style="display:none">
-                <div class="result-badge" id="result-badge">당신에게 추천</div>
-                <h3 id="result-title">"로이(Low-E) 복층 유리 + 1.8mm 프로파일"</h3>
-                <p id="result-desc">난방비 절감이 우선인 북향 집에 최적화된 조합입니다</p>
-                <div class="result-details">
-                    <!-- <div class="detail-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3203/3203883.png" alt="단열">
-                            <span>단열 등급 <strong>1등급</strong></span>
-                        </div> -->
-                    <div class="detail-item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3161/3161837.png" alt="가격">
-                        <span>예상 견적 <strong>3,200,000원~</strong></span>
-                    </div>
-                </div>
-                <button class="retry-btn" id="retry-btn">다시 테스트하기</button>
-            </div>
-
-            <!-- 정보 아코디언 -->
-            <div class="info-accordion">
-
-                <!-- 어떤 유리를 선택해야할까요 -->
-                <div class="accordion-item fade fade-element">
-                    <button class="accordion-btn">
-                        <span>유리선택 가이드</span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="glass-comparison">
-                            <div class="glass-type">
-                                <h4>로이(Low-E) 유리</h4>
-                                <ul>
-                                    <li>단열 : <strong>페어대비 30% 우수</strong></li>
-                                    <li>방음 : <strong>우수(STC 40dB↑)</strong></li>
-                                    <li>자외선 차단: <strong>우수 (70%)</strong></li>
-                                </ul>
-                            </div>
-                            <div class="glass-type">
-                                <h4>페어유리</h4>
-                                <ul>
-                                    <li>단열 : <strong>주거에 적합한 단열</strong></li>
-                                    <li>방음 : <strong>로이와 비슷</strong></li>
-                                    <li>자외선 차단: <strong>적정 (35%)</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="selection-guide">
-                            <h4>🏡 우리 집에는 어떤 유리가 맞을까요?</h4><br>
-                            <p>- <strong>가성비를 원한다면</strong>: 페어유리 (로이 유리 대비 평단가 15% 저렴)<br>
-                                - <strong>더 따뜻하고 싶다면</strong>: 로이유리 및 아르곤 가스 주입<br>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 단계별 확인사항 -->
-                <div class="accordion-item fade-element">
-                    <button class="accordion-btn">
-                        <span class="accordion-title"><span>시공 단계별 확인해야할 사항</span></span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <!-- 3단계 확인 카드 -->
-                        <div class="check-cards">
-                            <!-- 보강재 카드 -->
-                            <div class="step-card-wrapper">
-                                <div class="step-card steel-bg">
-                                    <h3>1. 보강재 확인</h3>
-                                    <div class="card-desc">
-                                        <p><span class="highlight-round">프로파일 내부</span> <strong>강철 보강재</strong> 삽입 필수
-                                        </p>
-                                        <div class="spec-box">
-                                            <span>자석을 이용해 확인</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-image">
-                                    <img src="images/ex1.png" alt="예시">
-                                </div>
-                            </div>
-
-                            <!-- 2. 발코니 전용창 -->
-                            <div class="step-card-wrapper">
-                                <div class="step-card balcony-bg">
-                                    <h3>2. 단열재 확인</h3>
-                                    <div class="card-desc">
-                                        <p><span class="highlight-round">폼, 실리콘</span> 창호용 실리콘 사용
-                                            여부 확인</p>
-                                        <div class="spec-box">
-                                            <span>샷시틀에 폼을 빈틈없이 채우기(단열)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-image">
-                                    <img src="images/ex2.png" alt="예시">
-                                </div>
-                            </div>
-
-                            <!-- 3. 유리 사양 -->
-                            <div class="step-card-wrapper">
-                                <div class="step-card glass-bg">
-                                    <h3>3. 샷시, 유리 사양</h3>
-                                    <div class="card-desc">
-                                        <p><span class="highlight-round">유리(주거) :</span>22T 페어유리 이상 사용 권장</p>
-                                        <p><span class="highlight-round">핸들(주거) :</span>침입방지 자동핸들 권장</p>
-                                        <p><span class="highlight-round">샷시(6층 이상 발코니) :</span>발코니 전용 샷시</p>
-                                        <div class="spec-box">
-                                            <span>창짝(가로 2.6이상) : 3짝문 권장</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-image">
-                                    <img src="images/ex3.png" alt="예시">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 추가 확인 사항 (타임라인 형태) -->
-                        <div class="timeline-section">
-                            <h4 class="timeline-title">⏳ 시공 단계별 점검 포인트</h4>
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-phase">시공 전</div>
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">기존 창틀 부식 상태 · 벽면 균열 확인</div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-phase">시공 중</div>
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">몰딩 접합부 실리콘 처리 · 수평 측정</div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-phase">완공 후</div>
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">개폐 테스트 · 방수 시험 · 결로 확인</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 창 종류 및 용도 구분 -->
-                <div class="accordion-item fade-element">
-                    <button class="accordion-btn">
-                        <span class="accordion-title"><span>창 종류 및 용도 구분</span></span>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="checklist-grid">
-                            <!--단창 이중창 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>단창 vs 이중창</h4>
-                                    <p>단창은 창이 한 겹인 구조, 이중창은 창이 두 겹인 구조로 이중창은 단창에 비해 단열 성능에 우수</p>
-                                    <span class="detail-note">※이중창에 비해 단창이 더 저렴</span>
-                                </div>
-                            </div>
-                            <!-- 시스템창 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>시스템창</h4>
-                                    <p>유럽식 고급 창호 개폐기능을 부여한 신개념의 다기능 복합창호로 성능이 뛰어남</p>
-                                    <span class="detail-note">※창호의 성능을 극대화 시킨 창</span>
-                                </div>
-                            </div>
-
-                            <!-- 픽스창 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>픽스창 (고정창)</h4>
-                                    <p>열리지 않는 창으로, 조망이나 채광 목적에 사용</p>
-                                    <span class="detail-note">기밀성 우수하지만 환기 불가</span>
-                                </div>
-                            </div>
-
-                            <!-- 발코니창 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>발코니창</h4>
-                                    <p>방수와 하중에 강한 구조로 설계되어 외기 접하는 위치에 적합</p>
-                                    <span class="detail-note">주로 확장 발코니 구간에 설치</span>
-                                </div>
-                            </div>
-
-                            <!-- PVC창 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>PVC창 vs 알루미늄창</h4>
-                                    <p>PVC창은 단열 성능 우수, 알루미늄창은 내구성 우수하며 PVC창을 하이샤시라고도 한다</p>
-                                    <span class="detail-note">※알루미늄창은 주로 상가 등에 사용</span>
-                                </div>
-                            </div>
-
-                            <!-- 확장 vs 비확장 -->
-                            <div class="check-item">
-                                <div class="check-icon">✔️</div>
-                                <div>
-                                    <h4>확장 vs 비확장</h4>
-                                    <p>확장은 베란다 공간을 내부로 포함하여 실사용 면적을 늘리는 방식이고, 비확장형은 기존 베란다 공간을 유지하는 구조</p>
-                                    <span class="detail-note">※비확장으로 지은 아파트를 확장으로 확장할 경우 단열 등 문제 발생할 수 있습니다</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    </section>
-    <style>
-        /* 계약서 전용 스타일 */
-        .contract-checklist {
+        /* 갤러리 그리드 */
+        .gallery-grid {
             display: grid;
-            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-            gap: 20px;
-            margin: 20px 0;
+            grid-template-columns: repeat(4, 1fr);
+            /* PC: 4개 */
+            gap: 12px;
+            /* 간격 축소 */
         }
 
-        .contract-card {
-            padding: 20px;
+        .gallery-item {
+            position: relative;
             border-radius: 10px;
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .contract-card.warning {
-            background: #F6F8FA;
-            border-left: 4px solid #1640f9;
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
-        .contract-card.danger {
-            background: #F6F8FA;
-            border-left: 4px solid #1640f9;
+        .gallery-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
         }
 
-        .contract-icon {
-            font-size: 1.5rem;
-            margin-top: 3px;
+        .item-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
         }
 
-        .contract-card h4 {
-            margin: 0 0 10px 0;
-            color: #1e293b;
+        .gallery-item:hover .item-overlay {
+            transform: translateY(0);
         }
 
-        .contract-card ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .contract-card li {
-            margin-bottom: 8px;
-            line-height: 1.5;
+        .item-overlay h3 {
+            margin: 0 0 4px;
             font-size: 0.95rem;
         }
 
-        /* 검토 포인트 그리드 */
-        .review-points {
-            margin: 30px 0;
-        }
-
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .review-item {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 8px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .review-number {
-            background: #2563eb;
-            color: white;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .review-item p {
+        .item-overlay p {
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
+            opacity: 0.85;
+            color: wheat
         }
 
-        /* 다운로드 섹션 */
-        .download-section {
-            margin-top: 40px;
+        /* 모달 스타일 */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
         }
 
-        .download-card {
-            background: #f0fdf4;
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            border: 1px dashed #16a34a;
+        .modal-content {
+            display: block;
+            margin: 50px auto;
+            width: auto;
+            height: auto;
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
         }
 
-        .file-icon {
-            font-size: 2.5rem;
-            color: #16a34a;
-        }
-
-        .download-card h4 {
-            margin: 0 0 5px 0;
-            color: #1e293b;
-        }
-
-        .download-card p {
-            margin: 0 0 15px 0;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        .download-btn {
-            background: #16a34a;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.3s;
-        }
-
-        .download-btn:hover {
-            background: #15803d;
-            transform: translateY(-2px);
-        }
-
-        .download-icon {
-            font-size: 1.2rem;
-        }
-
-        .download-notice {
-            font-size: 0.8rem;
-            color: #64748b;
+        .modal-caption {
+            margin: 10px auto;
             text-align: center;
-            margin-top: 10px;
+            color: white;
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 모바일은 항상 overlay 표시 */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 4px;
+            }
+
+            .item-overlay {
+                display: none;
+                /* transform: translateY(0px);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1px; */
+            }
+
+            .item-overlay h3 {
+                font-size: 0.8rem;
+            }
+
+            .item-overlay p {
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 
-
     <script>
-        // 퀴즈 데이터
-        // const quizData = [
-        //     {
-        //         question: "거실 창호의 가장 중요한 기능은?",
-        //         options: [
-        //             { text: "단열 성능", value: "A" },
-        //             { text: "방음 효과", value: "B" },
-        //             { text: "디자인", value: "C" }
-        //         ]
-        //     },
-        //     {
-        //         question: "주거 지역은 어디신가요?",
-        //         options: [
-        //             { text: "도심 번화가 (소음多)", value: "A" },
-        //             { text: "일반 주택가", value: "B" },
-        //             { text: "교외/시골", value: "C" }
-        //         ]
-        //     },
-        //     {
-        //         question: "창호 교체 주요 목적은?",
-        //         options: [
-        //             { text: "에너지 절감", value: "A" },
-        //             { text: "소음 차단", value: "B" },
-        //             { text: "인테리어 개선", value: "C" }
-        //         ]
-        //     },
-        //     {
-        //         question: "방향은 어떻게 되나요?",
-        //         options: [
-        //             { text: "북향/그늘진 곳", value: "A" },
-        //             { text: "남향/일조량 많음", value: "B" },
-        //             { text: "동서향", value: "C" }
-        //         ]
-        //     },
-        //     {
-        //         question: "예산은 어떻게 계획중이신가요?",
-        //         options: [
-        //             { text: "비용보다 품질 우선", value: "A" },
-        //             { text: "적당한 가성비", value: "B" },
-        //             { text: "최저가 위주", value: "C" }
-        //         ]
-        //     }
-        // ];
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모달 요소
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            const captionText = document.getElementById('modal-caption');
+            const closeBtn = document.getElementById('gallery-modal').querySelector('.close-btn');
 
-        // // 결과 데이터
-        // const resultData = {
-        //     "AAA": {
-        //         title: "로이(Low-E) 3중 유리 + 1.8mm 프로파일",
-        //         desc: "극한의 단열 성능이 필요한 북향 집에 최적화된 프리미엄 조합",
-        //         price: "3,800,000원~"
-        //     },
-        //     "BBB": {
-        //         title: "페어유리 + 1.6mm 프로파일",
-        //         desc: "도로변 소음을 효과적으로 차단하는 밸런스형 조합",
-        //         price: "3,200,000원~"
-        //     },
-        //     "CCC": {
-        //         title: "일반 복층 유리 + 1.4mm 프로파일",
-        //         desc: "비용 효율성을 중시하는 기본형 조합",
-        //         price: "2,500,000원~"
-        //     },
-        //     "default": {
-        //         title: "로이(Low-E) 복층 유리 + 1.6mm 프로파일",
-        //         desc: "대부분의 주거 환경에 적합한 베스트셀러 조합",
-        //         price: "3,200,000원~"
-        //     }
-        // };
+            // 모든 갤러리 이미지에 클릭 이벤트 추가
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    const img = this.querySelector('.gallery-image');
+                    const title = this.querySelector('h3').textContent;
+                    // const desc = this.querySelector('p').textContent;
+                    // 변경 후 (모든 <p> 내용을 가져와서 줄바꿈 처리)
+                    const paragraphs = Array.from(this.querySelectorAll('p'))
+                        .map(p => p.textContent)
+                        .join('<br>');
 
-        // 아코디언 기능
-        document.querySelectorAll('.accordion-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.classList.toggle('active');
-                const content = btn.nextElementSibling;
-                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+                    modal.style.display = 'block';
+                    modalImg.src = img.src;
+                    modalImg.alt = img.alt;
+                    captionText.innerHTML = `<strong>${title}</strong><br>${paragraphs}`;
+
+                    // captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // 닫기 버튼
+            closeBtn.addEventListener('click', function () {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // 모달 외부 클릭 시 닫기
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // ESC 키로 닫기
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
             });
         });
-
-
-        // // 퀴즈 기능
-        // let currentQuestion = 0;
-        // let answers = [];
-
-        // function showQuestion() {
-        //     const quiz = quizData[currentQuestion];
-        //     document.getElementById('question').textContent = quiz.question;
-
-        //     const optionsContainer = document.getElementById('options');
-        //     optionsContainer.innerHTML = '';
-
-        //     quiz.options.forEach((option, index) => {
-        //         const optionElement = document.createElement('label');
-        //         optionElement.className = 'option';
-        //         optionElement.innerHTML = `
-        //     <input type="radio" name="quiz" value="${option.value}">
-        //     <span class="custom-radio"></span>
-        //     <span>${option.text}</span>
-        //   `;
-        //         optionsContainer.appendChild(optionElement);
-        //     });
-
-        //     document.querySelector('.current').textContent = currentQuestion + 1;
-        // }
-
-        // function showResult() {
-        //     const resultKey = answers.join('').substring(0, 3) || 'default';
-        //     const result = resultData[resultKey] || resultData['default'];
-
-        //     document.getElementById('result-title').textContent = `"${result.title}"`;
-        //     document.getElementById('result-desc').textContent = result.desc;
-        //     document.querySelector('.result-details strong').textContent = result.price;
-
-        //     document.getElementById('quiz-container').style.display = 'none';
-        //     document.getElementById('result-container').style.display = 'block';
-        // }
-
-        // document.getElementById('next-btn').addEventListener('click', () => {
-        //     const selectedOption = document.querySelector('input[name="quiz"]:checked');
-        //     if (!selectedOption) return alert('옵션을 선택해주세요');
-
-        //     answers.push(selectedOption.value);
-
-        //     if (currentQuestion < quizData.length - 1) {
-        //         currentQuestion++;
-        //         showQuestion();
-        //     } else {
-        //         showResult();
-        //     }
-        // });
-
-        // document.getElementById('retry-btn').addEventListener('click', () => {
-        //     currentQuestion = 0;
-        //     answers = [];
-        //     showQuestion();
-        //     document.getElementById('quiz-container').style.display = 'block';
-        //     document.getElementById('result-container').style.display = 'none';
-        // });
-
-        // // 초기화
-        // showQuestion();
-        // updateSpecs();
     </script>
 
 
+<!--  -->
+<style>
+    .custom-button-section {
+        margin-top: 8% !important;
+        margin-bottom: 5% !important;
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+        align-items: flex-start;
+    }
 
+    .custom-image-button {
+        flex: 1;
+        height: 450px;
+        justify-content: center;
+        position: relative;
+        border: 1.5px solid rgb(180, 180, 180);
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+    }
+
+    /* 왼쪽 버튼 - 약간 아래로 */
+    .custom-image-button:nth-child(1) {
+        transform: translateY(20px);
+        border-right: none;
+    }
+
+    /* 가운데 버튼 - 약간 위로 */
+    .custom-image-button:nth-child(2) {
+        transform: translateY(-20px);
+        border-right: none;
+        border-left: none;
+    }
+
+    /* 오른쪽 버튼 - 더 아래로 */
+    .custom-image-button:nth-child(3) {
+        transform: translateY(40px);
+        border-left: none;
+    }
+
+    .custom-button-text {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .custom-image-button:hover {
+        opacity: 0.9;
+    }
+@media (max-width :768px) {
+        .custom-button-section {
+        /* flex-direction: column; */
+        width: 90%;
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+    }
+
+    .custom-image-button {
+        height: 300px;
+        margin-bottom: 20px;
+        border: 1.5px solid rgb(180, 180, 180) !important;
+        transform: none !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .custom-image-button:last-child {
+        margin-bottom: 0;
+    }
+
+}
+</style>
+
+<div class="custom-button-section fade-element">
+    <button class="custom-image-button" style="background-image: url('assets/images/단독주택/10.jpg')">
+        <span class="custom-button-text">썬룸</span>
+    </button>
+
+    <button class="custom-image-button" style="background-image: url('images/도어.jpg')">
+        <span class="custom-button-text">도어</span>
+    </button>
+
+    <button class="custom-image-button" style="background-image: url('images/버튼3.png')">
+        <span class="custom-button-text">샷시</span>
+    </button>
+
+
+</div>
+
+<!--  -->
 
     <!-- 4개 원 -->
     <section class="features-section">
@@ -921,24 +1639,24 @@
             <div class="feature">
                 <img src="images/c1.jpg" alt="c1">
                 <h3>제품설계</h3>
-                <p>고객님과 충분한 소통 후<br>정확한 제품 사양을 선택하고 제조합니다</p>
+                <p>정확한 제품 사양을 선택하고 설계</p>
             </div>
             <div class="feature fade-element">
                 <p class="feature2-label">※대양산업 1공장</p>
                 <img src="images/c2.jpg" alt="c2">
                 <h3>창호생산</h3>
-                <p>보강재를 필수 조립하고<br>정밀한 품질관리로 생산합니다</p>
+                <p>보강재를 필수 조립하고<br>정밀한 품질관리로 생산</p>
             </div>
             <div class="feature fade-element">
                 <p class="feature2-label">※소장님 직접 시공</p>
                 <img src="images/c3.jpg" alt="c3">
                 <h3>창호시공</h3>
-                <p>평균 근속 10년 이상의 기술자들이<br>완벽하고 안전한 시공을 합니다</p>
+                <p>평균 근속 10년 이상의 <br>기술자들이 완벽하고 <br>안전한 시공</p>
             </div>
             <div class="feature fade-element">
                 <img src="images/c4.jpg" alt="c4">
                 <h3>품질보증</h3>
-                <p>설치 후 발생하는 문제까지<br>책임지고 신속하게 해결합니다</p>
+                <p>설치 후 발생하는 <br>문제까지 책임지고 <br>신속하게 해결</p>
             </div>
         </div>
     </section>
@@ -1517,27 +2235,6 @@
 
 
 
-    <div class="sections">
-        <div class="left-image" style="background-image: url('images/tab_13.png') !important;"></div>
-        <div class="right-side">
-            <div class="top-banner" style="background: url('images/3.png') center/cover no-repeat !important; width: 100%;"></div>
-
-            <div class="bottom-board">
-
-                <h2>실시간문의 <a href="board.html" class="more-link">더보기 +</a></h2>
-
-                <table id="latestPostsTable">
-                    <tr>
-                        <td colspan="2">게시글을 불러오는 중입니다...</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-
-
-
-
     <div class="fp-header fade-element" style="margin-top: 10%; margin-bottom: 5%;">
         <p class="fp-subtitle fade-element">베스트 <span>리뷰</span></p>
         <div class="fp-divider"></div>
@@ -1899,337 +2596,719 @@
 
 
 
-    <!-- 시공사례 그리드 -->
-    <section class="construction-gallery" id="ex">
-        <h2 class="dcs-title">베스트 <span class="highlight" style="color: white !important;">포트폴리오</span></h2>
-
-        <div class="gallery-container">
-            <p class="gallery-subtitle">실제로 완성된 작업 결과</p>
-
-            <div class="gallery-grid">
-
-                <div class="gallery-item">
-                    <img src="images/re/1.jpg" alt="아파트 발코니 샷시 시공" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>단독주택 신축 창호공사</h3>
-                        <p>시스템 FM-Y140, BF-230, BF-248 </p>
-                        <p>26mm 투명 + 로이</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/2.jpg" alt="단독주택 파노라마 창" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>빌라 신축 창호공사</h3>
-                        <p>BF-248</p>
-                        <p>26mm 투명 + 로이</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/3.jpg" alt="상가 파티션 도어" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>빌라 신축 창호공사</h3>
-                        <p>시스템 (틸트앤턴) FM-Y70, BF-248</p>
-                        <p>26mm 투명 + 로이</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/4.jpg" alt="오피스 창호" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>빌라 신축 픽스 시스템 공사 </h3>
-                        <p>FIX, FM-Y70</p>
-                        <p>강화유리</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/5.jpg" alt="빌라 테라스" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>복층 빌라 창호 신축 공사</h3>
-                        <p>BF-Y250</p>
-                        <p>26mm 투명 + 로이</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/6.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>아파트 창호 리모델링</h3>
-                        <p>BF-Y260</p>
-                        <p>26mm 투명 + 로이 (아르곤)</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/re/7.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>아파트 주방 시스템창</h3>
-                        <p>시스템창 FM-T70</p>
-                        <p>24mm 페어유리(복층)</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/re/8.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>단독주택 창호 리모델링</h3>
-                        <p>FIX 및 알루미늄</p>
-                        <p>강화유리 및 26mm 페어유리(복층)</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/re/9.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>공장동 창호 리모델링</h3>
-                        <p>스테인레스 창</p>
-                        <p>24mm 페어유리, 강화유리</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/re/10.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>썬룸 공사</h3>
-                        <p>BF-Y250, FIX</p>
-                        <p>26mm 투명 + 로이, 강화유리</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/re/11.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>사무실 유리 가벽</h3>
-                        <p>FIX 및 알루미늄</p>
-                        <p>18mm 투명+투명</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/re/12.jpg" alt="호텔 로비" class="gallery-image">
-                    <div class="item-overlay">
-                        <h3>썬룸 공사</h3>
-                        <p>세이프도어 및 전면 FIX</p>
-                        <h3>브론즈 5mm, 강화유리(천장)</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 모달 창 -->
-        <div class="gallery-modal" id="gallery-modal">
-            <span class="close-btn">&times;</span>
-            <img class="modal-content" id="modal-image">
-            <div class="modal-caption" id="modal-caption"></div>
-        </div>
-    </section>
-
+<!-- 이것만큼은 -->
     <style>
-        /* 기본 스타일 */
-        .construction-gallery {
-            padding: 60px 0;
-            background: #f8fafc;
-            font-family: 'Pretendard', sans-serif;
+        .quiz-card {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            margin: 32px auto;
+            max-width: 700px;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
         }
 
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .gallery-title {
+        .quiz-card h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 24px;
+            color: #222;
             text-align: center;
+        }
+
+        .check-section {
+            margin-bottom: 32px;
+        }
+
+        .check-section h4 {
             font-size: 2rem;
-            color: #1e293b;
+            margin-bottom: 8px;
+            color: #1a73e8;
+        }
+
+        .check-section p {
+            font-size: 1.3rem;
+            line-height: 1.6;
             margin-bottom: 10px;
         }
 
-        .gallery-subtitle {
+        .steel-photo {
+            margin-top: 12px;
             text-align: center;
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 30px;
         }
 
-        /* 갤러리 그리드 */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            /* PC: 4개 */
-            gap: 12px;
-            /* 간격 축소 */
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            background: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-image {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .item-overlay {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 5px;
-            background: rgba(0, 0, 0, 0.55);
-            color: #fff;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .item-overlay {
-            transform: translateY(0);
-        }
-
-        .item-overlay h3 {
-            margin: 0 0 4px;
-            font-size: 0.95rem;
-        }
-
-        .item-overlay p {
-            margin: 0;
-            font-size: 0.75rem;
-            opacity: 0.85;
-            color: wheat
-        }
-
-        /* 모달 스타일 */
-        .gallery-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
-        }
-
-        .modal-content {
-            display: block;
-            margin: 50px auto;
-            width: auto;
+        .steel-photo img {
+            max-width: 100%;
             height: auto;
-            max-width: 90%;
-            max-height: 80vh;
-            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #ccc;
         }
 
-        .modal-caption {
-            margin: 10px auto;
-            text-align: center;
-            color: white;
-            max-width: 80%;
+        .steel-photo div {
             font-size: 0.9rem;
+            color: #666;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
+        .download-link {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #1a73e8;
             color: white;
-            font-size: 30px;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
         }
 
-        /* 모바일은 항상 overlay 표시 */
+        .download-link:hover {
+            background-color: #155ab6;
+        }
+
         @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 4px;
+            .check-section h4 {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+                color: #1a73e8;
             }
 
-            .item-overlay {
-                display: none;
-                /* transform: translateY(0px);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1px; */
-            }
 
-            .item-overlay h3 {
-                font-size: 0.8rem;
-            }
-
-            .item-overlay p {
-                font-size: 0.6rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
     </style>
 
+    <section class="must-know-section">
+        <div class="mks-container">
+            <!-- 섹션 헤더 -->
+            <div class="mks-header fade-element" style="margin-bottom: 15%;margin-top: 5%;">
+                <h2><span class="warning-icon">✅</span>공사전 <span class="highlight"
+                        style="color: white !important; font-weight: bold;font-size: 3.3rem;">꼭</span>확인해주세요!</h2>
+                <!-- <p>확인해주세요</p> -->
+            </div>
+
+            <!-- 기존 퀴즈 카드 자리에 대체 콘텐츠 -->
+            <div class="quiz-card" id="quiz-container">
+
+                <!-- 1. 보강재 확인 -->
+                <div class="check-section">
+                    <h4>1. <strong>보강재</strong></h4>
+                    <p><strong>보강재</strong>가 누락되면 변형이 생겨 큰 하자가 발생합니다.</p>
+                    <div class="steel-photo">
+                        <img src="images/보강재.png" alt="보강재 유무 비교 이미지"
+                            style="max-width: 100%; height: auto;margin-top: 6% !important;" />
+                        <!-- <div style="display: flex; justify-content: space-around; margin-top: 8px;">
+                            <div class="steel-photo">
+                                <img src="./src/assets/rebar_yes.png" alt="보강재 유 이미지" />
+                            </div>
+                            <div class="steel-photo">
+                                <img src="./src/assets/rebar_no.png" alt="보강재 무 이미지" />
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- 2. 샤시와 유리 확인 -->
+                <div class="check-section" style="margin-top: 20% !important;">
+                    <h4>2. <strong>샤시와 유리</strong></h4>
+                    <p>설치 위치별로 <strong>적절한 사양</strong>이 있습니다. <br>가장 저렴한 모델을 설치하는지 꼭 확인하세요!</p>
+
+                    <div class="steel-photo">
+                        <img src="images/ex3.png" style="width: 50%; margin-top: 7% !important;" alt="1" />
+                    </div>
+                </div>
+
+                <!-- 3. 계약서 작성 -->
+                <!-- 표준계약서 다운로드 -->
+                <div class="download-section" style="margin-top: 20% !important;">
+                    <div class="check-section">
+                        <h4>3. <strong>계약서</strong></h4>
+                        <p><strong>하자이행보증</strong>은 필수로 받아주세요</p>
+                    </div>
+                    <div class="contract-checklist">
+                        <div class="contract-card warning">
+                            <div class="contract-icon">❗</div>
+                            <div>
+                                <h4>필수 항목</h4>
+                                <ul>
+                                    <li><strong>정품 확인</strong>: 제품 모델, 유리 사양 등</li>
+                                    <li><strong>픔질 보증</strong>: 무상 A/S 기간(최소 3년 권장) 및 범위</li>
+                                    <li><strong>"추가 비용"</strong>에 대한 명확한 명시</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- <div class="contract-card danger">
+                            <div class="contract-icon">⚠️</div>
+                            <div>
+                                <h4>주의사항</h4>
+                                <ul>
+                                    <li><strong>"추가 비용"</strong>에 대한 명확한 명시</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- 계약서 검토 포인트 -->
+                    <div class="review-points">
+                        <h4>🔍 계약서 검토 시 필수 확인사항</h4>
+                        <div class="review-grid" style="margin-top: 10%;">
+                            <div class="review-item">
+                                <div class="review-number">1</div>
+                                <p>사업자등록번호 확인</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-number">2</div>
+                                <p>계약서 상의 자재 사양과 견적서 일치 여부</p>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-number">3</div>
+                                <p>하자 발생 시 책임 소재</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="download-card">
+                        <div class="file-icon">📄</div>
+                        <div>
+                            <h4>창호 시공 표준계약서</h4>
+                            <!-- <p>표준 양식 계약서</p> -->
+                            <a href="실내건축·창호 공사 표준계약서.hwp" style="margin-top: 5%;" class="download-btn" download>
+                                표준계약서 다운로드
+                                <span class="download-icon">↓</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="download-notice">※ 계약 전 반드시 최종 검토를 권장합니다</p>
+                </div>
+
+            </div>
+
+            <!-- 체크리스트 퀴즈 -->
+            <!-- <div class="quiz-card" id="quiz-container">
+                <div class="quiz-progress">
+                    <span class="current">1</span>/<span class="total">5</span>
+                </div>
+                <h3 class="quiz-question" id="question">거실 창호의 가장 중요한 기능은?</h3>
+                <div class="quiz-options" id="options">
+                    <label class="option">
+                        <input type="radio" name="quiz" value="A">
+                        <span class="custom-radio"></span>
+                        <span>단열 성능</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="quiz" value="B">
+                        <span class="custom-radio"></span>
+                        <span>방음 효과</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="quiz" value="C">
+                        <span class="custom-radio"></span>
+                        <span>디자인</span>
+                    </label>
+                </div>
+                <button class="quiz-next" id="next-btn">다음 질문 →</button>
+            </div> -->
+
+            <!-- 퀴즈 결과 (초기 숨김) -->
+            <div class="result-card" id="result-container" style="display:none">
+                <div class="result-badge" id="result-badge">당신에게 추천</div>
+                <h3 id="result-title">"로이(Low-E) 복층 유리 + 1.8mm 프로파일"</h3>
+                <p id="result-desc">난방비 절감이 우선인 북향 집에 최적화된 조합입니다</p>
+                <div class="result-details">
+                    <!-- <div class="detail-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3203/3203883.png" alt="단열">
+                            <span>단열 등급 <strong>1등급</strong></span>
+                        </div> -->
+                    <div class="detail-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3161/3161837.png" alt="가격">
+                        <span>예상 견적 <strong>3,200,000원~</strong></span>
+                    </div>
+                </div>
+                <button class="retry-btn" id="retry-btn">다시 테스트하기</button>
+            </div>
+
+            <!-- 정보 아코디언 -->
+            <div class="info-accordion">
+
+                <!-- 어떤 유리를 선택해야할까요 -->
+                <div class="accordion-item fade fade-element">
+                    <button class="accordion-btn">
+                        <span>유리선택 가이드</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="glass-comparison">
+                            <div class="glass-type">
+                                <h4>로이(Low-E) 유리</h4>
+                                <ul>
+                                    <li>단열 : <strong>페어대비 30% 우수</strong></li>
+                                    <li>방음 : <strong>우수(STC 40dB↑)</strong></li>
+                                    <li>자외선 차단: <strong>우수 (70%)</strong></li>
+                                </ul>
+                            </div>
+                            <div class="glass-type">
+                                <h4>페어유리</h4>
+                                <ul>
+                                    <li>단열 : <strong>주거에 적합한 단열</strong></li>
+                                    <li>방음 : <strong>로이와 비슷</strong></li>
+                                    <li>자외선 차단: <strong>적정 (35%)</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selection-guide">
+                            <h4>🏡 우리 집에는 어떤 유리가 맞을까요?</h4><br>
+                            <p>- <strong>가성비를 원한다면</strong>: 페어유리 (로이 유리 대비 평단가 15% 저렴)<br>
+                                - <strong>더 따뜻하고 싶다면</strong>: 로이유리 및 아르곤 가스 주입<br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 단계별 확인사항 -->
+                <div class="accordion-item fade-element">
+                    <button class="accordion-btn">
+                        <span class="accordion-title"><span>단계별 확인사항</span></span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- 3단계 확인 카드 -->
+                        <div class="check-cards">
+                            <!-- 보강재 카드 -->
+                            <div class="step-card-wrapper">
+                                <div class="step-card steel-bg">
+                                    <h3>1. 보강재 확인</h3>
+                                    <div class="card-desc">
+                                        <p><span class="highlight-round">프로파일 내부</span> <strong>강철 보강재</strong> 삽입 필수
+                                        </p>
+                                        <div class="spec-box">
+                                            <span>자석을 이용해 확인</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="images/ex1.png" alt="예시">
+                                </div>
+                            </div>
+
+                            <!-- 2. 발코니 전용창 -->
+                            <div class="step-card-wrapper">
+                                <div class="step-card balcony-bg">
+                                    <h3>2. 단열재 확인</h3>
+                                    <div class="card-desc">
+                                        <p><span class="highlight-round">폼, 실리콘</span> 창호용 실리콘 사용
+                                            여부 확인</p>
+                                        <div class="spec-box">
+                                            <span>샷시틀에 폼을 빈틈없이 채우기(단열)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="images/ex2.png" alt="예시">
+                                </div>
+                            </div>
+
+                            <!-- 3. 유리 사양 -->
+                            <div class="step-card-wrapper">
+                                <div class="step-card glass-bg">
+                                    <h3>3. 샷시, 유리 사양</h3>
+                                    <div class="card-desc">
+                                        <p><span class="highlight-round">유리(주거) :</span>22T 페어유리 이상 사용 권장</p>
+                                        <p><span class="highlight-round">핸들(주거) :</span>침입방지 자동핸들 권장</p>
+                                        <p><span class="highlight-round">샷시(6층 이상 발코니) :</span>발코니 전용 샷시</p>
+                                        <div class="spec-box">
+                                            <span>창짝(가로 2.6이상) : 3짝문 권장</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="images/ex3.png" alt="예시">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 추가 확인 사항 (타임라인 형태) -->
+                        <div class="timeline-section">
+                            <h4 class="timeline-title">⏳ 시공 단계별 점검 포인트</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-phase">시공 전</div>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">기존 창틀 부식 상태 · 벽면 균열 확인</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-phase">시공 중</div>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">몰딩 접합부 실리콘 처리 · 수평 측정</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-phase">완공 후</div>
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">개폐 테스트 · 방수 시험 · 결로 확인</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 창 종류 및 용도 구분 -->
+                <div class="accordion-item fade-element">
+                    <button class="accordion-btn">
+                        <span class="accordion-title"><span>창문 종류</span></span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="checklist-grid">
+                            <!--단창 이중창 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>단창 vs 이중창</h4>
+                                    <p>단창은 창이 한 겹인 구조, 이중창은 창이 두 겹인 구조로 이중창은 단창에 비해 단열 성능에 우수</p>
+                                    <span class="detail-note">※이중창에 비해 단창이 더 저렴</span>
+                                </div>
+                            </div>
+                            <!-- 시스템창 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>시스템창</h4>
+                                    <p>유럽식 고급 창호 개폐기능을 부여한 신개념의 다기능 복합창호로 성능이 뛰어남</p>
+                                    <span class="detail-note">※창호의 성능을 극대화 시킨 창</span>
+                                </div>
+                            </div>
+
+                            <!-- 픽스창 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>픽스창 (고정창)</h4>
+                                    <p>열리지 않는 창으로, 조망이나 채광 목적에 사용</p>
+                                    <span class="detail-note">기밀성 우수하지만 환기 불가</span>
+                                </div>
+                            </div>
+
+                            <!-- 발코니창 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>발코니창</h4>
+                                    <p>방수와 하중에 강한 구조로 설계되어 외기 접하는 위치에 적합</p>
+                                    <span class="detail-note">주로 확장 발코니 구간에 설치</span>
+                                </div>
+                            </div>
+
+                            <!-- PVC창 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>PVC창 vs 알루미늄창</h4>
+                                    <p>PVC창은 단열 성능 우수, 알루미늄창은 내구성 우수하며 PVC창을 하이샤시라고도 한다</p>
+                                    <span class="detail-note">※알루미늄창은 주로 상가 등에 사용</span>
+                                </div>
+                            </div>
+
+                            <!-- 확장 vs 비확장 -->
+                            <div class="check-item">
+                                <div class="check-icon">✔️</div>
+                                <div>
+                                    <h4>확장 vs 비확장</h4>
+                                    <p>확장은 베란다 공간을 내부로 포함하여 실사용 면적을 늘리는 방식이고, 비확장형은 기존 베란다 공간을 유지하는 구조</p>
+                                    <span class="detail-note">※비확장으로 지은 아파트를 확장으로 확장할 경우 단열 등 문제 발생할 수 있습니다</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+    <style>
+        /* 계약서 전용 스타일 */
+        .contract-checklist {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .contract-card {
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .contract-card.warning {
+            background: #F6F8FA;
+            border-left: 4px solid #1640f9;
+        }
+
+        .contract-card.danger {
+            background: #F6F8FA;
+            border-left: 4px solid #1640f9;
+        }
+
+        .contract-icon {
+            font-size: 1.5rem;
+            margin-top: 3px;
+        }
+
+        .contract-card h4 {
+            margin: 0 0 10px 0;
+            color: #1e293b;
+        }
+
+        .contract-card ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .contract-card li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        /* 검토 포인트 그리드 */
+        .review-points {
+            margin: 30px 0;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .review-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .review-number {
+            background: #2563eb;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .review-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* 다운로드 섹션 */
+        .download-section {
+            margin-top: 40px;
+        }
+
+        .download-card {
+            background: #f0fdf4;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border: 1px dashed #16a34a;
+        }
+
+        .file-icon {
+            font-size: 2.5rem;
+            color: #16a34a;
+        }
+
+        .download-card h4 {
+            margin: 0 0 5px 0;
+            color: #1e293b;
+        }
+
+        .download-card p {
+            margin: 0 0 15px 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .download-btn {
+            background: #16a34a;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+        }
+
+        .download-icon {
+            font-size: 1.2rem;
+        }
+
+        .download-notice {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 모달 요소
-            const modal = document.getElementById('gallery-modal');
-            const modalImg = document.getElementById('modal-image');
-            const captionText = document.getElementById('modal-caption');
-            const closeBtn = document.getElementById('gallery-modal').querySelector('.close-btn');
+        // 퀴즈 데이터
+        // const quizData = [
+        //     {
+        //         question: "거실 창호의 가장 중요한 기능은?",
+        //         options: [
+        //             { text: "단열 성능", value: "A" },
+        //             { text: "방음 효과", value: "B" },
+        //             { text: "디자인", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "주거 지역은 어디신가요?",
+        //         options: [
+        //             { text: "도심 번화가 (소음多)", value: "A" },
+        //             { text: "일반 주택가", value: "B" },
+        //             { text: "교외/시골", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "창호 교체 주요 목적은?",
+        //         options: [
+        //             { text: "에너지 절감", value: "A" },
+        //             { text: "소음 차단", value: "B" },
+        //             { text: "인테리어 개선", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "방향은 어떻게 되나요?",
+        //         options: [
+        //             { text: "북향/그늘진 곳", value: "A" },
+        //             { text: "남향/일조량 많음", value: "B" },
+        //             { text: "동서향", value: "C" }
+        //         ]
+        //     },
+        //     {
+        //         question: "예산은 어떻게 계획중이신가요?",
+        //         options: [
+        //             { text: "비용보다 품질 우선", value: "A" },
+        //             { text: "적당한 가성비", value: "B" },
+        //             { text: "최저가 위주", value: "C" }
+        //         ]
+        //     }
+        // ];
 
-            // 모든 갤러리 이미지에 클릭 이벤트 추가
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', function () {
-                    const img = this.querySelector('.gallery-image');
-                    const title = this.querySelector('h3').textContent;
-                    // const desc = this.querySelector('p').textContent;
-                    // 변경 후 (모든 <p> 내용을 가져와서 줄바꿈 처리)
-                    const paragraphs = Array.from(this.querySelectorAll('p'))
-                        .map(p => p.textContent)
-                        .join('<br>');
+        // // 결과 데이터
+        // const resultData = {
+        //     "AAA": {
+        //         title: "로이(Low-E) 3중 유리 + 1.8mm 프로파일",
+        //         desc: "극한의 단열 성능이 필요한 북향 집에 최적화된 프리미엄 조합",
+        //         price: "3,800,000원~"
+        //     },
+        //     "BBB": {
+        //         title: "페어유리 + 1.6mm 프로파일",
+        //         desc: "도로변 소음을 효과적으로 차단하는 밸런스형 조합",
+        //         price: "3,200,000원~"
+        //     },
+        //     "CCC": {
+        //         title: "일반 복층 유리 + 1.4mm 프로파일",
+        //         desc: "비용 효율성을 중시하는 기본형 조합",
+        //         price: "2,500,000원~"
+        //     },
+        //     "default": {
+        //         title: "로이(Low-E) 복층 유리 + 1.6mm 프로파일",
+        //         desc: "대부분의 주거 환경에 적합한 베스트셀러 조합",
+        //         price: "3,200,000원~"
+        //     }
+        // };
 
-                    modal.style.display = 'block';
-                    modalImg.src = img.src;
-                    modalImg.alt = img.alt;
-                    captionText.innerHTML = `<strong>${title}</strong><br>${paragraphs}`;
-
-                    // captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            // 닫기 버튼
-            closeBtn.addEventListener('click', function () {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-
-            // 모달 외부 클릭 시 닫기
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // ESC 키로 닫기
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.style.display === 'block') {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
+        // 아코디언 기능
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+                const content = btn.nextElementSibling;
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
             });
         });
+
+        // // 퀴즈 기능
+        // let currentQuestion = 0;
+        // let answers = [];
+
+        // function showQuestion() {
+        //     const quiz = quizData[currentQuestion];
+        //     document.getElementById('question').textContent = quiz.question;
+
+        //     const optionsContainer = document.getElementById('options');
+        //     optionsContainer.innerHTML = '';
+
+        //     quiz.options.forEach((option, index) => {
+        //         const optionElement = document.createElement('label');
+        //         optionElement.className = 'option';
+        //         optionElement.innerHTML = `
+        //     <input type="radio" name="quiz" value="${option.value}">
+        //     <span class="custom-radio"></span>
+        //     <span>${option.text}</span>
+        //   `;
+        //         optionsContainer.appendChild(optionElement);
+        //     });
+
+        //     document.querySelector('.current').textContent = currentQuestion + 1;
+        // }
+
+        // function showResult() {
+        //     const resultKey = answers.join('').substring(0, 3) || 'default';
+        //     const result = resultData[resultKey] || resultData['default'];
+
+        //     document.getElementById('result-title').textContent = `"${result.title}"`;
+        //     document.getElementById('result-desc').textContent = result.desc;
+        //     document.querySelector('.result-details strong').textContent = result.price;
+
+        //     document.getElementById('quiz-container').style.display = 'none';
+        //     document.getElementById('result-container').style.display = 'block';
+        // }
+
+        // document.getElementById('next-btn').addEventListener('click', () => {
+        //     const selectedOption = document.querySelector('input[name="quiz"]:checked');
+        //     if (!selectedOption) return alert('옵션을 선택해주세요');
+
+        //     answers.push(selectedOption.value);
+
+        //     if (currentQuestion < quizData.length - 1) {
+        //         currentQuestion++;
+        //         showQuestion();
+        //     } else {
+        //         showResult();
+        //     }
+        // });
+
+        // document.getElementById('retry-btn').addEventListener('click', () => {
+        //     currentQuestion = 0;
+        //     answers = [];
+        //     showQuestion();
+        //     document.getElementById('quiz-container').style.display = 'block';
+        //     document.getElementById('result-container').style.display = 'none';
+        // });
+
+        // // 초기화
+        // showQuestion();
+        // updateSpecs();
     </script>
 
 
@@ -2240,7 +3319,7 @@
     <section class="contact-section" style="margin-top: 5%; background: #f8fafc; padding: 3rem 0;">
         <h2 id="submitForm"
             style="text-align: center; margin-bottom: 2.5rem; font-size: 1.8rem; color: #1e293b; font-weight: 500; letter-spacing: -0.5px;">
-            문의하기
+            실시간 문의
         </h2>
         <div class="form-container" id="submits" style="max-width: 600px; margin: 0 auto; padding: 0 20px;">
             <h2>
@@ -2273,9 +3352,14 @@
                             onblur="if(!this.value) { this.parentElement.querySelector('label').style.transform='translateY(-12px) scale(1)'; this.style.borderBottomColor='#cbd5e1'; }"></textarea>
                         <label for="contents"
                             style="position: absolute; left: 0; top: 24px; color: #64748b; transition: all 0.3s; pointer-events: none; font-size: 0.95rem;">문의사항</label>
+
                         <span class="input-hint"
                             style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※
-                            견적 문의 등 문의 사항을 작성해 주세요.
+                            견적 문의시 지역과 층 수도 함께 작성해 주세요.
+                        </span>
+                        <span class="input-hint"
+                            style="display: block; font-size: 0.75rem; color: #94a3b8; margin-top: 8px;">※
+                            연중무휴 언제나 상담 가능합니다.
                         </span>
                     </div>
                 </div>
@@ -2361,7 +3445,82 @@
                     submitBtn.disabled = false;
                 });
         });
+
+
+        // 유입 키워드 분석 코드
+
+    function checkReferrerMz() {
+    const referrer = document.referrer;
+    let refPath = "X";
+    let keyword = "X";
+
+    if (referrer) {
+        refPath = referrer;
+        
+        // 네이버 유입 분석
+        if (referrer.includes("naver.com")) {
+            const urlParams = new URLSearchParams(referrer.split('?')[1]);
+            // 네이버는 검색어 파라미터가 다양함 (query, q 등)
+            keyword = urlParams.get('query') || urlParams.get('q') || "X";
+        } 
+        // 구글 유입 분석 (보통 보안상 키워드는 가려짐)
+        else if (referrer.includes("google.com")) {
+            const urlParams = new URLSearchParams(referrer.split('?')[1]);
+            keyword = urlParams.get('q') || "X";
+        }
+    }
+
+    // Appscript로 전송    
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify({
+            action: "saveReferrer",
+            data: {
+                path: refPath,
+                keyword: keyword
+            }
+        })
+    })
+    .then(response => response.json())
+    .catch(error => console.error("유입 분석 기록 실패:", error));
+}
+
+window.addEventListener('load', checkReferrerMz);
     </script>
+
+
+<!-- 게시글 5개 -->
+
+
+    <div class="sections">
+        <div class="left-image" style="background-image: url('images/tab_13.png') !important;"></div>
+        <div class="right-side">
+            <div class="top-banner"
+                style="background: url('images/3.png') center/cover no-repeat !important; width: 100%;"></div>
+
+            <div class="bottom-board">
+
+                <h2>실시간문의 <a href="board.html" class="more-link">더보기 +</a></h2>
+
+                <table id="latestPostsTable">
+                    <tr>
+                        <td colspan="2">게시글을 불러오는 중입니다...</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- FAQ -->
     <style>
@@ -2577,14 +3736,26 @@
                         <div class="logo">
 
                         </div>
+                        <!-- <ul style="margin-top: -50px; margin-left:-17px;">
+                            <div style="color: white; font-size: 40px; font-weight: bold;">
+                                (주)한양창호
+                            </div>
+                            <li><a href="#">본사 : 경기도 군포시 당정로 75번길 30-6</a></li>
+                            <li><a href="#">hyi_window@naver.com</a></li>
+                            <li><a href="#">010-4010-2363</a></li>
+                            <li><a href="#">031 - 353 - 0457</a></li>
+                            <li><a href="#">대표 : 김진우</a></li>
+                            <li><a href="#">사업자등록번호 : 373 - 88 - 03446</a></li>
+                        </ul> -->
                         <ul style="margin-top: -50px; margin-left:-17px;">
                             <div style="color: white; font-size: 40px; font-weight: bold;">
                                 대양산업
                             </div>
                             <li><a href="#">본사 : 경기도 화성시 팔탄면 푸른들판로 496</a></li>
-                            <li><a href="#">ejrwls0321@naver.com</a></li>
-                            <li><a href="#">010-4010-2363</a></li>
+                            <li><a href="#">ysy366999@naver.com</a></li>
+                            <li><a href="#">010-5722-2363</a></li>
                             <li><a href="#">031 - 353 - 0457</a></li>
+                            <li><a href="#">대표 : 윤세연</a></li>
                             <li><a href="#">사업자등록번호 : 419 - 10 - 02841</a></li>
                         </ul>
                     </div>

@@ -80,7 +80,7 @@ function openKakao() {
 
 // 전화 문의
 function makeCall() {
-    window.location.href = 'tel:01040102363';
+    window.location.href = 'tel:01057222363';
 }
 
 // 문의 폼 페이지

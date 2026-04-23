@@ -79,30 +79,52 @@ postForm.addEventListener('submit', function (e) {
         });
 });
 
-function fetchPosts() {
+async function fetchPosts() {
     showLoading();
-    const timestamp = new Date().getTime();
-    const url = `${scriptURL}?boardType=${currentBoardType}&_=${timestamp}`;
-    fetch(url, { method: 'GET', cache: 'no-store' })
-        .then(response => response.json())
-        .then(data => {
-            if (!Array.isArray(data)) throw new Error("데이터 형식 오류");
-            totalPosts = data.length;
-            renderPosts(data);
+    try {
+        const response = await fetch(`${scriptURL}?action=getPosts&boardType=${currentBoardType}`);
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+            // [수정 포인트] 시트에 최신순으로 기록되고 있다면, 
+            // 프론트엔드에서 데이터를 역순으로 뒤집어줘야 최신글이 1페이지 상단에 나옵니다.
+            const sortedData = data.reverse(); 
+            
+            totalPosts = sortedData.length;
+            renderPosts(sortedData);
             renderPagination();
-        })
-        .catch(error => {
-            postList.innerHTML = `
-                <tr>
-                    <td colspan="4" class="error-message">
-                        게시글을 불러오는 데 실패했습니다.<br>
-                        ${error.message}
-                        <button onclick="fetchPosts()" class="retry-btn">다시 시도</button>
-                    </td>
-                </tr>`;
-        })
-        .finally(() => hideLoading());
+        }
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+        postList.innerHTML = '<tr><td colspan="5" style="text-align:center;">데이터를 불러오는 중 오류가 발생했습니다.</td></tr>';
+    } finally {
+        hideLoading();
+    }
 }
+// function fetchPosts() {
+//     showLoading();
+//     const timestamp = new Date().getTime();
+//     const url = `${scriptURL}?boardType=${currentBoardType}&_=${timestamp}`;
+//     fetch(url, { method: 'GET', cache: 'no-store' })
+//         .then(response => response.json())
+//         .then(data => {
+//             if (!Array.isArray(data)) throw new Error("데이터 형식 오류");
+//             totalPosts = data.length;
+//             renderPosts(data);
+//             renderPagination();
+//         })
+//         .catch(error => {
+//             postList.innerHTML = `
+//                 <tr>
+//                     <td colspan="4" class="error-message">
+//                         게시글을 불러오는 데 실패했습니다.<br>
+//                         ${error.message}
+//                         <button onclick="fetchPosts()" class="retry-btn">다시 시도</button>
+//                     </td>
+//                 </tr>`;
+//         })
+//         .finally(() => hideLoading());
+// }
 
 function renderPosts(posts) {
     postList.innerHTML = '';

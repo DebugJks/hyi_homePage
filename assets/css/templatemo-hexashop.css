@@ -232,15 +232,15 @@ header
 }
 
 .header-area {
-  /* border-bottom: 3px dotted #eee; */
+  /* border-bottom: 3px solid #eee; */
   box-shadow: none;
-  background-color: #ffffff3d;
+  background-color: #eb161600;
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
-  height: 100px;
+  height: 60px;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
