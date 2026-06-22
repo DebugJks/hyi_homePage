@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창호업체 취급 브랜드 섹션 (2개 브랜드 전용)</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        .brand-section * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* 브랜드 섹션 전체 컨테이너 */
+        .brand-section {
+            padding: 100px 20px;
+            background-color: #fcfcfd; /* 미세한 웜그레이로 고급스러운 분위기 */
+            text-align: center;
+        }
+
+        /* 섹션 타이틀 그룹 */
+        .brand-section .title-group {
+            margin-bottom: 60px;
+        }
+
+        .brand-section .section-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* 타이틀 아래 세련된 포인트 라인 */
+        .brand-section .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #0056b3; /* 브랜드 시그니처 컬러 */
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .brand-section .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* 2개 브랜드 전용 플렉스 레이아웃 */
+        .brand-container {
+            max-width: 1000px; /* 2개일 때는 너무 넓지 않게 잡아주는 것이 안정적 */
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* 세련된 프리미엄 브랜드 카드 */
+        .brand-card {
+            flex: 1;
+            background-color: #ffffff;
+            border: 1px solid #eef0f3;
+            border-radius: 16px; /* 더 부드러운 라운딩 */
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* 부드러운 애니메이션 효과 */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 마우스 호버 효과 (모던 럭셔리 스타일) */
+        .brand-card:hover {
+            transform: translateY(-8px);
+            border-color: #0056b3;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.08); /* 브랜드 컬러 반영된 은은한 그림자 */
+        }
+
+        /* 카드 상단에 은은한 하이라이트 선 */
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+        .brand-card:hover::before {
+            background-color: #0056b3;
+        }
+
+        /* 브랜드 로고 영역 */
+        .brand-logo-wrap {
+            width: 100%;
+            height: 80px; /* 높이를 키워 로고가 더 시원하게 보이도록 수정 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .brand-logo-wrap img {
+            max-width: 70%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* 브랜드 명 */
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        /* 브랜드 설명 */
+        .brand-desc {
+            font-size: 0.95rem;
+            color: #777;
+            line-height: 1.6;
+            word-break: keep-all; /* 한글 단어 깨짐 방지 */
+            max-width: 280px; /* 글이 옆으로 너무 퍼지지 않게 제한 */
+        }
+
+        /* 반응형 레이아웃 (모바일) */
+        @media (max-width: 768px) {
+            .brand-section {
+                padding: 60px 20px;
+            }
+            .brand-section .section-title {
+                font-size: 1.8rem;
+            }
+            .brand-container {
+                flex-direction: column; /* 세로 배치로 전환 */
+                gap: 20px;
+            }
+            .brand-card {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 여기서부터 복사해서 사용하세요 -->
+    <section class="brand-section">
+        <div class="title-group">
+            <h2 class="section-title">명품 브랜드 파트너</h2>
+            <p class="section-subtitle">가장 신뢰받는 국내 탑클래스 브랜드 정품만을 엄선하여 시공합니다.</p>
+        </div>
+
+        <div class="brand-container">
+            
+            <!-- 브랜드 1: LX지인 -->
+            <div class="brand-card">
+                <div class="brand-logo-wrap">
+                    <img src="images/logo-lx.png" alt="LX Z:IN">
+                </div>
+                <h3 class="brand-name">LX Z:IN</h3>
+                <p class="brand-desc">국내 리딩 브랜드의 독보적인 단열 성능과 공간의 가치를 높이는 프리미엄 디자인</p>
+            </div>
+
+            <!-- 브랜드 2: KCC -->
+            <div class="brand-card">
+                <div class="brand-logo-wrap">
+                    <img src="images/logo-kcc.png" alt="KCC">
+                </div>
+                <h3 class="brand-name">KCC 창호</h3>
+                <p class="brand-desc">우수한 내구성과 합리적인 가치, 한국 기후 환경에 가장 최적화된 고기능성 국민 창호</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- 여기까지 복사 -->
+<section id="brands" class="brand-section">
+    <div class="container">
+        <h2 class="section-title">Partner Brands</h2>
+        
+        <div class="brand-item row align-items-center animate-on-scroll reveal-left">
+            <div class="col-md-6 brand-text">
+                <h3>영림 (YOUNGLIM)</h3>
+                <p>도어 및 몰딩 분야의 국내 선두 주자, 영림은 감각적인 디자인과 탁월한 내구성을 자랑합니다. 특히 ABS 도어 라인업은 습기에 강하고 뒤틀림이 없어 화장실 및 방문 인테리어의 표준이 되고 있습니다.</p>
+            </div>
+            <div class="col-md-6 brand-img">
+                <img src="https://postfiles.pstatic.net/MjAyNjA1MTRfMTMg/MDAxNzc4NzU3MjkzNjE3.JvMYmjefWxZvqyvopRiagLXjO9RN7aINxWhei_-EW5Yg.OkE8iBk8ma0GMfxYbOpkMGJouFMcHPhZ9RzI0Dc2zyQg.PNG/%EB%A1%9C%EA%B3%A0.png?type=w3840" alt="영림 대표 제품" class="img-fluid rounded shadow">
+            </div>
+        </div>
+
+        <div class="brand-item row align-items-center animate-on-scroll reveal-right mt-5">
+            <div class="col-md-6 brand-img order-2 order-md-1">
+                <img src="https://postfiles.pstatic.net/MjAyNjA1MTRfMTMg/MDAxNzc4NzU3MjkzNjE3.JvMYmjefWxZvqyvopRiagLXjO9RN7aINxWhei_-EW5Yg.OkE8iBk8ma0GMfxYbOpkMGJouFMcHPhZ9RzI0Dc2zyQg.PNG/%EB%A1%9C%EA%B3%A0.png?type=w3840" alt="KCC 창호" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 brand-text order-1 order-md-2">
+                <h3>KCC 창호 (KCC WINDOW)</h3>
+                <p>에너지 효율과 방음 성능의 극치, KCC 창호는 프리미엄 주거 환경을 완성합니다. 고단열 설계를 통해 사계절 내내 쾌적한 실내 온도를 유지하며, 뛰어난 풍압 견딤으로 안전함까지 제공합니다.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .brand-section { padding: 100px 0; overflow: hidden; background-color: #f8f9fa; }
+    .section-title { text-align: center; margin-bottom: 60px; font-weight: 800; font-size: 2.5rem; color: #222; }
+    .brand-item { margin-bottom: 60px; }
+    .brand-text h3 { font-weight: 700; color: #333; margin-bottom: 20px; }
+    .brand-text p { font-size: 1.1rem; line-height: 1.8; color: #555; word-break: keep-all; }
+    
+    /* 초기 상태: 투명하고 옆으로 밀려남 */
+    .animate-on-scroll {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal-left { transform: translateX(-80px); }
+    .reveal-right { transform: translateX(80px); }
+    
+    /* 활성화 상태: 제자리로 오며 나타남 */
+    .animate-on-scroll.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            threshold: 0.2 // 섹션의 20%가 보일 때 애니메이션 시작
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 화면에 들어왔을 때 클래스 추가
+                    entry.target.classList.add("active");
+                } else {
+                    // 화면에서 나갔을 때 클래스 제거 (반복 재생의 핵심)
+                    entry.target.classList.remove("active");
+                }
+            });
+        }, observerOptions);
+
+        // 애니메이션 대상 요소들을 관찰 시작
+        const animatedElements = document.querySelectorAll(".animate-on-scroll");
+        animatedElements.forEach(el => observer.observe(el));
+    });
+</script>
+</body>
+</html>
+
+
+<!-- 세로 버튼 -->
+         <section class="pds-section-container">
+
+            <div class="pds-top-slider-viewport">
+                <div class="pds-slider-track">
+                    <!-- 상단 루프 슬라이더 제품들 (onclick 추가 및 데이터 연동) -->
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/도어_/abs_바론.jpg', '슬라이딩 모델 A', '공간 활용도가 뛰어난 고급스러운 디자인의 슬라이딩 도어입니다. 부드러운 구동감과 완벽한 밀폐력을 자랑합니다.')">
+                        <img src="images/도어_/abs_바론.jpg" alt="DOOR 01" class="pds-img-box">
+                        <h4>슬라이딩 모델 A</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '프렌치 스타일 B', '클래식하고 이국적인 분위기를 연출하는 프렌치 도어입니다. 인테리어에 우아한 포인트를 주기에 적합합니다.')">
+                        <div class="pds-img-box">DOOR 02</div>
+                        <h4>슬림 양방향 접이식 도어</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '슬림 3연동 C', '개방감이 극대화된 3연동 슬림 중문입니다. 좁은 현관에서도 넓은 통로 공간을 확보해 드립니다.')">
+                        <div class="pds-img-box">DOOR 03</div>
+                        <h4>슬림 3연동 C</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '히든 여닫이 D', '문틀이 보이지 않아 벽면과 일체감을 주는 미니멀한 디자인의 히든 도어입니다.')">
+                        <div class="pds-img-box">DOOR 04</div>
+                        <h4>히든 여닫이 D</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '스윙 도어 E', '양방향으로 자유롭게 열고 닫을 수 있어 동선이 편리하고 개방감이 우수한 도어입니다.')">
+                        <div class="pds-img-box">DOOR 05</div>
+                        <h4>스윙 도어 E</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '시스템 창호 F', '단열, 기밀, 방음 성능이 극대화된 하이엔드 프리미엄 시스템 창호 솔루션입니다.')">
+                        <div class="pds-img-box">DOOR 06</div>
+                        <h4>시스템 창호 F</h4>
+                    </div>
+                    <!-- 무한 슬라이드 루프용 복제본들에도 동일하게 적용 -->
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/도어_/abs_바론.jpg', '슬라이딩 모델 A', '공간 활용도가 뛰어난 고급스러운 디자인의 슬라이딩 도어입니다.')">
+                        <img src="images/도어_/abs_바론.jpg" alt="DOOR 01" class="pds-img-box">
+                        <h4>슬라이딩 모델 A</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '프렌치 스타일 B', '클래식하고 이국적인 분위기를 연출하는 프렌치 도어입니다.')">
+                        <div class="pds-img-box">DOOR 02</div>
+                        <h4>프렌치 스타일 B</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '슬림 3연동 C', '개방감이 극대화된 3연동 슬림 중문입니다.')">
+                        <div class="pds-img-box">DOOR 03</div>
+                        <h4>슬림 3연동 C</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '히든 여닫이 D', '문틀이 보이지 않아 벽면과 일체감을 주는 미니멀한 디자인의 히든 도어입니다.')">
+                        <div class="pds-img-box">DOOR 04</div>
+                        <h4>히든 여닫이 D</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '스윙 도어 E', '양방향으로 자유롭게 열고 닫을 수 있어 동선이 편리하고 개방감이 우수한 도어입니다.')">
+                        <div class="pds-img-box">DOOR 05</div>
+                        <h4>스윙 도어 E</h4>
+                    </div>
+                    <div class="pds-top-product-card"
+                        onclick="pdsOpenModal('images/placeholder.jpg', '시스템 창호 F', '단열, 기밀, 방음 성능이 극대화된 하이엔드 프리미엄 시스템 창호 솔루션입니다.')">
+                        <div class="pds-img-box">DOOR 06</div>
+                        <h4>시스템 창호 F</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pds-main-interactive">
+
+                <div class="pds-display-column">
+                    <!-- row 1 -->
+                    <div class="pds-content-row pds-show" id="pds-row-1">
+                        <div class="pds-horizontal-slider">
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/도어_/abs_바론.jpg', '슬림-Alpha', '세련된 슬림 프레임과 감각적인 유리 매칭이 돋보이는 슬림-Alpha 모델입니다.')">
+                                <div class="pds-thumb"><img src="images/도어_/abs_바론.jpg" alt="슬림-Alpha"></div>
+                                <div class="pds-info">
+                                    <h5>슬림-Alpha</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬림-Beta', '모던한 인테리어에 어울리는 미니멀리즘 슬림-Beta 모델입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬림-Beta</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬림-Gamma', '견고함과 슬림함을 동시에 만족시키는 내구성이 높은 모델입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬림-Gamma</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬림-Delta', '프라이빗한 공간 연출을 위해 불투명 유리가 적용 가능한 도어입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬림-Delta</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬림-Epsilon', '트렌디한 하이엔드 컬러 칩이 적용된 시그니처 연동 도어입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬림-Epsilon</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 2 -->
+                    <div class="pds-content-row" id="pds-row-2">
+                        <div class="pds-horizontal-slider">
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '스윙-A', '스윙-A 제품의 상세 설명입니다. 편리한 개폐감이 특징입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>스윙-A</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '스윙-B', '스윙-B 제품의 상세 설명입니다. 소음 차단 능력이 우수합니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>스윙-B</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '스윙-C', '스윙-C 제품의 상세 설명입니다. 부드러운 댐퍼 기능이 내장되어 있습니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>스윙-C</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 3 -->
+                    <div class="pds-content-row" id="pds-row-3">
+                        <div class="pds-horizontal-slider">
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬라이딩-X', '벽면 밀착형 구조로 공간 효율을 극대화한 슬라이딩-X입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬라이딩-X</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬라이딩-Y', '매립형 레일 적용으로 문턱이 없어 안전한 슬라이딩-Y입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬라이딩-Y</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '슬라이딩-Z', '와이드한 전면 통유리로 탁 트인 시야를 제공하는 슬라이딩-Z입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>슬라이딩-Z</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 4 -->
+                    <div class="pds-content-row" id="pds-row-4">
+                        <div class="pds-horizontal-slider">
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '시스템-01', '유럽형 하드웨어를 채택하여 고단열을 실현한 프리미엄 시스템 도어입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>시스템-01</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '시스템-02', '멀티 잠금 장치 메커니즘으로 보안성과 밀폐성을 높인 시스템 도어입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>시스템-02</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- row 5 -->
+                    <div class="pds-content-row" id="pds-row-5">
+                        <div class="pds-horizontal-slider">
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '핸들-Gold', '24K 골드 아노다이징 코팅으로 변색 없이 화려함을 유지하는 명품 핸들입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>핸들-Gold</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '디지털-Lock', '푸시풀 방식의 편리성과 강력한 IoT 보안 기능을 탑재한 도어락입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>디지털-Lock</h5>
+                                </div>
+                            </div>
+                            <div class="pds-item-card"
+                                onclick="pdsOpenModal('images/placeholder.jpg', '스마트-센서', '접근 시 자동으로 구동을 제어하여 라이프 스타일의 가치를 높이는 센서입니다.')">
+                                <div class="pds-thumb"></div>
+                                <div class="pds-info">
+                                    <h5>스마트-센서</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pds-button-column">
+                    <button class="pds-category-btn pds-active" onclick="pdsToggleRow(1, this)">
+                        <span>ABS 도어</span>
+                        <small>ABS door</small>
+                    </button>
+                    <button class="pds-category-btn" onclick="pdsToggleRow(2, this)">
+                        <span>3연동 중문</span>
+                        <small>3-Way, Sliding</small>
+                    </button>
+                    <button class="pds-category-btn" onclick="pdsToggleRow(3, this)">
+                        <span>양개 중문</span>
+                        <small>Partition door</small>
+                    </button>
+                    <button class="pds-category-btn" onclick="pdsToggleRow(4, this)">
+                        <span>폴딩 도어</span>
+                        <small>Folding door</small>
+                    </button>
+                    <!-- <button class="pds-category-btn" onclick="pdsToggleRow(5, this)">
+                    <span>하드웨어</span>
+                    <small>Option & Parts</small>
+                </button> -->
+                </div>
+
+            </div>
+
+            <!-- 팝업 모달 마크업 추가 -->
+            <div id="pdsProductModal" class="pds-modal-overlay" onclick="pdsCloseModal()">
+                <div class="pds-modal-content" onclick="event.stopPropagation()">
+                    <button class="pds-modal-close" onclick="pdsCloseModal()">&times;</button>
+                    <div class="pds-modal-body">
+                        <div class="pds-modal-img-area">
+                            <img id="pdsModalImg" src="" alt="제품 이미지">
+                            <div id="pdsModalNoImg" class="pds-modal-no-img">IMAGE</div>
+                        </div>
+                        <div class="pds-modal-info-area">
+                            <h3 id="pdsModalTitle">제품명</h3>
+                            <p id="pdsModalDesc">제품에 대한 상세 설명이 들어가는 자리입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function pdsToggleRow(index, btn) {
+                    const row = document.getElementById(`pds-row-${index}`);
+                    btn.classList.toggle('pds-active');
+                    if (btn.classList.contains('pds-active')) {
+                        row.classList.add('pds-show');
+                    } else {
+                        row.classList.remove('pds-show');
+                    }
+                }
+
+                /* 팝업 모달 열기 함수 */
+                function pdsOpenModal(imgSrc, title, description) {
+                    const modal = document.getElementById('pdsProductModal');
+                    const modalImg = document.getElementById('pdsModalImg');
+                    const modalNoImg = document.getElementById('pdsModalNoImg');
+                    const modalTitle = document.getElementById('pdsModalTitle');
+                    const modalDesc = document.getElementById('pdsModalDesc');
+
+                    // 이미지 경로 유효성 검사 및 바인딩 (placeholder거나 비어있을 시 텍스트 대체 처리)
+                    if (imgSrc && imgSrc !== 'images/placeholder.jpg') {
+                        modalImg.src = imgSrc;
+                        modalImg.style.display = 'block';
+                        modalNoImg.style.display = 'none';
+                    } else {
+                        modalImg.style.display = 'none';
+                        modalNoImg.style.display = 'flex';
+                        modalNoImg.innerText = title; // 이미지가 없을 때 대체 문구
+                    }
+
+                    modalTitle.innerText = title;
+                    modalDesc.innerText = description;
+
+                    modal.classList.add('pds-modal-show');
+                    document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 방지
+                }
+
+                /* 팝업 모달 닫기 함수 */
+                function pdsCloseModal() {
+                    const modal = document.getElementById('pdsProductModal');
+                    modal.classList.remove('pds-modal-show');
+                    document.body.style.overflow = ''; // 스크롤 복원
+                }
+
+                window.onload = function () {
+                    const pdsSliders = document.querySelectorAll('.pds-horizontal-slider');
+                    pdsSliders.forEach(slider => {
+                        slider.addEventListener('wheel', (e) => {
+                            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                                e.preventDefault();
+                                slider.scrollLeft += e.deltaX;
+                            }
+                        });
+                    });
+                }
+            </script>
+            <style>
+                :root {
+                    --pds-primary: #ffffff;
+                    --pds-accent: #54341C;
+                    --pds-bg: #ffffff;
+                    --pds-btn-height: 150px;
+                    --pds-gap: 15px;
+                }
+
+                .pds-section-container {
+                    margin: 0 auto;
+                    padding: 60px 20px;
+                }
+
+                .pds-top-slider-viewport {
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 40px 0;
+                    border-radius: 24px;
+                    margin-bottom: 60px;
+                    position: relative;
+                }
+
+                .pds-slider-track {
+                    display: flex;
+                    width: calc(300px * 12);
+                    animation: pdsScrollAnim 30s linear infinite;
+                }
+
+                .pds-top-product-card {
+                    width: 260px;
+                    height: 270px;
+                    margin: 0 20px;
+                    background: white;
+                    border-radius: 18px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                    transition: transform 0.3s;
+                    cursor: pointer;
+                    /* 클릭 유도 커서 추가 */
+                }
+
+                .pds-top-product-card h4 {
+                    /* margin-top: -1%; */
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+                    font-size: 1rem;
+                }
+
+                .pds-top-product-card:hover {
+                    transform: translateY(-10px);
+                }
+
+                .pds-top-product-card .pds-img-box {
+                    width: 100%;
+                    height: 90%;
+                    border-radius: 3px;
+                    margin-top: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    background: #ffffff;
+                    object-fit: cover;
+                }
+
+                @keyframes pdsScrollAnim {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(calc(-300px * 6));
+                    }
+                }
+
+                .pds-main-interactive {
+                    display: flex;
+                    gap: 25px;
+                    align-items: flex-start;
+                }
+
+                .pds-display-column {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--pds-gap);
+                }
+
+                .pds-button-column {
+                    width: 220px;
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--pds-gap);
+                }
+
+                .pds-category-btn {
+                    height: var(--pds-btn-height);
+                    background: white;
+                    border: 2px solid transparent;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    padding: 0 25px;
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    text-align: right;
+                    outline: none;
+                }
+
+                .pds-category-btn span {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: #86868b;
+                }
+
+                .pds-category-btn small {
+                    font-size: 0.8rem;
+                    margin-top: 5px;
+                    color: #a1a1a6;
+                }
+
+                .pds-category-btn.pds-active {
+                    background: var(--pds-primary);
+                    border-color: var(--pds-accent);
+                    transform: scale(1.05);
+                    z-index: 10;
+                }
+
+                .pds-category-btn.pds-active span {
+                    color: #53341C;
+                }
+
+                .pds-category-btn.pds-active small {
+                    color: var(--pds-accent);
+                }
+
+                .pds-content-row {
+                    height: var(--pds-btn-height);
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    transform: translateX(0);
+                    clip-path: inset(0 0 0 100%);
+                    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+                    pointer-events: none;
+                    overflow: hidden;
+                }
+
+                .pds-content-row.pds-show {
+                    opacity: 1;
+                    transform: translateX(0);
+                    clip-path: inset(0 0 0 0);
+                    pointer-events: auto;
+                }
+
+                .pds-horizontal-slider {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 8px;
+                    padding: 0 8px;
+                    overflow-x: auto;
+                    scroll-behavior: smooth;
+                }
+
+                .pds-horizontal-slider::-webkit-scrollbar {
+                    height: 4px;
+                }
+
+                .pds-horizontal-slider::-webkit-scrollbar-thumb {
+                    background: #ddd;
+                    border-radius: 10px;
+                }
+
+                .pds-item-card {
+                    flex: 0 0 90px;
+                    height: 100%;
+                    border-radius: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+
+                .pds-item-card:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+                }
+
+                .pds-item-card .pds-thumb {
+                    position: absolute;
+                    inset: 0;
+                    background: #d0c8c0;
+                    overflow: hidden;
+                }
+
+                .pds-item-card .pds-thumb img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .pds-item-card .pds-info {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 18px 8px 7px;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 100%);
+                    z-index: 1;
+                }
+
+                .pds-item-card .pds-info h5 {
+                    font-size: 0.72rem;
+                    font-weight: 600;
+                    color: #ffffff;
+                    margin: 0;
+                    line-height: 1.2;
+                    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+                }
+
+                /* ========================================================
+           팝업 모달 CSS 스타일 정의 
+        ======================================================== */
+                .pds-modal-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.6);
+                    backdrop-filter: blur(5px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.4s ease;
+                }
+
+                /* 팝업 활성화 시 스타일 */
+                .pds-modal-overlay.pds-modal-show {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+
+                .pds-modal-content {
+                    background: #ffffff;
+                    width: 90%;
+                    max-width: 650px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    transform: translateY(30px);
+                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+
+                .pds-modal-overlay.pds-modal-show .pds-modal-content {
+                    transform: translateY(0);
+                }
+
+                .pds-modal-close {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    color: #333333;
+                    cursor: pointer;
+                    z-index: 10;
+                    transition: color 0.2s;
+                }
+
+                .pds-modal-close:hover {
+                    color: var(--pds-accent);
+                }
+
+                .pds-modal-body {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                /* 모달 이미지 영역 */
+                .pds-modal-img-area {
+                    width: 100%;
+                    height: 350px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+
+                .pds-modal-img-area img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .pds-modal-no-img {
+                    width: 100%;
+                    height: 100%;
+                    background: #d0c8c0;
+                    color: #ffffff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                /* 모달 상세 텍스트 설명 영역 */
+                .pds-modal-info-area {
+                    padding: 13px;
+                    background: #ffffff;
+                }
+
+                .pds-modal-info-area h3 {
+                    font-size: 1.4rem;
+                    margin: 0 0 10px 0;
+                    color: #53341C;
+                    font-weight: 700;
+                }
+
+                .pds-modal-info-area p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: #666666;
+                    margin: 0;
+                }
+
+                /* 모바일 대응 반응형 브레이크포인트 */
+                @media (max-width: 480px) {
+                    .pds-modal-img-area {
+                        height: 220px;
+                    }
+
+                    .pds-modal-info-area {
+                        padding: 20px;
+                    }
+
+                    .pds-modal-info-area h3 {
+                        font-size: 1.3rem;
+                    }
+
+                    .pds-modal-info-area p {
+                        font-size: 0.9rem;
+                    }
+                }
+            </style>
+
+        </section>

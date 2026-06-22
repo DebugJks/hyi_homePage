@@ -1,0 +1,20 @@
+{
+  "ABS Door": [
+    { "name": "엠보스 YA-07E", "img": "images/도어_/abs/엠보스.jpg" },
+    { "name": "몬타나 YA-1030", "img": "images/도어_/abs/ya1030.png"},
+    { "name": "브렌트 YFA-138", "img": "images/도어_/abs/브렌트.png"},
+    { "name": "메르시 YA-1010", "img": "images/도어_/abs/메르시.png"},
+    { "name": "필로 YA-1060", "img": "images/도어_/abs/필로.jpg"},
+    { "name": "바론 YA-1070", "img": "images/도어_/abs/바론.jpg"}
+  ],
+  "B타입 제품군": [
+    { "name": "B타입 실속형 창호 01", "img": "https://via.placeholder.com/200x150/e5e5e5/333333?text=TypeB+01"},
+    { "name": "B타입 발코니 창호 02", "img": "https://via.placeholder.com/200x150/d5d5d5/333333?text=TypeB+02"}
+  ],
+  "C타입 제품군": [
+    { "name": "C타입 이중창 이코노미", "img": "https://via.placeholder.com/200x150/eeeeee/333333?text=TypeC+01"}
+  ],
+  "D타입 제품군": [],
+  "E타입 제품군": [],
+  "F타입 제품군": []
+}

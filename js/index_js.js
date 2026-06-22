@@ -65,38 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// 문의하기 토글 함수
-function toggleContact() {
-    const options = document.querySelectorAll('.contact-option');
-    options.forEach(option => {
-        option.style.display = option.style.display === 'block' ? 'none' : 'block';
-    });
-}
-
-// 카카오톡 문의
-function openKakao() {
-    window.open('http://pf.kakao.com/_LIqxbn/chat', '_blank');
-}
-
-// 전화 문의
-function makeCall() {
-    window.location.href = 'tel:01057222363';
-}
-
-// 문의 폼 페이지
-function openSubmit() {
-    window.open('submit.html', '_blank');
-}
-
-// 모바일에서 터치 이벤트 최적화
-document.querySelectorAll('.contact-option, .contact-toggle').forEach(btn => {
-    btn.addEventListener('touchstart', function () {
-        this.style.transform = 'scale(0.95)';
-    });
-    btn.addEventListener('touchend', function () {
-        this.style.transform = '';
-    });
-});
 
 
 
